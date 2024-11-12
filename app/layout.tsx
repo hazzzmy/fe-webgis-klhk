@@ -48,22 +48,7 @@ export default function RootLayout({
         <body className={inter.className}>
           <Toaster />
           <RootProviders>
-          <MainAppLayout
-              navItems={[
-                {
-                  path: "/",
-                  title: "System Dynamic",
-                  icon: SlidersHorizontal,
-                },
-                {
-                  path: "/map",
-                  title: "Map",
-                  icon: Earth,
-                },
-              ]}
-            >
-              {children}
-            </MainAppLayout>
+            {children}
           </RootProviders>
         </body>
       </html>
