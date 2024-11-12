@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import { useMap } from "react-map-gl";
 import { SharedComponentButtonTooltip } from "@/shared/components/SharedComponentButtonTooltip";
-import { Radius } from "lucide-react"; // Replace with the appropriate icon
-import * as turf from "@turf/turf"; // Make sure you have turf.js installed
+import { Radius } from "lucide-react";
+import * as turf from "@turf/turf";
 import CustomButtonControl from "@/components/map-components/CustomButtonControlOptions";
 import { GeoJSONSource } from "maplibre-gl";
 

@@ -149,7 +149,7 @@ export const SystemDynamicInputContainer = () => {
           </div>
           <Collapsible
             open={parameter.descriptionOpen}
-            onOpenChange={() => toggleDescriptionOpen(key as keyof InitialParameterValueType)}
+            onOpenChange={() => toggleDescriptionOpen(key as any)}
             className="flex w-full flex-col gap-2"
           >
             <div className='flex flex-row justify-between items-center gap-2 w-full'>

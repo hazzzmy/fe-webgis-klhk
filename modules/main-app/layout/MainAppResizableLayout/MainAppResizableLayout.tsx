@@ -55,7 +55,7 @@ export const MainAppResizableLayout: React.FC<{ children: React.ReactNode, pathn
         </ResizablePanel>
       </ResizablePanelGroup>
     )
-  } else if (pathname === "/systemdynamic") {
+  } else if (pathname === "/") {
     return (
       <ResizablePanelGroup
         direction="horizontal"
