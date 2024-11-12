@@ -166,10 +166,14 @@ export const SystemDynamicModelsContainer = () => {
           );
         })}
       </div>
-      ):(<Card className="flex p-4 gap-2 justify-center items-center m-6">
+      ):(
+      <div className="p-6">
+      <Card className="flex p-4 gap-2 justify-center items-center">
         <InfoIcon />
         <p>please add first to see model visualization</p>
-      </Card>)
+      </Card>
+      </div>
+      )
 };
 
 function filterData(dataArray: any, desiredColumns: any) {

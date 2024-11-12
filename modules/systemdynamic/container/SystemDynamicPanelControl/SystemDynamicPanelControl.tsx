@@ -10,7 +10,7 @@ export const SystemDynamicPanelControl = () => {
             <div
                 className='absolute'
                 style={{
-                    bottom: 32,
+                    bottom: 16,
                     left: 16,
                 }}
             >
@@ -32,7 +32,7 @@ export const SystemDynamicPanelControl = () => {
             <div
                 className='absolute'
                 style={{
-                    bottom: 32,
+                    bottom: 16,
                     right: 16,
                 }}
             >
