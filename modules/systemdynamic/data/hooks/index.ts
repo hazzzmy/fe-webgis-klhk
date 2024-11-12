@@ -1,0 +1,1 @@
+export { useSystemDynamicData } from './useSystemDynamicData'

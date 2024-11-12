@@ -1,0 +1,97 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model parameter_area {
+  id            String    @id @db.Uuid
+  name_disaster String    @db.VarChar(255)
+  weight        Float
+  project_id    String    @db.Uuid
+  created_at    DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model parameter_poi {
+  id            String    @id @db.Uuid
+  name_disaster String    @db.VarChar(255)
+  weight        Float
+  project_id    String    @db.Uuid
+  created_at    DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model tbl_celery_tasks_analyze {
+  id             String    @id @db.Uuid
+  user_id        String?   @db.Uuid
+  project_id     String?   @db.Uuid
+  status         String    @db.VarChar(255)
+  status_message String?
+  created_at     DateTime? @default(now()) @db.Timestamp(6)
+  exec_time      DateTime? @db.Timestamp(6)
+  parameter      Json?
+  task_id        String?   @db.VarChar
+
+  project tbl_project? @relation(fields: [project_id], references: [id])
+}
+
+model tbl_project {
+  id             String  @id @db.Uuid
+  project_name   String? @db.VarChar(255)
+  project_type   String? @db.VarChar(255)
+  analyze_result Json?
+  report_path    Json?
+  
+  tasks tbl_celery_tasks_analyze[]
+}
+
+model users {
+  id         String    @id @db.Uuid
+  username   String    @db.VarChar(255)
+  email      String    @db.VarChar(255)
+  password   String    @db.VarChar(255)
+  created_at DateTime? @default(now()) @db.Timestamp(6)
+  is_active  Boolean?  @default(true)
+}
+
+enum data_filtering_e {
+  sub_category @map("sub-category")
+  brand
+}
+
+enum pref_by_adminstratif_e {
+  city
+  regency
+  district
+  subdistrict
+  village
+}
+
+enum pref_by_area_e {
+  location
+  map_scale @map("map scale")
+  radius
+}
+
+enum pref_select_road_e {
+  avoided
+  prefered
+  prohibited
+}
+
+enum pref_type_road_e {
+  avoided
+  prefered
+  prohibited
+}
+
+enum travel_mode_e {
+  car_bicyle_walk                   @map("car,bicyle,walk")
+  car_bicyle_walk_motorcycle        @map("car,bicyle,walk,motorcycle")
+  truck
+  car_bicyle_walk_motorcycle_truck  @map("car,bicyle,walk,motorcycle,truck")
+  car_bicycle_walk_motorcycle_truck @map("car,bicycle,walk,motorcycle,truck")
+  car_bicycle_walk                  @map("car,bicycle,walk")
+}

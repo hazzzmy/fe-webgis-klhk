@@ -1,0 +1,1 @@
+export { useMainAppControl } from './useMainAppControl'
