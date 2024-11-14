@@ -9,11 +9,12 @@ import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@radix-ui/react-collapsible';
 import { ChevronsUpDown, InfoIcon } from 'lucide-react';
+import Spinner from '@/components/ui/spinner';
 
 export const SystemDynamicInputContainer = () => {
   // Access Zustand store and the action to set the selected parameter
-  const { parameters, grid_layout, updateParameterValue, resetParameters, setGridLayout, refetchData, toggleDescriptionOpen } = useSystemDynamicParameter();
-
+  const { parameters, grid_layout, updateParameterValue, resetParameters, setGridLayout, refetchData, toggleDescriptionOpen, isFetching} = useSystemDynamicParameter();
+  
   const [rangeValue, setRangeValue] = useState<[number, number]>([
     parameters.initial_time.value,
     parameters.final_time.value,
@@ -66,10 +67,11 @@ export const SystemDynamicInputContainer = () => {
   }
 
   return (
-    <div className="p-4 flex flex-col gap-4 overflow-auto h-screen">
+    <div className="p-4 flex flex-col gap-4">
       <div className='flex flex-row justify-between w-full items-center'>
-        <h3 className="text-primary text-xl">Input Parameter</h3>
+        <h3 className="text-primary text-xl font-bold">Input Parameter</h3>
       </div>
+      <div className='overflow-y overflow-x-hidden flex flex-col h-[85vh] gap-2 p-2 bg-gray-100 rounded'>
       <Card className="flex flex-col items-center justify-center p-4 rounded gap-4">
         <div className="text text-primary flex justify-center items-center text-start w-full font-bold">
           <p>Grid Layout</p>
@@ -178,8 +180,9 @@ export const SystemDynamicInputContainer = () => {
           </Collapsible>
         </Card>
       ))}
+      </div>
       <div className='flex flex-row justify-between w-full items-center gap-2'>
-        <Button className='w-full bg-secondary text-primary hover:bg-primary hover:text-white' variant={'outline'} onClick={handleRun}>Run</Button>
+        <Button className='w-full bg-secondary text-primary hover:bg-primary hover:text-white' variant={'outline'} onClick={handleRun}>{isFetching ? <Spinner width={5} height={5} /> : 'Run'}</Button>
         <Button className='w-full' variant={'outline'} onClick={handleResetAndFetch}>Reset</Button>
       </div>
     </div>

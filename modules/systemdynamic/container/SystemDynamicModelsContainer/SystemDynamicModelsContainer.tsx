@@ -1,5 +1,5 @@
 import { useSystemDynamicData } from "../../data/hooks";
-import { useModelsData } from "../../data/hooks/useSystemDynamicData";
+// import { useModelsData } from "../../data/hooks/useSystemDynamicData";
 // import { XAxis, YAxis, CartesianGrid, Tooltip, AreaChart, Area } from 'recharts';
 
 import { InfoIcon, Loader2, TrendingUp } from "lucide-react"
@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/chart"
 import { useSystemDynamicParameter } from "@/modules/systemdynamic-input/hooks/useSystemDynamicInputData";
 import { useQuery } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 export const description = "A stacked area chart"
 
 const LoadingComponent = () => {
@@ -39,7 +39,7 @@ export const SystemDynamicModelsContainer = () => {
 
   const systemDynamicData = useSystemDynamicData();
   const activeParameters = systemDynamicData.activeParameters();
-  const {parameters, grid_layout, setRefetchDataFn} = useSystemDynamicParameter();
+  const {parameters, grid_layout, setRefetchDataFn, setIsFetching} = useSystemDynamicParameter();
   
   const dataQuery = useQuery({
     queryKey: ["systemDynamic"],
@@ -76,6 +76,15 @@ export const SystemDynamicModelsContainer = () => {
         setRefetchDataFn(dataQuery.refetch);
       }
     }, [dataQuery.refetch, setRefetchDataFn]);
+
+  useEffect(() => {
+      if (dataQuery.isFetching) {
+        setIsFetching(dataQuery.isFetching);
+      }
+      return () => {
+        setIsFetching(false);
+      }
+  }, [dataQuery.isFetching, setIsFetching]);
   
 
   const chartConfig = {
@@ -95,7 +104,7 @@ export const SystemDynamicModelsContainer = () => {
 
   return dataQuery.data && activeParameters.length > 0 ? (
       <div className={`p-6 gap-2 flex overflow-y-auto scrollbar-none max-h-screen grid grid-cols-${grid_layout} w-full`}>
-        {activeParameters.length > 0 && activeParameters.map((param: string) => {
+        { activeParameters.length > 0 && activeParameters.map((param: string) => {
           const baseline = filterData(dataQuery.data.baseline, ['time', param]);
           const simulation = filterData(dataQuery.data.result, ['time', param]);
 
@@ -119,6 +128,7 @@ export const SystemDynamicModelsContainer = () => {
             <CardContent>
               <ChartContainer config={chartConfig} className="h-full">
                 <LineChart
+                  key={JSON.stringify(data)}
                   accessibilityLayer
                   data={data}
                   margin={{

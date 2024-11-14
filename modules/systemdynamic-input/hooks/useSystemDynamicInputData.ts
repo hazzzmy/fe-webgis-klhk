@@ -67,6 +67,8 @@ type InitialParameterValueType = {
 interface ParameterStore {
   grid_layout: number;
   parameters: InitialParameterValueType;  // Holds the parameter data
+  isFetching: boolean;
+  setIsFetching: (value: boolean) => void;
   updateParameterValue: (key: keyof InitialParameterValueType, newValue: number) => void; // Action to update a parameter value
   resetParameters: () => void;
   setGridLayout: (value: number) => void;
@@ -81,6 +83,8 @@ export const useSystemDynamicParameter = create<ParameterStore>()(
     (set) => ({
       parameters: initialParameterValue,  // Set initial parameter values
       grid_layout: 2,
+      isFetching: false,
+      setIsFetching: (value: boolean) => set({ isFetching: value }),
       setGridLayout: (value:number) => set({ grid_layout: value }),
       resetParameters: () => set((state) => {
         const resetState = { parameters: initialParameterValue };
