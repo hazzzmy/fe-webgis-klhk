@@ -14,7 +14,7 @@ export const MainAppResizableLayout: React.FC<{ children: React.ReactNode, pathn
   const [sizeWidget, setSizeWidget] = useState(0);
   const systemDynamicControl = useSystemDynamicControl();
 
-  if (pathname === "/map") {
+  if (pathname === "/") {
     return (
       <ResizablePanelGroup
         direction="horizontal"
@@ -56,7 +56,7 @@ export const MainAppResizableLayout: React.FC<{ children: React.ReactNode, pathn
         </ResizablePanel>
       </ResizablePanelGroup>
     )
-  } else if (pathname === "/") {
+  } else if (pathname === "/systemdynamic") {
     return (
       <ResizablePanelGroup
         direction="horizontal"
