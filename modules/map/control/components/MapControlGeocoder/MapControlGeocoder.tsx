@@ -105,6 +105,10 @@ export const MapControlGeocoder:React.FC<MapControlGeocoderProps> = (props) => {
     return (
         <div className="MapControlGeocoder">
             <div className="flex gap-1 items-center">
+                <div
+                    ref={geocoderContainerRef}
+                    style={{ display: active ? 'block' : 'none'}} // Show/hide based on state
+                />
                 <SharedComponentButtonTooltip
                     tooltipProps={{
                         side: 'right',
@@ -118,10 +122,6 @@ export const MapControlGeocoder:React.FC<MapControlGeocoderProps> = (props) => {
                         <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                     </svg>
                 </SharedComponentButtonTooltip>
-                <div
-                    ref={geocoderContainerRef}
-                    style={{ display: active ? 'block' : 'none'}} // Show/hide based on state
-                />
             </div>
         </div>
     );

@@ -8,12 +8,12 @@ export const MainAppSidebar:React.FC<{ navItems: {path: string, title: string, i
       <div
         className="h-full max-h-screen shadow-xl w-[60px] z-50"
       >
-          <TooltipProvider>
+          {/* <TooltipProvider>
             <NavSidebar
               isCollapsed={true}
               links={props.navItems}
             />
-          </TooltipProvider>
+          </TooltipProvider> */}
       </div>
     )
 }

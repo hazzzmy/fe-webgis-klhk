@@ -103,7 +103,7 @@ export const SystemDynamicModelsContainer = () => {
   }
 
   return dataQuery.data && activeParameters.length > 0 ? (
-      <div className={`p-6 gap-2 flex overflow-y-auto scrollbar-none max-h-screen grid grid-cols-${grid_layout} w-full`}>
+      <div className={`p-6 gap-2 flex overflow-y-auto custom-scrollbar grid grid-cols-${grid_layout} w-full bg-white`}>
         { activeParameters.length > 0 && activeParameters.map((param: string) => {
           const baseline = filterData(dataQuery.data.baseline, ['time', param]);
           const simulation = filterData(dataQuery.data.result, ['time', param]);
@@ -177,12 +177,10 @@ export const SystemDynamicModelsContainer = () => {
         })}
       </div>
       ):(
-      <div className="p-6">
       <Card className="flex p-4 gap-2 justify-center items-center">
         <InfoIcon />
-        <p>please add first to see model visualization</p>
+        <p>Please add the System Dynamic Model to see the results</p>
       </Card>
-      </div>
       )
 };
 

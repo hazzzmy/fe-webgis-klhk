@@ -27,11 +27,11 @@ const Layout: React.FC<{ children?: React.ReactNode }> = (props) => {
         },
       ]}
     >
-       <MainAppResizableLayout pathname={pathname}>
-      <MapLayout>
-        {props.children}
-      </MapLayout>
-    </MainAppResizableLayout>
+      <MainAppResizableLayout pathname={pathname}>
+        <MapLayout>
+          {props.children}
+        </MapLayout>
+      </MainAppResizableLayout>
     </MainAppLayout>
   );
 };

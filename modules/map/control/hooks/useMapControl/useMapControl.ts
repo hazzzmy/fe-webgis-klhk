@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { devtools } from 'zustand/middleware'
-import { basemapSourceList as basemap, tools } from './initialState';
+import { basemapSourceList as basemap, tools, navControl } from './initialState';
 import { LayerListItem } from '@/types';
 
 type GenericTools = {
@@ -19,6 +19,15 @@ type GenericTools = {
        | 'layerControl'
        | 'widgetTools'
        | 'attributesTable'
+};
+
+type navControls = {
+    active: boolean;
+    disabled: boolean;
+    show: boolean;
+    type: 
+    |'layers'
+    |'systemDynamic'
 };
 
 interface MapControlStore {
@@ -40,6 +49,8 @@ interface MapControlStore {
 	};
     tools: { [k in GenericTools['type']]: Omit<GenericTools, 'type'> };
     toolConfig: (x: {key: GenericTools['type'], config: Partial<Omit<GenericTools, 'type'>> }) => void;
+    navControl: { [k in navControls['type']]: Omit<navControls, 'type'> };
+    navControlConfig: (x: {key: navControls['type'], config: Partial<Omit<navControls, 'type'>> }) => void;
     distanceInfo: string;
     setDistanceInfo: (x: string) => void;
     isOpenAddLayer: boolean;
@@ -77,6 +88,21 @@ export const useMapControl = create<MapControlStore>()(
                         prev.tools[key].show = config.show
                     }
                     return {tools: { ...prev.tools }}
+                }
+            ),
+            navControl,
+            navControlConfig: ({ key, config }) => set(
+                (prev) => {
+                    if (config.active !== undefined) {
+                        prev.navControl[key].active = config.active
+                    }
+                    if (config.disabled !== undefined) {
+                        prev.navControl[key].disabled = config.disabled
+                    }
+                    if (config.show !== undefined) {
+                        prev.navControl[key].show = config.show
+                    }
+                    return {navControl: { ...prev.navControl }}
                 }
             ),
             distanceInfo: '',

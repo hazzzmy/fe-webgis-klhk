@@ -11,20 +11,56 @@ import { MapControlMeasure } from '../../components/MapControlMeasure'
 import { MapControlBasemap } from '../../components/MapControlBasemap'
 import { ButtonToggleSidebar } from '../../components/ButtonToggleSidebar'
 import { ButtonToggleAttributeLayers } from '../../components/ButtonToggleAttributeLayers'
+import { usePathname } from 'next/navigation'
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '@/components/ui/resizable'
+import { AttributesTableContainer } from '@/modules/attribute-data/container/AttributesTableContainer'
 
 export const MapControlContainer = () => {
   const mapControl = useMapControl();
 
+  const pathname = usePathname()
+  // const active = pathname === '/map' ? mapControl.tools.layerControl.active : systemDynamicControl.tools.systemDynamicControl.active
+
+
   return (
     <React.Fragment>
+      <ResizablePanelGroup
+            direction="vertical"
+            className="h-full max-h-screen items-stretch"
+            style={{ paddingLeft: mapControl.tools.layerControl.active ? '336px' : '16px', paddingBottom:'16px', paddingRight:'56px' }}
+          >
+            <ResizablePanel><></></ResizablePanel>
+            {mapControl.tools.attributesTable.active && <ResizableHandle withHandle={mapControl.tools.attributesTable.active} />}
+            <ResizablePanel
+              defaultSize={42}
+              minSize={20}
+              maxSize={90}
+              style={{ display: mapControl.tools.attributesTable.active ? 'block' : 'none'}}
+              >
+              <div className='relative h-full'>
+                <AttributesTableContainer sizeWidgetTools={mapControl.tools.widgetTools.active ? 100 : 0} />
+              </div>
+            </ResizablePanel>
+          </ResizablePanelGroup>
+
       <div
         className='MapControlContainerTopLeft absolute'
         style={{
           top: 16,
-          left: 16,
+          right: 16,
         }}
       >
-        <div className='flex flex-col gap-2'>
+        <div className='flex flex-col gap-2 items-end'>
+          {mapControl.tools.widgetTools.show && (
+            <ButtonToggleSidebar
+              position='right'
+              isOpen={mapControl.tools.widgetTools.active}
+              onClick={() => {
+                mapControl.toolConfig({ key: 'widgetTools', config: { active: !mapControl.tools.widgetTools.active } })
+              }}
+              disabled={mapControl.tools.widgetTools.disabled}
+            />
+          )}
           {mapControl.tools.geocoder.show && (
             <MapControlGeocoder
               active={mapControl.tools.geocoder.active}
@@ -98,13 +134,23 @@ export const MapControlContainer = () => {
               setBasemap={mapControl.setActiveBasemap}
             />
           )}
+          {mapControl.tools.attributesTable.show && (
+              <ButtonToggleAttributeLayers
+                position='right'
+                isOpen={mapControl.tools.attributesTable.active}
+                onClick={() => {
+                  mapControl.toolConfig({ key: 'attributesTable', config: { active: !mapControl.tools.attributesTable.active } })
+                }}
+                disabled={mapControl.tools.attributesTable.disabled}
+              />
+          )}
         </div>
       </div>
       <div
         className='MapControlContainerBottomLeft absolute'
         style={{
-          bottom: 16,
-          left: 16,
+          top: 16,
+          left: mapControl.tools.layerControl.active ? 336 : 16,
         }}
       >
         <div className='flex flex-col gap-2'>
@@ -120,20 +166,10 @@ export const MapControlContainer = () => {
                 disabled={mapControl.tools.layerControl.disabled}
               />
             )}
-            {mapControl.tools.attributesTable.show && (
-              <ButtonToggleAttributeLayers
-                position='left'
-                isOpen={mapControl.tools.attributesTable.active}
-                onClick={() => {
-                  mapControl.toolConfig({ key: 'attributesTable', config: { active: !mapControl.tools.attributesTable.active } })
-                }}
-                disabled={mapControl.tools.attributesTable.disabled}
-              />
-            )}
           </div>
         </div>
       </div>
-      <div
+      {/* <div
         className='MapControlContainerBottomRight absolute'
         style={{
           bottom: 16,
@@ -152,7 +188,7 @@ export const MapControlContainer = () => {
             />
           )}
         </div>
-      </div>
+      </div> */}
     </React.Fragment>
   )
 }

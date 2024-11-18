@@ -10,9 +10,10 @@ import { Separator } from '@/components/ui/separator';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@radix-ui/react-collapsible';
 import { ChevronsUpDown, InfoIcon } from 'lucide-react';
 import Spinner from '@/components/ui/spinner';
+import { useSystemDynamicControl } from '@/modules/systemdynamic/control/hooks';
+import { CustomSlider } from '@/components/ui/customSlider';
 
 export const SystemDynamicInputContainer = () => {
-  // Access Zustand store and the action to set the selected parameter
   const { parameters, grid_layout, updateParameterValue, resetParameters, setGridLayout, refetchData, toggleDescriptionOpen, isFetching} = useSystemDynamicParameter();
   
   const [rangeValue, setRangeValue] = useState<[number, number]>([
@@ -66,20 +67,22 @@ export const SystemDynamicInputContainer = () => {
     }
   }
 
-  return (
-    <div className="p-4 flex flex-col gap-4">
+  const systemDynamicControl = useSystemDynamicControl()
+
+  return systemDynamicControl.tools.systemDynamicInputControl.active && (
+    <div className="p-4 flex flex-col gap-4 max-h-[calc(100vh-60px)]">
       <div className='flex flex-row justify-between w-full items-center'>
         <h3 className="text-primary text-xl font-bold">Input Parameter</h3>
       </div>
-      <div className='overflow-y overflow-x-hidden flex flex-col h-[85vh] gap-2 p-2 bg-gray-100 rounded'>
-      <Card className="flex flex-col items-center justify-center p-4 rounded gap-4">
+      <div className='overflow-y overflow-x-hidden flex flex-col h-[85vh] gap-2 p-4 bg-white rounded custom-scrollbar'>
+      <Card className="flex flex-col items-center justify-center p-4 rounded gap-4 shadow">
         <div className="text text-primary flex justify-center items-center text-start w-full font-bold">
           <p>Grid Layout</p>
         </div>
         <div className="flex flex-row items-center w-full gap-4">
           <Slider
             min={1}
-            max={4}
+            max={3}
             step={1}
             value={[grid_layout]}
             onValueChange={(value) => handleChangeGrid(value)}
@@ -98,7 +101,7 @@ export const SystemDynamicInputContainer = () => {
           </div>
         </div>
       </Card>
-      <Card className="flex flex-col items-center justify-center p-4 rounded gap-4">
+      <Card className="flex flex-col items-center justify-center p-4 rounded gap-4 shadow">
         <div className="text text-primary flex justify-center items-center text-start w-full font-bold">
           <p>Time Range ({parameters.initial_time.unit})</p>
         </div>
@@ -135,12 +138,12 @@ export const SystemDynamicInputContainer = () => {
       </Card>
 
       {Object.entries(parameters).slice(2).map(([key, parameter]) => (
-        <Card key={key} className="flex flex-col items-center justify-center p-4 rounded gap-4">
+        <Card key={key} className="flex flex-col items-center justify-center p-4 rounded gap-4 shadow">
           <div className="text text-primary flex justify-center items-center text-start w-full font-bold">
             <p>{toTitleCase(key)} ({parameter.unit})</p>
           </div>
           <div className="flex flex-row items-center w-full gap-4">
-            <Slider
+            <CustomSlider
               min={parameter.min}
               max={parameter.max}
               step={parameter.step}

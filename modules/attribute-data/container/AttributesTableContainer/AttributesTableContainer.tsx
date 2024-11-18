@@ -17,6 +17,7 @@ import { useMapControl } from '@/modules/map/control/hooks/useMapControl';
 import { cn } from '@/lib/utils';
 import { useAttributeData } from '../../hooks/useAttributeData';
 export const AttributesTableContainer:React.FC<{ sizeWidgetTools: number }> = ({ sizeWidgetTools }) => {
+
     const mapControl = useMapControl();
 
     const { layers } = useMapData();
@@ -31,7 +32,7 @@ export const AttributesTableContainer:React.FC<{ sizeWidgetTools: number }> = ({
     return (
         <div
             className={cn(
-                'h-full p-6 flex flex-col gap-2',
+                'h-full p-6 flex flex-col gap-2 bg-white rounded-bl-md rounded-br-md',
                 mapControl.tools.layerControl.active ? `w-[calc(100vw-${370+sizeWidgetTools}px)]` : `w-[calc(100vw-${60+sizeWidgetTools}px)]`
             )}
         >

@@ -13,13 +13,12 @@ export const MainAppLayout:React.FC<{ children?: React.ReactNode, navItems: {pat
 
     return (
         <main className="MainAppLayout flex">
-            <MainAppSidebar navItems={props.navItems} />
             <div
-                className="MainAppLayoutChildren"
+                className="MainAppLayoutChildren h-screen"
                 style={{
                     position: 'relative',
                     flexGrow: 1,
-                    paddingLeft: active ? 310 : 0,
+                    // paddingLeft: active ? 310 : 0,
                 }}
             >
                 {props.children}

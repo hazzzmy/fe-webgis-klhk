@@ -82,7 +82,7 @@ export const useSystemDynamicParameter = create<ParameterStore>()(
   devtools(
     (set) => ({
       parameters: initialParameterValue,  // Set initial parameter values
-      grid_layout: 2,
+      grid_layout: 1,
       isFetching: false,
       setIsFetching: (value: boolean) => set({ isFetching: value }),
       setGridLayout: (value:number) => set({ grid_layout: value }),

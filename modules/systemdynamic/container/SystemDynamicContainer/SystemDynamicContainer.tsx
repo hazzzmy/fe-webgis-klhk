@@ -20,7 +20,6 @@ export const SystemDynamicContainer: React.FC<React.PropsWithChildren> = ({ chil
 	return (
 		<div className='relative h-[100vh] w-full'>
 			{modelsData?.data ? <>{children}</>: <LoadingComponent />}
-			
 		</div>
 	);
 };

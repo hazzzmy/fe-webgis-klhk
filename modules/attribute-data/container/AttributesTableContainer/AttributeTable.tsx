@@ -43,6 +43,8 @@ interface AttributesTableProps {
 }
 
 export const AttributeTable: React.FC<AttributesTableProps> = ({ layer, sizeWidgetTools, extent, filterByExtent, cqlFilter }) => {
+
+  console.log(sizeWidgetTools);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
@@ -236,10 +238,10 @@ export const AttributeTable: React.FC<AttributesTableProps> = ({ layer, sizeWidg
             </div>
           </div>
           <div
-            className='flex rounded-md border max-h-[50vh] overflow-auto'
-            style={{
-              width: mapControl.tools.layerControl.active ? `calc(100vw - ${420 + sizeWidgetTools}px)` : `calc(100vw - ${120 + sizeWidgetTools}px)`
-            }}
+            className='flex rounded-md border max-h-[50vh] w-full overflow-auto'
+            // style={{
+            //   width: mapControl.tools.layerControl.active ? `calc(100vw - ${420 + sizeWidgetTools}px)` : `calc(100vw - ${120 + sizeWidgetTools}px)`
+            // }}
           >
             <Table>
               <TableHeader>

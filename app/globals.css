@@ -85,6 +85,22 @@
           -ms-overflow-style: none;  /* IE and Edge */
           scrollbar-width: none;  /* Firefox */
     }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 8px; /* Scrollbar width */
+      height: 8px; /* Scrollbar height */
+    }
+  
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f3f4f6; /* Track color (gray-100) */
+    }
+  
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #9ca3af; /* Thumb color (gray-400) */
+    }
+  
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #6b7280; /* Thumb hover color (gray-600) */
+    }
   }
 
 .maplibre-popup-content {

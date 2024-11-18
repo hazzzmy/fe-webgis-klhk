@@ -33,7 +33,7 @@ export const initialSystemDynamicList:SystemDynamic[] = [
     {
         uuid:"c7b37d9d-2de7-4aa3-8cea-de784c853c1b",
         type:"single",
-        name:"Tk Pengangguran",
+        name:"Tingkat Pengangguran",
         parameter:["Tk Pengangguran"],
         active:false,
     },
@@ -55,7 +55,7 @@ export const initialSystemDynamicList:SystemDynamic[] = [
         uuid:"fed3e965-3f02-46b6-9f33-10f0f5dbed03",
         type:"multiple",
         name:"Ambang Batas Pangan dan Tempat Tinggal Penduduk",
-        parameter:["Ambang Batas Penduduk Pangan","Ambang Batas penduduk tempat tinggal","Populasi Pulau"],
+        parameter:["Ambang Batas Penduduk Pangan","Ambang Batas penduduk tempat tinggal"],
         active:false,
     }
 ]

@@ -33,7 +33,7 @@ COPY --from=builder /app/public /app/public
 COPY --from=builder /app/package*.json /app/
 
 # Expose the necessary port
-EXPOSE 80
+EXPOSE 3000
 
 # Start the application
 CMD ["npm", "start"]

@@ -11,6 +11,7 @@ import { LayerListItem } from "@/types";
 import { AlertDialog, AlertDialogContent } from "@/components/ui/alert-dialog";
 import { Info } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { SystemDynamicControlContainer } from "@/modules/systemdynamic/control/container/SystemDynamicControlContainer";
 
 export const MapControlLayersContainer = () => {
     const mapControl = useMapControl();
@@ -201,76 +202,87 @@ export const MapControlLayersContainer = () => {
         <MapControlLayers
             open={true}
             style={{
-                paddingLeft: 60,
-                display: mapControl.tools.layerControl.active ? '' : 'none' // prevent reseting state
+                display: mapControl.tools.layerControl.active ? '' : 'none', // prevent reseting state
+                position: 'absolute',
+                top: '16px',
+                left: '16px',
+                marginBottom: '16px',
+                borderRadius: '8px',
             }}
             addLayer={() => {
                 mapControl.setIsOpenAddLayer(true);
             }}
         >
-            <div className="LayerList grid gap-2 p-3 text-primary">
-                {mapData.layers.length > 0 ? (
-                    <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-                        <SortableContext items={mapData.layers.map((layer) => layer.id)} strategy={verticalListSortingStrategy}>
-                            {mapData.layers.map((layer) => {
-                                return <SortableCardLayer
-                                    key={`${layer.id}-${layer.name}`}
-                                    layer={layer}
-                                    onCheck={handleOnCheck}
-                                    onOpacityChange={(value) => {
-                                        handleOpacityChange(value, layer.id)
-                                    }}
-                                    onZoomToLayer={() => handleZoomToLayer(layer)}
-                                    onDeleteLayer={() => handleClickDeleteLayer(layer)}
+            {mapControl.navControl.layers.active && (
+                <>
+                <div className="LayerList grid gap-2 p-3 text-primary">
+                    {mapData.layers.length > 0 ? (
+                        <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+                            <SortableContext items={mapData.layers.map((layer) => layer.id)} strategy={verticalListSortingStrategy}>
+                                {mapData.layers.map((layer) => {
+                                    return <SortableCardLayer
+                                        key={`${layer.id}-${layer.name}`}
+                                        layer={layer}
+                                        onCheck={handleOnCheck}
+                                        onOpacityChange={(value) => {
+                                            handleOpacityChange(value, layer.id)
+                                        }}
+                                        onZoomToLayer={() => handleZoomToLayer(layer)}
+                                        onDeleteLayer={() => handleClickDeleteLayer(layer)}
+                                    />
+                                }
+                            )}
+                            </SortableContext>
+                            <DragOverlay>
+                                <div
+                                    className={cn(
+                                        'w-full h-full',
+                                        'bg-white/90'
+                                    )}
                                 />
-                            }
-                        )}
-                        </SortableContext>
-                        <DragOverlay>
-                            <div
-                                className={cn(
-                                    'w-full h-full',
-                                    'bg-white/90'
-                                )}
-                            />
-                        </DragOverlay>
-                    </DndContext>) : (
-                        <Card className="bg-[#F2F2F2] text-primary rounded-md shadow-md flex items-center gap-2 px-2 py-4">
-                            <Info height={20} width={20} />
-                            <span>Add Layer for Data Exploration</span>
-                        </Card>
-                    ) 
-                }
-            </div>
-            <AlertDialog open={isShowDialog}>
-                <AlertDialogContent className="py-10 px-4">
-                    <div className="flex flex-col gap-4">
-                        <div className="text-primary text-center text-lg">
-                            &quot;Please Confirm: Do You Really Want to Remove This Layer?&quot;
-                        </div>
-                        <div className="flex items-center justify-center gap-2">
-                            <div
-                                className="bg-secondary text-primary text-center px-8 py-2 rounded-md cursor-pointer"
-                                onClick={() => {
-                                    if (deleteLayer) {
-                                        handleConfirmDeleteLayer(deleteLayer)
-                                    }
-                                }}
-                            >
-                                Remove
+                            </DragOverlay>
+                        </DndContext>) : (
+                            <Card className="bg-[#F2F2F2] text-primary rounded-md shadow-md flex items-center gap-2 px-2 py-4">
+                                <Info height={20} width={20} />
+                                <span>Add Layer for Data Exploration</span>
+                            </Card>
+                        ) 
+                    }
+                </div>
+                <AlertDialog open={isShowDialog}>
+                    <AlertDialogContent className="py-10 px-4">
+                        <div className="flex flex-col gap-4">
+                            <div className="text-primary text-center text-lg">
+                                &quot;Please Confirm: Do You Really Want to Remove This Layer?&quot;
                             </div>
-                            <div
-                                className="bg-secondary text-primary text-center px-8 py-2 rounded-md cursor-pointer"
-                                onClick={() => {
-                                    setIsShowDialog(false)
-                                }}
-                            >
-                                Cancel
+                            <div className="flex items-center justify-center gap-2">
+                                <div
+                                    className="bg-secondary text-primary text-center px-8 py-2 rounded-md cursor-pointer"
+                                    onClick={() => {
+                                        if (deleteLayer) {
+                                            handleConfirmDeleteLayer(deleteLayer)
+                                        }
+                                    }}
+                                >
+                                    Remove
+                                </div>
+                                <div
+                                    className="bg-secondary text-primary text-center px-8 py-2 rounded-md cursor-pointer"
+                                    onClick={() => {
+                                        setIsShowDialog(false)
+                                    }}
+                                >
+                                    Cancel
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </AlertDialogContent>
-            </AlertDialog>
+                    </AlertDialogContent>
+                </AlertDialog>
+                </>
+            )}
+            {mapControl.navControl.systemDynamic.active && (
+                <SystemDynamicControlContainer/>
+            )}
         </MapControlLayers>
     )
 }

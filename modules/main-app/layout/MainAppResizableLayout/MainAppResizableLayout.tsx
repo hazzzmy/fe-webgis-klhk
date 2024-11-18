@@ -18,33 +18,34 @@ export const MainAppResizableLayout: React.FC<{ children: React.ReactNode, pathn
     return (
       <ResizablePanelGroup
         direction="horizontal"
-        className="h-full max-h-screen items-stretch"
+        className="h-full max-h-screen items-stretch w-full"
       >
-        <ResizablePanel defaultSize={100}>
+        <ResizablePanel className='w-full h-full'>
+          {children}
+        </ResizablePanel>
+        {/* <ResizablePanel defaultSize={100}>
           <ResizablePanelGroup
             direction="vertical"
             className="h-full max-h-screen items-stretch"
           >
-            <ResizablePanel className='w-full h-full bg-white'>
-              {children}
-            </ResizablePanel>
             <ResizableHandle withHandle={mapControl.tools.attributesTable.active} />
             <ResizablePanel
               defaultSize={42}
               minSize={20}
               maxSize={80}
-              style={{ display: mapControl.tools.attributesTable.active ? 'block' : 'none' }}>
-              <div className='relative h-full bg-white'>
+              style={{ display: mapControl.tools.attributesTable.active ? 'block' : 'none', marginLeft: mapControl.tools.layerControl.active ? '326px' : '0'}}
+              >
+              <div className='relative h-full'>
                 <AttributesTableContainer sizeWidgetTools={mapControl.tools.widgetTools.active ? sizeWidget : 0} />
               </div>
             </ResizablePanel>
           </ResizablePanelGroup>
-        </ResizablePanel>
+        </ResizablePanel> */}
         <ResizableHandle withHandle={mapControl.tools.widgetTools.active} />
         <ResizablePanel
-          defaultSize={20}
+          defaultSize={30}
           minSize={20}
-          maxSize={60}
+          maxSize={75}
           style={{ display: mapControl.tools.widgetTools.active ? 'block' : 'none' }}
           onResize={(size) => {
             const sizeInPX = (size / 100) * ((window.innerWidth || 0) - (!mapControl.tools.layerControl.active ? 60 : 370))

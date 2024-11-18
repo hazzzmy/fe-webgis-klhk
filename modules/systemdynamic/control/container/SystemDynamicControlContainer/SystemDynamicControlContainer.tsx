@@ -36,7 +36,6 @@ export const SystemDynamicControlContainer = () => {
         <SystemDynamicControl
             open={true}
             style={{
-                paddingLeft: 60,
                 display: systemDynamicControl.tools.systemDynamicControl.active ? '' : 'none'
             }}
             showAll={handleShowAllModel}

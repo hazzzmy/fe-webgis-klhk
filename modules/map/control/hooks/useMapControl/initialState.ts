@@ -116,3 +116,16 @@ export const tools = {
         show: true,
     },
 }
+
+export const navControl={
+    layers:{
+        active:true,
+        disabled:false,
+        show:true,
+    },
+    systemDynamic:{
+        active:false,
+        disabled:false,
+        show:true,
+    }
+}

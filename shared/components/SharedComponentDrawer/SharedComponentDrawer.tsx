@@ -18,9 +18,10 @@ export const SharedComponentDrawer:React.FC<SharedComponentDrawerProps> = (props
                         bottom: 0,
                         top: 0,
                         ...style,
-                        animation: 'none'
+                        animation: 'none',
+                        height: 'fit-content'
                     }}
-                    className="fixed z-10 flex outline-none"
+                    className="fixed z-10 flex outline-none max-h-[calc(100vh-16px)]"
                     data-vaul-no-drag
                 >
                     <Drawer.Title />

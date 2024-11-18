@@ -1,6 +1,6 @@
 export const tools = {
     map: {
-        active: false,
+        active: true,
     },
     systemDynamic: {
         active: false,

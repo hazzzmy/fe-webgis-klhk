@@ -1,6 +1,5 @@
 import { Checkbox } from "@/components/ui/checkbox";
 import { cn, toTitleCase } from "@/lib/utils";
-import { Slider } from "@/components/ui/slider";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Button } from "@/components/ui/button";
 import { ChevronsDownUp, ChevronsUpDown, CircleMinus, CirclePlusIcon, Filter, Fullscreen, GripVerticalIcon, Info } from "lucide-react";
