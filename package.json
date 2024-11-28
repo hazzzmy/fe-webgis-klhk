@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/clerk-sdk-node": "^5.0.69",
     "@clerk/nextjs": "^4.30.0",
     "@dnd-kit/modifiers": "^7.0.0",
     "@dnd-kit/sortable": "^8.0.0",
@@ -60,6 +61,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "cmdk": "^1.0.0",
+    "cookie": "^1.0.2",
     "cors": "^2.8.5",
     "d3-shape": "^3.2.0",
     "date-fns": "^3.6.0",
@@ -108,6 +110,7 @@
   },
   "devDependencies": {
     "@tanstack/react-query-devtools": "^5.29.2",
+    "@types/cookie": "^1.0.0",
     "@types/eventsource": "^1.1.15",
     "@types/lodash": "^4.17.5",
     "@types/node": "^20",

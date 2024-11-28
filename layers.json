@@ -1,0 +1,3358 @@
+{
+    "layers": {
+      "layer": [
+        {
+          "name": "Pertamina_PLN:co_jakarta",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/Pertamina_PLN%3Aco_jakarta.json"
+        },
+        {
+          "name": "Pertamina_PLN:no2_jakarta",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/Pertamina_PLN%3Ano2_jakarta.json"
+        },
+        {
+          "name": "Pertamina_PLN:so2_jakarta",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/Pertamina_PLN%3Aso2_jakarta.json"
+        },
+        {
+          "name": "Tematik_KKP3:IG_LAHAN_JENEPONTO",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/Tematik_KKP3%3AIG_LAHAN_JENEPONTO.json"
+        },
+        {
+          "name": "hso:desa_desa",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/hso%3Adesa_desa.json"
+        },
+        {
+          "name": "hso:hso_test_desa",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/hso%3Ahso_test_desa.json"
+        },
+        {
+          "name": "Kantor_UPT:Lokasi_Kantor_UPT",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/Kantor_UPT%3ALokasi_Kantor_UPT.json"
+        },
+        {
+          "name": "Bantuan_Pemerintah:Bantuan Pemerintah per Kabupaten",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/Bantuan_Pemerintah%3ABantuan+Pemerintah+per+Kabupaten.json"
+        },
+        {
+          "name": "Bantuan_Pemerintah:Bantuan_Pemerintah_per_Provinsi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/Bantuan_Pemerintah%3ABantuan_Pemerintah_per_Provinsi.json"
+        },
+        {
+          "name": "Bantuan_Pemerintah:Detail Bantuan Pemerintah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/Bantuan_Pemerintah%3ADetail+Bantuan+Pemerintah.json"
+        },
+        {
+          "name": "demo:BMKG - prakiraan_awal_musim_hujan_2021",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3ABMKG+-+prakiraan_awal_musim_hujan_2021.json"
+        },
+        {
+          "name": "demo:BMKG - prakiraan_puncak_musim_hujan_2021",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3ABMKG+-+prakiraan_puncak_musim_hujan_2021.json"
+        },
+        {
+          "name": "demo:FAT_rfs",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3AFAT_rfs.json"
+        },
+        {
+          "name": "demo:Tokio Marine Indonesia",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3ATokio+Marine+Indonesia.json"
+        },
+        {
+          "name": "demo:risk_flood_historis_gee",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Arisk_flood_historis_gee.json"
+        },
+        {
+          "name": "demo:tbl_banjir_bpbd_jakarta",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_banjir_bpbd_jakarta.json"
+        },
+        {
+          "name": "demo:tbl_bencana_banjir_bandang_bps",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_bencana_banjir_bandang_bps.json"
+        },
+        {
+          "name": "demo:tbl_bencana_gempa_bumi_esdm",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_bencana_gempa_bumi_esdm.json"
+        },
+        {
+          "name": "demo:tbl_bencana_gunung_api_esdm",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_bencana_gunung_api_esdm.json"
+        },
+        {
+          "name": "demo:tbl_bencana_kekeringan_bnpb",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_bencana_kekeringan_bnpb.json"
+        },
+        {
+          "name": "demo:tbl_bencana_kekeringan_bps",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_bencana_kekeringan_bps.json"
+        },
+        {
+          "name": "demo:tbl_bencana_longsor_esdm",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_bencana_longsor_esdm.json"
+        },
+        {
+          "name": "demo:tbl_bencana_tsunami_bnpb",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_bencana_tsunami_bnpb.json"
+        },
+        {
+          "name": "demo:tbl_bencana_tsunami_esdm",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_bencana_tsunami_esdm.json"
+        },
+        {
+          "name": "demo:tbl_rdtr_dki_jakarta_2022",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_rdtr_dki_jakarta_2022.json"
+        },
+        {
+          "name": "demo:tbl_rtrw",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_rtrw.json"
+        },
+        {
+          "name": "demo:tbl_ses_2021",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_ses_2021.json"
+        },
+        {
+          "name": "demo:tbl_status_bencana_banjir_bps",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_status_bencana_banjir_bps.json"
+        },
+        {
+          "name": "demo:tbl_status_bencana_kebakaran_hutan_bps",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_status_bencana_kebakaran_hutan_bps.json"
+        },
+        {
+          "name": "demo:tbl_status_bencana_longsor_bps",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_status_bencana_longsor_bps.json"
+        },
+        {
+          "name": "demo:tbl_status_bencana_puting_beliung_bps",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_status_bencana_puting_beliung_bps.json"
+        },
+        {
+          "name": "demo:tbl_znt_2021",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/demo%3Atbl_znt_2021.json"
+        },
+        {
+          "name": "ksp:Klasifikasi tingkat kerawanan bencana",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/ksp%3AKlasifikasi+tingkat+kerawanan+bencana.json"
+        },
+        {
+          "name": "ksp:klasifikasi tingkat kerawanan kriminalitas",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/ksp%3Aklasifikasi+tingkat+kerawanan+kriminalitas.json"
+        },
+        {
+          "name": "ksp:klasifikasi tingkat kerawanan kriminalitas dan bencana",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/ksp%3Aklasifikasi+tingkat+kerawanan+kriminalitas+dan+bencana.json"
+        },
+        {
+          "name": "IGT_Biota_laut_Dilindungi:biota_Habitat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/IGT_Biota_laut_Dilindungi%3Abiota_Habitat.json"
+        },
+        {
+          "name": "IGT_Biota_laut_Dilindungi:biota_kemunculan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/IGT_Biota_laut_Dilindungi%3Abiota_kemunculan.json"
+        },
+        {
+          "name": "IGT_Biota_laut_Dilindungi:biota_keterancaman",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/IGT_Biota_laut_Dilindungi%3Abiota_keterancaman.json"
+        },
+        {
+          "name": "IGT_Biota_laut_Dilindungi:biota_keterdamparan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/IGT_Biota_laut_Dilindungi%3Abiota_keterdamparan.json"
+        },
+        {
+          "name": "telco_data:desa",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/telco_data%3Adesa.json"
+        },
+        {
+          "name": "telco_data:desa_geom",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/telco_data%3Adesa_geom.json"
+        },
+        {
+          "name": "telco_data:district",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/telco_data%3Adistrict.json"
+        },
+        {
+          "name": "telco_data:kabupaten",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/telco_data%3Akabupaten.json"
+        },
+        {
+          "name": "telco_data:kecamatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/telco_data%3Akecamatan.json"
+        },
+        {
+          "name": "telco_data:kecamatan_testing",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/telco_data%3Akecamatan_testing.json"
+        },
+        {
+          "name": "telco_data:province",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/telco_data%3Aprovince.json"
+        },
+        {
+          "name": "telco_data:regency",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/telco_data%3Aregency.json"
+        },
+        {
+          "name": "telco_data:sandt",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/telco_data%3Asandt.json"
+        },
+        {
+          "name": "telco_data:telco_geom",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/telco_data%3Atelco_geom.json"
+        },
+        {
+          "name": "telco_data:telco_origin_destination",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/telco_data%3Atelco_origin_destination.json"
+        },
+        {
+          "name": "telco_data:village",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/telco_data%3Avillage.json"
+        },
+        {
+          "name": "bpn:Akses Pendidikan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/bpn%3AAkses+Pendidikan.json"
+        },
+        {
+          "name": "bpn:Akses_Hiburan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/bpn%3AAkses_Hiburan.json"
+        },
+        {
+          "name": "bpn:Akses_Kesehatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/bpn%3AAkses_Kesehatan.json"
+        },
+        {
+          "name": "bpn:Akses_Transportasi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/bpn%3AAkses_Transportasi.json"
+        },
+        {
+          "name": "bpn:Commercial_Index_Land",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/bpn%3ACommercial_Index_Land.json"
+        },
+        {
+          "name": "bpn:parcel_jakarta",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/bpn%3Aparcel_jakarta.json"
+        },
+        {
+          "name": "XL:Coverage",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/XL%3ACoverage.json"
+        },
+        {
+          "name": "XL:FAT_rfs",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/XL%3AFAT_rfs.json"
+        },
+        {
+          "name": "XL:cluster_RFS",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/XL%3Acluster_RFS.json"
+        },
+        {
+          "name": "XL:data_demografi_xl",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/XL%3Adata_demografi_xl.json"
+        },
+        {
+          "name": "XL:geohash_xl",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/XL%3Ageohash_xl.json"
+        },
+        {
+          "name": "XL:household_makasssar_rfs2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/XL%3Ahousehold_makasssar_rfs2.json"
+        },
+        {
+          "name": "XL:market_share_competitor",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/XL%3Amarket_share_competitor.json"
+        },
+        {
+          "name": "XL:non_rfs_makassar",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/XL%3Anon_rfs_makassar.json"
+        },
+        {
+          "name": "XL:road_non_rfs",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/XL%3Aroad_non_rfs.json"
+        },
+        {
+          "name": "XL:road_rfs",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/XL%3Aroad_rfs.json"
+        },
+        {
+          "name": "XL:road_selected_cover",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/XL%3Aroad_selected_cover.json"
+        },
+        {
+          "name": "XL:tbl_h3_point_xl",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/XL%3Atbl_h3_point_xl.json"
+        },
+        {
+          "name": "XL:tbl_ses_2021_xl",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/XL%3Atbl_ses_2021_xl.json"
+        },
+        {
+          "name": "staging-lokasimaps:2021_admin_indonesia",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3A2021_admin_indonesia.json"
+        },
+        {
+          "name": "staging-lokasimaps:2021_admin_kabkot",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3A2021_admin_kabkot.json"
+        },
+        {
+          "name": "staging-lokasimaps:2021_admin_kec",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3A2021_admin_kec.json"
+        },
+        {
+          "name": "staging-lokasimaps:2021_admin_prov",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3A2021_admin_prov.json"
+        },
+        {
+          "name": "staging-lokasimaps:base_line_v2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abase_line_v2.json"
+        },
+        {
+          "name": "staging-lokasimaps:base_railway_v2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abase_railway_v2.json"
+        },
+        {
+          "name": "staging-lokasimaps:base_station_v2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abase_station_v2.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1101_aceh_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1101_aceh_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1102_aceh_tenggara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1102_aceh_tenggara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1103_aceh_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1103_aceh_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1104_aceh_tengah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1104_aceh_tengah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1105_aceh_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1105_aceh_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1106_aceh_besar",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1106_aceh_besar.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1107_pidie",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1107_pidie.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1108_aceh_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1108_aceh_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1109_simeulue",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1109_simeulue.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1110_aceh_singkil",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1110_aceh_singkil.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1111_bireuen",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1111_bireuen.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1112_aceh_barat_daya",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1112_aceh_barat_daya.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1113_gayo_lues",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1113_gayo_lues.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1114_aceh_jaya",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1114_aceh_jaya.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1115_nagan_raya",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1115_nagan_raya.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1116_aceh_tamiang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1116_aceh_tamiang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1117_bener_meriah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1117_bener_meriah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1118_pidie_jaya",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1118_pidie_jaya.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1171_kota_banda_aceh",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1171_kota_banda_aceh.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1172_kota_sabang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1172_kota_sabang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1173_kota_lhokseumawe",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1173_kota_lhokseumawe.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1174_kota_langsa",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1174_kota_langsa.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1175_kota_subulussalam",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1175_kota_subulussalam.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1201_tapanuli_tengah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1201_tapanuli_tengah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1202_tapanuli_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1202_tapanuli_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1203_tapanuli_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1203_tapanuli_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1204_nias",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1204_nias.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1205_langkat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1205_langkat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1206_karo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1206_karo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1207_deli_serdang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1207_deli_serdang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1208_simalungun",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1208_simalungun.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1209_asahan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1209_asahan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1210_labuhanbatu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1210_labuhanbatu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1211_dairi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1211_dairi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1212_toba_samosir",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1212_toba_samosir.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1213_mandailing_natal",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1213_mandailing_natal.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1214_nias_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1214_nias_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1215_pakpak_bharat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1215_pakpak_bharat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1216_humbang_hasundutan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1216_humbang_hasundutan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1217_samosir",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1217_samosir.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1218_serdang_bedagai",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1218_serdang_bedagai.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1219_batu_bara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1219_batu_bara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1220_padang_lawas_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1220_padang_lawas_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1221_padang_lawas",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1221_padang_lawas.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1222_labuhanbatu_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1222_labuhanbatu_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1223_labuhanbatu_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1223_labuhanbatu_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1224_nias_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1224_nias_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1225_nias_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1225_nias_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1271_kota_medan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1271_kota_medan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1272_kota_pematangsiantar",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1272_kota_pematangsiantar.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1273_kota_sibolga",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1273_kota_sibolga.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1274_kota_tanjung_balai",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1274_kota_tanjung_balai.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1275_kota_binjai",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1275_kota_binjai.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1276_kota_tebing_tinggi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1276_kota_tebing_tinggi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1277_kota_padang_sidimpuan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1277_kota_padang_sidimpuan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1278_kota_gunungsitoli",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1278_kota_gunungsitoli.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1299_danau_toba",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1299_danau_toba.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1301_pesisir_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1301_pesisir_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1302_solok",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1302_solok.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1303_sijunjung",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1303_sijunjung.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1304_tanah_datar",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1304_tanah_datar.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1305_padang_pariaman",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1305_padang_pariaman.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1306_agam",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1306_agam.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1307_lima_puluh_kota",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1307_lima_puluh_kota.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1308_pasaman",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1308_pasaman.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1309_kepulauan_mentawai",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1309_kepulauan_mentawai.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1310_dharmasraya",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1310_dharmasraya.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1311_solok_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1311_solok_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1312_pasaman_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1312_pasaman_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1371_kota_padang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1371_kota_padang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1372_kota_solok",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1372_kota_solok.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1373_kota_sawahlunto",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1373_kota_sawahlunto.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1374_kota_padang_panjang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1374_kota_padang_panjang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1375_kota_bukittinggi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1375_kota_bukittinggi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1376_kota_payakumbuh",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1376_kota_payakumbuh.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1377_kota_pariaman",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1377_kota_pariaman.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1399_danau_singkarak",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1399_danau_singkarak.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1401_kampar",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1401_kampar.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1402_indragiri_hulu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1402_indragiri_hulu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1403_bengkalis",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1403_bengkalis.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1404_indragiri_hilir",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1404_indragiri_hilir.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1405_pelalawan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1405_pelalawan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1406_rokan_hulu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1406_rokan_hulu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1407_rokan_hilir",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1407_rokan_hilir.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1408_siak",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1408_siak.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1409_kuantan_singingi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1409_kuantan_singingi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1410_kepulauan_meranti",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1410_kepulauan_meranti.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1471_kota_pekanbaru",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1471_kota_pekanbaru.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1472_kota_dumai",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1472_kota_dumai.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1501_kerinci",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1501_kerinci.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1502_merangin",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1502_merangin.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1503_sarolangun",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1503_sarolangun.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1504_batanghari",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1504_batanghari.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1505_muaro_jambi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1505_muaro_jambi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1506_tanjung_jabung_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1506_tanjung_jabung_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1507_tanjung_jabung_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1507_tanjung_jabung_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1508_bungo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1508_bungo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1509_tebo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1509_tebo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1571_kota_jambi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1571_kota_jambi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1572_kota_sungai_penuh",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1572_kota_sungai_penuh.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1601_ogan_komering_ulu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1601_ogan_komering_ulu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1602_ogan_komering_ilir",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1602_ogan_komering_ilir.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1603_muara_enim",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1603_muara_enim.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1604_lahat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1604_lahat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1605_musi_rawas",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1605_musi_rawas.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1606_musi_banyuasin",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1606_musi_banyuasin.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1607_banyuasin",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1607_banyuasin.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1608_ogan_komering_ulu_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1608_ogan_komering_ulu_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1609_ogan_komering_ulu_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1609_ogan_komering_ulu_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1610_ogan_ilir",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1610_ogan_ilir.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1611_empat_lawang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1611_empat_lawang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1612_penukal_abab_lematang_ilir",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1612_penukal_abab_lematang_ilir.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1613_musi_rawas_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1613_musi_rawas_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1671_kota_palembang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1671_kota_palembang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1672_kota_pagar_alam",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1672_kota_pagar_alam.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1673_kota_lubuklinggau",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1673_kota_lubuklinggau.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1674_kota_prabumulih",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1674_kota_prabumulih.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1701_bengkulu_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1701_bengkulu_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1702_rejang_lebong",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1702_rejang_lebong.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1703_bengkulu_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1703_bengkulu_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1704_kaur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1704_kaur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1705_seluma",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1705_seluma.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1706_mukomuko",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1706_mukomuko.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1707_lebong",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1707_lebong.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1708_kepahiang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1708_kepahiang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1709_bengkulu_tengah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1709_bengkulu_tengah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1771_kota_bengkulu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1771_kota_bengkulu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1801_lampung_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1801_lampung_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1802_lampung_tengah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1802_lampung_tengah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1803_lampung_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1803_lampung_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1804_lampung_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1804_lampung_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1805_tulang_bawang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1805_tulang_bawang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1806_tanggamus",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1806_tanggamus.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1807_lampung_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1807_lampung_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1808_way_kanan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1808_way_kanan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1809_pesawaran",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1809_pesawaran.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1810_pringsewu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1810_pringsewu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1811_mesuji",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1811_mesuji.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1812_tulang_bawang_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1812_tulang_bawang_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1813_pesisir_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1813_pesisir_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1871_kota_bandar_lampung",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1871_kota_bandar_lampung.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1872_kota_metro",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1872_kota_metro.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1901_bangka",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1901_bangka.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1902_belitung",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1902_belitung.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1903_bangka_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1903_bangka_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1904_bangka_tengah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1904_bangka_tengah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1905_bangka_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1905_bangka_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1906_belitung_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1906_belitung_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_1971_kota_pangkalpinang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_1971_kota_pangkalpinang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_2101_bintan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_2101_bintan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_2102_karimun",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_2102_karimun.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_2103_natuna",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_2103_natuna.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_2104_lingga",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_2104_lingga.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_2105_kepulauan_anambas",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_2105_kepulauan_anambas.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_2171_kota_batam",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_2171_kota_batam.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_2172_kota_tanjungpinang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_2172_kota_tanjungpinang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3101_kepulauan_seribu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3101_kepulauan_seribu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3171_jakarta_pusat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3171_jakarta_pusat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3172_jakarta_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3172_jakarta_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3173_jakarta_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3173_jakarta_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3174_jakarta_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3174_jakarta_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3175_jakarta_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3175_jakarta_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3201_bogor",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3201_bogor.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3202_sukabumi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3202_sukabumi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3203_cianjur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3203_cianjur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3204_bandung",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3204_bandung.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3205_garut",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3205_garut.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3206_tasikmalaya",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3206_tasikmalaya.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3207_ciamis",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3207_ciamis.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3208_kuningan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3208_kuningan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3209_cirebon",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3209_cirebon.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3210_majalengka",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3210_majalengka.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3211_sumedang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3211_sumedang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3212_indramayu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3212_indramayu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3213_subang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3213_subang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3214_purwakarta",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3214_purwakarta.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3215_karawang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3215_karawang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3216_bekasi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3216_bekasi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3217_bandung_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3217_bandung_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3218_pangandaran",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3218_pangandaran.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3271_kota_bogor",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3271_kota_bogor.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3272_kota_sukabumi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3272_kota_sukabumi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3273_kota_bandung",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3273_kota_bandung.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3274_kota_cirebon",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3274_kota_cirebon.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3275_kota_bekasi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3275_kota_bekasi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3276_kota_depok",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3276_kota_depok.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3277_kota_cimahi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3277_kota_cimahi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3278_kota_tasikmalaya",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3278_kota_tasikmalaya.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3279_kota_banjar",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3279_kota_banjar.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3299_waduk_citara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3299_waduk_citara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3301_cilacap",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3301_cilacap.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3302_banyumas",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3302_banyumas.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3303_purbalingga",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3303_purbalingga.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3304_banjarnegara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3304_banjarnegara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3305_kebumen",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3305_kebumen.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3306_purworejo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3306_purworejo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3307_wonosobo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3307_wonosobo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3308_magelang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3308_magelang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3309_boyolali",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3309_boyolali.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3310_klaten",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3310_klaten.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3311_sukoharjo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3311_sukoharjo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3312_wonogiri",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3312_wonogiri.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3313_karanganyar",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3313_karanganyar.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3314_sragen",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3314_sragen.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3315_grobogan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3315_grobogan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3316_blora",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3316_blora.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3317_rembang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3317_rembang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3318_pati",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3318_pati.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3319_kudus",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3319_kudus.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3320_jepara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3320_jepara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3321_demak",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3321_demak.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3322_semarang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3322_semarang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3323_temanggung",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3323_temanggung.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3324_kendal",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3324_kendal.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3325_batang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3325_batang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3326_pekalongan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3326_pekalongan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3327_pemalang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3327_pemalang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3328_tegal",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3328_tegal.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3329_brebes",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3329_brebes.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3371_kota_magelang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3371_kota_magelang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3372_kota_surakarta",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3372_kota_surakarta.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3373_kota_salatiga",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3373_kota_salatiga.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3374_kota_semarang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3374_kota_semarang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3375_kota_pekalongan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3375_kota_pekalongan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3376_kota_tegal",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3376_kota_tegal.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3401_kulon_progo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3401_kulon_progo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3402_bantul",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3402_bantul.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3403_gunungkidul",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3403_gunungkidul.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3404_sleman",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3404_sleman.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3471_kota_yogyakarta",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3471_kota_yogyakarta.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3501_pacitan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3501_pacitan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3502_ponorogo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3502_ponorogo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3503_trenggalek",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3503_trenggalek.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3504_tulungagung",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3504_tulungagung.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3505_blitar",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3505_blitar.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3506_kediri",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3506_kediri.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3507_malang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3507_malang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3508_lumajang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3508_lumajang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3509_jember",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3509_jember.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3510_banyuwangi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3510_banyuwangi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3511_bondowoso",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3511_bondowoso.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3512_situbondo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3512_situbondo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3513_probolinggo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3513_probolinggo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3514_pasuruan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3514_pasuruan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3515_sidoarjo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3515_sidoarjo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3516_mojokerto",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3516_mojokerto.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3517_jombang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3517_jombang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3518_nganjuk",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3518_nganjuk.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3519_madiun",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3519_madiun.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3520_magetan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3520_magetan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3521_ngawi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3521_ngawi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3522_bojonegoro",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3522_bojonegoro.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3523_tuban",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3523_tuban.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3524_lamongan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3524_lamongan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3525_gresik",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3525_gresik.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3526_bangkalan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3526_bangkalan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3527_sampang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3527_sampang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3528_pamekasan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3528_pamekasan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3529_sumenep",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3529_sumenep.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3571_kota_kediri",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3571_kota_kediri.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3572_kota_blitar",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3572_kota_blitar.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3573_kota_malang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3573_kota_malang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3574_kota_probolinggo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3574_kota_probolinggo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3575_kota_pasuruan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3575_kota_pasuruan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3576_kota_mojokerto",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3576_kota_mojokerto.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3577_kota_madiun",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3577_kota_madiun.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3578_kota_surabaya",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3578_kota_surabaya.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3579_kota_batu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3579_kota_batu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3601_pandeglang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3601_pandeglang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3602_lebak",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3602_lebak.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3603_tangerang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3603_tangerang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3604_serang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3604_serang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3671_kota_tangerang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3671_kota_tangerang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3672_kota_cilegon",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3672_kota_cilegon.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3673_kota_serang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3673_kota_serang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_3674_kota_tangerang_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_3674_kota_tangerang_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5101_jembrana",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5101_jembrana.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5102_tabanan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5102_tabanan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5103_badung",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5103_badung.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5104_gianyar",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5104_gianyar.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5105_klungkung",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5105_klungkung.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5106_bangli",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5106_bangli.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5107_karangasem",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5107_karangasem.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5108_buleleng",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5108_buleleng.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5171_kota_denpasar",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5171_kota_denpasar.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5201_lombok_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5201_lombok_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5202_lombok_tengah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5202_lombok_tengah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5203_lombok_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5203_lombok_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5204_sumbawa",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5204_sumbawa.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5205_dompu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5205_dompu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5206_bima",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5206_bima.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5207_sumbawa_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5207_sumbawa_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5208_lombok_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5208_lombok_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5271_kota_mataram",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5271_kota_mataram.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5272_kota_bima",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5272_kota_bima.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5301_kupang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5301_kupang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5302_timor_tengah_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5302_timor_tengah_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5303_timor_tengah_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5303_timor_tengah_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5304_belu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5304_belu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5305_alor",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5305_alor.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5306_flores_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5306_flores_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5307_sikka",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5307_sikka.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5308_ende",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5308_ende.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5309_ngada",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5309_ngada.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5310_manggarai",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5310_manggarai.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5311_sumba_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5311_sumba_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5312_sumba_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5312_sumba_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5313_lembata",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5313_lembata.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5314_rote_ndao",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5314_rote_ndao.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5315_manggarai_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5315_manggarai_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5316_nagekeo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5316_nagekeo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5317_sumba_tengah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5317_sumba_tengah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5318_sumba_barat_daya",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5318_sumba_barat_daya.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5319_manggarai_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5319_manggarai_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5320_sabu_raijua",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5320_sabu_raijua.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5321_malaka",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5321_malaka.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_5371_kota_kupang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_5371_kota_kupang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6101_sambas",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6101_sambas.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6102_mempawah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6102_mempawah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6103_sanggau",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6103_sanggau.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6104_ketapang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6104_ketapang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6105_sintang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6105_sintang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6106_kapuas_hulu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6106_kapuas_hulu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6107_bengkayang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6107_bengkayang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6108_landak",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6108_landak.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6109_sekadau",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6109_sekadau.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6110_melawi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6110_melawi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6111_kayong_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6111_kayong_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6112_kubu_raya",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6112_kubu_raya.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6171_kota_pontianak",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6171_kota_pontianak.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6172_kota_singkawang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6172_kota_singkawang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6201_kotawaringin_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6201_kotawaringin_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6202_kotawaringin_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6202_kotawaringin_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6203_kapuas",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6203_kapuas.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6204_barito_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6204_barito_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6205_barito_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6205_barito_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6206_katingan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6206_katingan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6207_seruyan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6207_seruyan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6208_sukamara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6208_sukamara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6209_lamandau",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6209_lamandau.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6210_gunung_mas",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6210_gunung_mas.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6211_pulang_pisau",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6211_pulang_pisau.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6212_murung_raya",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6212_murung_raya.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6213_barito_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6213_barito_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6271_kota_palangkaraya",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6271_kota_palangkaraya.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6301_tanah_laut",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6301_tanah_laut.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6302_kotabaru",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6302_kotabaru.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6303_banjar",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6303_banjar.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6304_barito_kuala",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6304_barito_kuala.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6305_tapin",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6305_tapin.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6306_hulu_sungai_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6306_hulu_sungai_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6307_hulu_sungai_tengah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6307_hulu_sungai_tengah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6308_hulu_sungai_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6308_hulu_sungai_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6309_tabalong",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6309_tabalong.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6310_tanah_bumbu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6310_tanah_bumbu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6311_balangan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6311_balangan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6371_kota_banjarmasin",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6371_kota_banjarmasin.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6372_kota_banjarbaru",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6372_kota_banjarbaru.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6401_paser",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6401_paser.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6402_kutai_kartanegara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6402_kutai_kartanegara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6403_berau",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6403_berau.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6407_kutai_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6407_kutai_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6408_kutai_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6408_kutai_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6409_penajam_paser_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6409_penajam_paser_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6411_mahakam_ulu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6411_mahakam_ulu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6471_kota_balikpapan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6471_kota_balikpapan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6472_kota_samarinda",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6472_kota_samarinda.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6474_kota_bontang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6474_kota_bontang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6501_bulungan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6501_bulungan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6502_malinau",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6502_malinau.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6503_nunukan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6503_nunukan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6504_tana_tidung",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6504_tana_tidung.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_6571_kota_tarakan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_6571_kota_tarakan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7101_bolaang_mongondow",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7101_bolaang_mongondow.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7102_minahasa",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7102_minahasa.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7103_kepulauan_sangihe",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7103_kepulauan_sangihe.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7104_kepulauan_talaud",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7104_kepulauan_talaud.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7105_minahasa_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7105_minahasa_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7106_minahasa_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7106_minahasa_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7107_minahasa_tenggara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7107_minahasa_tenggara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7108_bolaang_mongondow_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7108_bolaang_mongondow_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7109_kep_siau_tagulandang_biaro",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7109_kep_siau_tagulandang_biaro.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7110_bolaang_mongondow_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7110_bolaang_mongondow_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7111_bolaang_mongondow_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7111_bolaang_mongondow_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7171_kota_manado",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7171_kota_manado.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7172_kota_bitung",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7172_kota_bitung.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7173_kota_tomohon",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7173_kota_tomohon.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7174_kota_kotamobagu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7174_kota_kotamobagu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7201_banggai",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7201_banggai.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7202_poso",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7202_poso.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7203_donggala",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7203_donggala.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7204_tolitoli",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7204_tolitoli.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7205_buol",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7205_buol.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7206_morowali",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7206_morowali.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7207_banggai_kepulauan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7207_banggai_kepulauan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7208_parigi_moutong",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7208_parigi_moutong.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7209_tojo_una_una",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7209_tojo_una_una.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7210_sigi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7210_sigi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7211_banggai_laut",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7211_banggai_laut.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7212_morowali_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7212_morowali_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7271_kota_palu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7271_kota_palu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7301_kepulauan_selayar",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7301_kepulauan_selayar.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7302_bulukumba",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7302_bulukumba.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7303_bantaeng",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7303_bantaeng.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7304_jeneponto",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7304_jeneponto.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7305_takalar",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7305_takalar.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7306_gowa",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7306_gowa.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7307_sinjai",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7307_sinjai.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7308_bone",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7308_bone.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7309_maros",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7309_maros.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7310_pangkajene_dan_kepulauan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7310_pangkajene_dan_kepulauan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7311_barru",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7311_barru.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7312_soppeng",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7312_soppeng.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7313_wajo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7313_wajo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7314_sidenreng_rappang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7314_sidenreng_rappang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7315_pinrang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7315_pinrang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7316_enrekang",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7316_enrekang.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7317_luwu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7317_luwu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7318_tana_toraja",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7318_tana_toraja.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7322_luwu_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7322_luwu_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7324_luwu_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7324_luwu_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7326_toraja_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7326_toraja_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7371_kota_makassar",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7371_kota_makassar.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7372_kota_pare_pare",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7372_kota_pare_pare.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7373_kota_palopo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7373_kota_palopo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7399_danau_sindereng",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7399_danau_sindereng.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7401_kolaka",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7401_kolaka.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7402_konawe",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7402_konawe.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7403_muna",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7403_muna.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7404_buton",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7404_buton.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7405_konawe_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7405_konawe_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7406_bombana",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7406_bombana.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7407_wakatobi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7407_wakatobi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7408_kolaka_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7408_kolaka_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7409_konawe_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7409_konawe_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7410_buton_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7410_buton_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7411_kolaka_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7411_kolaka_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7412_konawe_kepulauan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7412_konawe_kepulauan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7413_muna_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7413_muna_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7414_buton_tengah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7414_buton_tengah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7415_buton_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7415_buton_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7471_kota_kendari",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7471_kota_kendari.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7472_kota_bau_bau",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7472_kota_bau_bau.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7501_gorontalo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7501_gorontalo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7502_boalemo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7502_boalemo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7503_bone_bolango",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7503_bone_bolango.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7504_pahuwato",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7504_pahuwato.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7505_gorontalo_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7505_gorontalo_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7571_kota_gorontalo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7571_kota_gorontalo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7601_mamuju_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7601_mamuju_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7602_mamuju",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7602_mamuju.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7603_mamasa",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7603_mamasa.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7604_polewali_mandar",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7604_polewali_mandar.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7605_majene",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7605_majene.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_7606_mamuju_tengah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_7606_mamuju_tengah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8101_maluku_tengah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8101_maluku_tengah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8102_maluku_tenggara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8102_maluku_tenggara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8103_maluku_tenggara_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8103_maluku_tenggara_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8104_buru",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8104_buru.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8105_seram_bagian_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8105_seram_bagian_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8106_seram_bagian_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8106_seram_bagian_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8107_kepulauan_aru",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8107_kepulauan_aru.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8108_maluku_barat_daya",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8108_maluku_barat_daya.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8109_buru_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8109_buru_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8171_kota_ambon",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8171_kota_ambon.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8172_kota_tual",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8172_kota_tual.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8201_halmahera_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8201_halmahera_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8202_halmahera_tengah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8202_halmahera_tengah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8203_halmahera_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8203_halmahera_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8204_halmahera_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8204_halmahera_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8205_kepulauan_sula",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8205_kepulauan_sula.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8206_halmahera_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8206_halmahera_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8207_pulau_morotai",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8207_pulau_morotai.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8208_pulau_taliabu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8208_pulau_taliabu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8271_kota_ternate",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8271_kota_ternate.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_8272_kota_tidore_kepulauan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_8272_kota_tidore_kepulauan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_9103_jayapura",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_9103_jayapura.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_9104_nabire",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_9104_nabire.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_9105_kepulauan_yapen",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_9105_kepulauan_yapen.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_9106_biak_numfor",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_9106_biak_numfor.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_9109_mimika",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_9109_mimika.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_aceh",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_aceh.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_bali",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_bali.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_banten",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_banten.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_bengkulu",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_bengkulu.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_daerah_istimewa_yogyakarta",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_daerah_istimewa_yogyakarta.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_dki_jakarta",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_dki_jakarta.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_gorontalo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_gorontalo.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_jambi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_jambi.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_jawa_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_jawa_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_jawa_tengah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_jawa_tengah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_jawa_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_jawa_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_kalimantan_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_kalimantan_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_kalimantan_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_kalimantan_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_kalimantan_tengah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_kalimantan_tengah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_kalimantan_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_kalimantan_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_kalimantan_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_kalimantan_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_kepulauan_bangka_belitung",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_kepulauan_bangka_belitung.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_kepulauan_riau",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_kepulauan_riau.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_lampung",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_lampung.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_maluku",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_maluku.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_maluku_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_maluku_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_nusa_tenggara_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_nusa_tenggara_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_nusa_tenggara_timur",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_nusa_tenggara_timur.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_papua",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_papua.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_papua_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_papua_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_riau",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_riau.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_sulawesi_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_sulawesi_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_sulawesi_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_sulawesi_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_sulawesi_tengah",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_sulawesi_tengah.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_sulawesi_tenggara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_sulawesi_tenggara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_sulawesi_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_sulawesi_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_sumatera_barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_sumatera_barat.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_sumatera_selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_sumatera_selatan.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_bvt_sumatera_utara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_bvt_sumatera_utara.json"
+        },
+        {
+          "name": "staging-lokasimaps:building_line_v2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilding_line_v2.json"
+        },
+        {
+          "name": "staging-lokasimaps:built_up_area_bvt",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Abuilt_up_area_bvt.json"
+        },
+        {
+          "name": "staging-lokasimaps:city_divider_v2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Acity_divider_v2.json"
+        },
+        {
+          "name": "staging-lokasimaps:city_line_v2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Acity_line_v2.json"
+        },
+        {
+          "name": "staging-lokasimaps:city_railway_v2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Acity_railway_v2.json"
+        },
+        {
+          "name": "staging-lokasimaps:city_site_v2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Acity_site_v2.json"
+        },
+        {
+          "name": "staging-lokasimaps:city_station_v2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Acity_station_v2.json"
+        },
+        {
+          "name": "staging-lokasimaps:city_tunnel_v2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Acity_tunnel_v2.json"
+        },
+        {
+          "name": "staging-lokasimaps:countries_v2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Acountries_v2.json"
+        },
+        {
+          "name": "staging-lokasimaps:land_cover_v2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Aland_cover_v2.json"
+        },
+        {
+          "name": "staging-lokasimaps:land_use_v2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Aland_use_v2.json"
+        },
+        {
+          "name": "staging-lokasimaps:landcover_hutan_primer",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Alandcover_hutan_primer.json"
+        },
+        {
+          "name": "staging-lokasimaps:landcover_lvl0",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Alandcover_lvl0.json"
+        },
+        {
+          "name": "staging-lokasimaps:landcover_lvl1",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Alandcover_lvl1.json"
+        },
+        {
+          "name": "staging-lokasimaps:landcover_lvl2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Alandcover_lvl2.json"
+        },
+        {
+          "name": "staging-lokasimaps:landcover_lvl3",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Alandcover_lvl3.json"
+        },
+        {
+          "name": "staging-lokasimaps:oceans_v2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Aoceans_v2.json"
+        },
+        {
+          "name": "staging-lokasimaps:province_boundline_v2",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Aprovince_boundline_v2.json"
+        },
+        {
+          "name": "staging-lokasimaps:railway_krl_poi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Arailway_krl_poi.json"
+        },
+        {
+          "name": "staging-lokasimaps:railway_lrt",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Arailway_lrt.json"
+        },
+        {
+          "name": "staging-lokasimaps:railway_lrt_poi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Arailway_lrt_poi.json"
+        },
+        {
+          "name": "staging-lokasimaps:railway_mrt",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Arailway_mrt.json"
+        },
+        {
+          "name": "staging-lokasimaps:railway_mrt_poi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Arailway_mrt_poi.json"
+        },
+        {
+          "name": "staging-lokasimaps:roadclass_0101",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Aroadclass_0101.json"
+        },
+        {
+          "name": "staging-lokasimaps:roadclass_0102",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Aroadclass_0102.json"
+        },
+        {
+          "name": "staging-lokasimaps:roadclass_0103",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Aroadclass_0103.json"
+        },
+        {
+          "name": "staging-lokasimaps:roadclass_0204",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Aroadclass_0204.json"
+        },
+        {
+          "name": "staging-lokasimaps:roadclass_0305",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Aroadclass_0305.json"
+        },
+        {
+          "name": "staging-lokasimaps:roadclass_0306",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Aroadclass_0306.json"
+        },
+        {
+          "name": "staging-lokasimaps:taman_nasional_bvt",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Ataman_nasional_bvt.json"
+        },
+        {
+          "name": "staging-lokasimaps:tbl_poi_commercial",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Atbl_poi_commercial.json"
+        },
+        {
+          "name": "staging-lokasimaps:tbl_poi_communication",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Atbl_poi_communication.json"
+        },
+        {
+          "name": "staging-lokasimaps:tbl_poi_education",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Atbl_poi_education.json"
+        },
+        {
+          "name": "staging-lokasimaps:tbl_poi_heritage_site",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Atbl_poi_heritage_site.json"
+        },
+        {
+          "name": "staging-lokasimaps:tbl_poi_hospital",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Atbl_poi_hospital.json"
+        },
+        {
+          "name": "staging-lokasimaps:tbl_poi_law___defend",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Atbl_poi_law___defend.json"
+        },
+        {
+          "name": "staging-lokasimaps:tbl_poi_market",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Atbl_poi_market.json"
+        },
+        {
+          "name": "staging-lokasimaps:tbl_poi_medical",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Atbl_poi_medical.json"
+        },
+        {
+          "name": "staging-lokasimaps:tbl_poi_park",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Atbl_poi_park.json"
+        },
+        {
+          "name": "staging-lokasimaps:tbl_poi_social_economy",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Atbl_poi_social_economy.json"
+        },
+        {
+          "name": "staging-lokasimaps:tbl_poi_sport",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Atbl_poi_sport.json"
+        },
+        {
+          "name": "staging-lokasimaps:tbl_poi_tourism",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Atbl_poi_tourism.json"
+        },
+        {
+          "name": "staging-lokasimaps:tbl_poi_transportation_and_logistic",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Atbl_poi_transportation_and_logistic.json"
+        },
+        {
+          "name": "staging-lokasimaps:waterway",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Awaterway.json"
+        },
+        {
+          "name": "staging-lokasimaps:world_extent",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/staging-lokasimaps%3Aworld_extent.json"
+        },
+        {
+          "name": "geoportal:halte_trans_jogja",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/geoportal%3Ahalte_trans_jogja.json"
+        },
+        {
+          "name": "geoportal:jalur_pelayanan_trans_jogja",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/geoportal%3Ajalur_pelayanan_trans_jogja.json"
+        },
+        {
+          "name": "geoportal:pd_yogyakarta_sample",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/geoportal%3Apd_yogyakarta_sample.json"
+        },
+        {
+          "name": "geoportal:poi_smart_city",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/geoportal%3Apoi_smart_city.json"
+        },
+        {
+          "name": "geoportal:tourism_sub_category",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/geoportal%3Atourism_sub_category.json"
+        },
+        {
+          "name": "fif_apps:indo_grid_10km",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/fif_apps%3Aindo_grid_10km.json"
+        },
+        {
+          "name": "fif_apps:indo_grid_5km_srid",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/fif_apps%3Aindo_grid_5km_srid.json"
+        },
+        {
+          "name": "fif_apps:tbl_fif_area_cabang_pos",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/fif_apps%3Atbl_fif_area_cabang_pos.json"
+        },
+        {
+          "name": "fif_apps:tbl_fif_area_zipcode",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/fif_apps%3Atbl_fif_area_zipcode.json"
+        },
+        {
+          "name": "fif_apps:tbl_fif_poi_area",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/fif_apps%3Atbl_fif_poi_area.json"
+        },
+        {
+          "name": "atr_bpn:Aksesibilitas - Jakarta Selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AAksesibilitas+-+Jakarta+Selatan.json"
+        },
+        {
+          "name": "atr_bpn:Aksesibilitas Fasilitas Hiburan - Kelurahan Rawa Barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AAksesibilitas+Fasilitas+Hiburan+-+Kelurahan+Rawa+Barat.json"
+        },
+        {
+          "name": "atr_bpn:Aksesibilitas Fasilitas Hiburan - Kelurahan Selong",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AAksesibilitas+Fasilitas+Hiburan+-+Kelurahan+Selong.json"
+        },
+        {
+          "name": "atr_bpn:Aksesibilitas Fasilitas Kesehatan - Kelurahan Rawa Barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AAksesibilitas+Fasilitas+Kesehatan+-+Kelurahan+Rawa+Barat.json"
+        },
+        {
+          "name": "atr_bpn:Aksesibilitas Fasilitas Kesehatan - Kelurahan Selong",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AAksesibilitas+Fasilitas+Kesehatan+-+Kelurahan+Selong.json"
+        },
+        {
+          "name": "atr_bpn:Aksesibilitas Fasilitas Pendidikan - Kelurahan Rawa Barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AAksesibilitas+Fasilitas+Pendidikan+-+Kelurahan+Rawa+Barat.json"
+        },
+        {
+          "name": "atr_bpn:Aksesibilitas Fasilitas Pendidikan - Kelurahan Selong",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AAksesibilitas+Fasilitas+Pendidikan+-+Kelurahan+Selong.json"
+        },
+        {
+          "name": "atr_bpn:Aksesibilitas Fasilitas Transportasi - Kelurahan Rawa Barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AAksesibilitas+Fasilitas+Transportasi+-+Kelurahan+Rawa+Barat.json"
+        },
+        {
+          "name": "atr_bpn:Aksesibilitas Fasilitas Transportasi - Kelurahan Selong",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AAksesibilitas+Fasilitas+Transportasi+-+Kelurahan+Selong.json"
+        },
+        {
+          "name": "atr_bpn:Batas Administrasi Kecamatan - Jakarta Selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3ABatas+Administrasi+Kecamatan+-+Jakarta+Selatan.json"
+        },
+        {
+          "name": "atr_bpn:Batas Admistrasi Desa - Jakarta Selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3ABatas+Admistrasi+Desa+-+Jakarta+Selatan.json"
+        },
+        {
+          "name": "atr_bpn:Commercial Index Land Scoring - Kelurahan Rawa Barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3ACommercial+Index+Land+Scoring+-+Kelurahan+Rawa+Barat.json"
+        },
+        {
+          "name": "atr_bpn:Commercial Index Land Scoring - Kelurahan Selong",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3ACommercial+Index+Land+Scoring+-+Kelurahan+Selong.json"
+        },
+        {
+          "name": "atr_bpn:Data Kepadatan - Jakarta Selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AData+Kepadatan+-+Jakarta+Selatan.json"
+        },
+        {
+          "name": "atr_bpn:Data Persil - Kelurahan  Rawa Barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AData+Persil+-+Kelurahan++Rawa+Barat.json"
+        },
+        {
+          "name": "atr_bpn:Data Persil - Kelurahan Melawai",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AData+Persil+-+Kelurahan+Melawai.json"
+        },
+        {
+          "name": "atr_bpn:Data Persil - Kelurahan_Selong",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AData+Persil+-+Kelurahan_Selong.json"
+        },
+        {
+          "name": "atr_bpn:Data Persil Bangunan - Jakarta Selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AData+Persil+Bangunan+-+Jakarta+Selatan.json"
+        },
+        {
+          "name": "atr_bpn:Hotel Potential Area - Jakarta Selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AHotel+Potential+Area+-+Jakarta+Selatan.json"
+        },
+        {
+          "name": "atr_bpn:Indeks Aksesibilitas  - Gresik",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AIndeks+Aksesibilitas++-+Gresik.json"
+        },
+        {
+          "name": "atr_bpn:Indeks Ekonomi - Gresik",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AIndeks+Ekonomi+-+Gresik.json"
+        },
+        {
+          "name": "atr_bpn:Kesesuaian Penggunaan Lahan berbasis Bidang - Kelurahan Rawa Barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AKesesuaian+Penggunaan+Lahan+berbasis+Bidang+-+Kelurahan+Rawa+Barat.json"
+        },
+        {
+          "name": "atr_bpn:Kesesuaian Penggunaan Lahan berbasis Bidang - Kelurahan Selong",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AKesesuaian+Penggunaan+Lahan+berbasis+Bidang+-+Kelurahan+Selong.json"
+        },
+        {
+          "name": "atr_bpn:Minimarket Potential Area - Jakarta Selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AMinimarket+Potential+Area+-+Jakarta+Selatan.json"
+        },
+        {
+          "name": "atr_bpn:POI - Jakarta Selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3APOI+-+Jakarta+Selatan.json"
+        },
+        {
+          "name": "atr_bpn:Penggunaan Lahan berbasis Bidang - Kelurahan Rawa Barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3APenggunaan+Lahan+berbasis+Bidang+-+Kelurahan+Rawa+Barat.json"
+        },
+        {
+          "name": "atr_bpn:Penggunaan Lahan berbasis Bidang - Kelurahan Selong",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3APenggunaan+Lahan+berbasis+Bidang+-+Kelurahan+Selong.json"
+        },
+        {
+          "name": "atr_bpn:Persil Tanah -  DKI Jakarta",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3APersil+Tanah+-++DKI+Jakarta.json"
+        },
+        {
+          "name": "atr_bpn:RDTR - Jakarta Selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3ARDTR+-+Jakarta+Selatan.json"
+        },
+        {
+          "name": "atr_bpn:Restaurant Potential Area - Jakarta Selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3ARestaurant+Potential+Area+-+Jakarta+Selatan.json"
+        },
+        {
+          "name": "atr_bpn:Zona Niai Tanah berbasis Bidang - Kelurahan Rawa Barat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AZona+Niai+Tanah+berbasis+Bidang+-+Kelurahan+Rawa+Barat.json"
+        },
+        {
+          "name": "atr_bpn:Zona Niai Tanah berbasis Bidang - Kelurahan Selong",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AZona+Niai+Tanah+berbasis+Bidang+-+Kelurahan+Selong.json"
+        },
+        {
+          "name": "atr_bpn:Zona Nilai Tanah - Jakarta Selatan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/atr_bpn%3AZona+Nilai+Tanah+-+Jakarta+Selatan.json"
+        },
+        {
+          "name": "lokasimaps2:city_site",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/lokasimaps2%3Acity_site.json"
+        },
+        {
+          "name": "lokasimaps2:city_station",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/lokasimaps2%3Acity_station.json"
+        },
+        {
+          "name": "lokasimaps2:city_tunnel",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/lokasimaps2%3Acity_tunnel.json"
+        },
+        {
+          "name": "lokasimaps2:district",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/lokasimaps2%3Adistrict.json"
+        },
+        {
+          "name": "lokasimaps2:land_cover",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/lokasimaps2%3Aland_cover.json"
+        },
+        {
+          "name": "lokasimaps2:land_use",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/lokasimaps2%3Aland_use.json"
+        },
+        {
+          "name": "lokasimaps2:other_country",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/lokasimaps2%3Aother_country.json"
+        },
+        {
+          "name": "lokasimaps2:province",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/lokasimaps2%3Aprovince.json"
+        },
+        {
+          "name": "lokasimaps2:province_boundline",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/lokasimaps2%3Aprovince_boundline.json"
+        },
+        {
+          "name": "lokasimaps2:road_link",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/lokasimaps2%3Aroad_link.json"
+        },
+        {
+          "name": "lokasimaps2:sea_polygon",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/lokasimaps2%3Asea_polygon.json"
+        },
+        {
+          "name": "lokasimaps2:subdistrict",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/lokasimaps2%3Asubdistrict.json"
+        },
+        {
+          "name": "lokasimaps2:waterway",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/lokasimaps2%3Awaterway.json"
+        },
+        {
+          "name": "lokasimaps2:world_countries",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/lokasimaps2%3Aworld_countries.json"
+        },
+        {
+          "name": "natural-resources:Bentang_Alam_Karst",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3ABentang_Alam_Karst.json"
+        },
+        {
+          "name": "natural-resources:Coal_Terminal",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3ACoal_Terminal.json"
+        },
+        {
+          "name": "natural-resources:IPPKH",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3AIPPKH.json"
+        },
+        {
+          "name": "natural-resources:Perkebunan(HGU)",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3APerkebunan%28HGU%29.json"
+        },
+        {
+          "name": "natural-resources:Perkebunan(HGU) perkebunan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3APerkebunan%28HGU%29+perkebunan.json"
+        },
+        {
+          "name": "natural-resources:Potensi_Batubara",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3APotensi_Batubara.json"
+        },
+        {
+          "name": "natural-resources:Potensi_Bitumen_Padat",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3APotensi_Bitumen_Padat.json"
+        },
+        {
+          "name": "natural-resources:Potensi_Mineral_Bukan_Logam",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3APotensi_Mineral_Bukan_Logam.json"
+        },
+        {
+          "name": "natural-resources:Potensi_Mineral_Logam",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3APotensi_Mineral_Logam.json"
+        },
+        {
+          "name": "natural-resources:Smelting_Plant",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3ASmelting_Plant.json"
+        },
+        {
+          "name": "natural-resources:Tata_Guna_Hutan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3ATata_Guna_Hutan.json"
+        },
+        {
+          "name": "natural-resources:Terminal_Khusus",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3ATerminal_Khusus.json"
+        },
+        {
+          "name": "natural-resources:WIUP_Update",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3AWIUP_Update.json"
+        },
+        {
+          "name": "natural-resources:Wilayah_Pertambangan_2017",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3AWilayah_Pertambangan_2017.json"
+        },
+        {
+          "name": "natural-resources:sampel_road_cls_0101",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3Asampel_road_cls_0101.json"
+        },
+        {
+          "name": "natural-resources:sampl_road_cls_0101",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3Asampl_road_cls_0101.json"
+        },
+        {
+          "name": "natural-resources:sample_jkt_class_0101",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3Asample_jkt_class_0101.json"
+        },
+        {
+          "name": "natural-resources:sample_jkt_class_0102",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3Asample_jkt_class_0102.json"
+        },
+        {
+          "name": "natural-resources:sample_jkt_class_0103",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3Asample_jkt_class_0103.json"
+        },
+        {
+          "name": "natural-resources:sample_jkt_class_0204",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3Asample_jkt_class_0204.json"
+        },
+        {
+          "name": "natural-resources:sample_jkt_class_0305",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3Asample_jkt_class_0305.json"
+        },
+        {
+          "name": "natural-resources:sample_jkt_class_0306",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/natural-resources%3Asample_jkt_class_0306.json"
+        },
+        {
+          "name": "Tematik_KKP:Wilayah Perairan Indonesia",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/Tematik_KKP%3AWilayah+Perairan+Indonesia.json"
+        },
+        {
+          "name": "Tematik_KKP:zona_konservasi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/Tematik_KKP%3Azona_konservasi.json"
+        },
+        {
+          "name": "liv3:admin_desa",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Aadmin_desa.json"
+        },
+        {
+          "name": "liv3:datex_multy_brand",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Adatex_multy_brand.json"
+        },
+        {
+          "name": "liv3:datex_poi_v3",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Adatex_poi_v3.json"
+        },
+        {
+          "name": "liv3:datex_v3_city_thematic",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Adatex_v3_city_thematic.json"
+        },
+        {
+          "name": "liv3:datex_v3_district_thematic",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Adatex_v3_district_thematic.json"
+        },
+        {
+          "name": "liv3:datex_v3_poi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Adatex_v3_poi.json"
+        },
+        {
+          "name": "liv3:datex_v3_province_thematic",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Adatex_v3_province_thematic.json"
+        },
+        {
+          "name": "liv3:datex_v3_ses_thematic",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Adatex_v3_ses_thematic.json"
+        },
+        {
+          "name": "liv3:datex_v3_vilage_thematic",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Adatex_v3_vilage_thematic.json"
+        },
+        {
+          "name": "liv3:datex_v3_znt_thematic",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Adatex_v3_znt_thematic.json"
+        },
+        {
+          "name": "liv3:kendaraan_kota_tes",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Akendaraan_kota_tes.json"
+        },
+        {
+          "name": "liv3:poi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Apoi.json"
+        },
+        {
+          "name": "liv3:poi_admin",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Apoi_admin.json"
+        },
+        {
+          "name": "liv3:poi_datex",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Apoi_datex.json"
+        },
+        {
+          "name": "liv3:poi_datex_indo",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Apoi_datex_indo.json"
+        },
+        {
+          "name": "liv3:poi_datex_test",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Apoi_datex_test.json"
+        },
+        {
+          "name": "liv3:poi_icon",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Apoi_icon.json"
+        },
+        {
+          "name": "liv3:poi_test",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Apoi_test.json"
+        },
+        {
+          "name": "liv3:poi_v3",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Apoi_v3.json"
+        },
+        {
+          "name": "liv3:poi_v3_datex",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Apoi_v3_datex.json"
+        },
+        {
+          "name": "liv3:tbl_master_provinsi_gabungan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Atbl_master_provinsi_gabungan.json"
+        },
+        {
+          "name": "liv3:tourism_yogja",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Atourism_yogja.json"
+        },
+        {
+          "name": "liv3:v3_city_thematic",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_city_thematic.json"
+        },
+        {
+          "name": "liv3:v3_district_thematic",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_district_thematic.json"
+        },
+        {
+          "name": "liv3:v3_district_thematic_by_city",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_district_thematic_by_city.json"
+        },
+        {
+          "name": "liv3:v3_district_thematic_by_region",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_district_thematic_by_region.json"
+        },
+        {
+          "name": "liv3:v3_economy_city_thematic",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_economy_city_thematic.json"
+        },
+        {
+          "name": "liv3:v3_economy_province_thematic",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_economy_province_thematic.json"
+        },
+        {
+          "name": "liv3:v3_japan_district_thematic_by_region",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_japan_district_thematic_by_region.json"
+        },
+        {
+          "name": "liv3:v3_japan_prefecture_thematic_by_region",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_japan_prefecture_thematic_by_region.json"
+        },
+        {
+          "name": "liv3:v3_poi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_poi.json"
+        },
+        {
+          "name": "liv3:v3_province_thematic",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_province_thematic.json"
+        },
+        {
+          "name": "liv3:v3_province_thematic_economy",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_province_thematic_economy.json"
+        },
+        {
+          "name": "liv3:v3_regency_thematic",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_regency_thematic.json"
+        },
+        {
+          "name": "liv3:v3_regency_thematic_by_region",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_regency_thematic_by_region.json"
+        },
+        {
+          "name": "liv3:v3_regency_thematic_by_region_economy",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_regency_thematic_by_region_economy.json"
+        },
+        {
+          "name": "liv3:v3_ses_thematic",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_ses_thematic.json"
+        },
+        {
+          "name": "liv3:v3_thematic_geom_by_city",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_thematic_geom_by_city.json"
+        },
+        {
+          "name": "liv3:v3_thematic_geom_by_province",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_thematic_geom_by_province.json"
+        },
+        {
+          "name": "liv3:v3_thematic_geom_disaster_by_city",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_thematic_geom_disaster_by_city.json"
+        },
+        {
+          "name": "liv3:v3_thematic_geom_disaster_by_province",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_thematic_geom_disaster_by_province.json"
+        },
+        {
+          "name": "liv3:v3_vietnam_commune_thematic_by_region",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_vietnam_commune_thematic_by_region.json"
+        },
+        {
+          "name": "liv3:v3_vietnam_district_thematic_by_region",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_vietnam_district_thematic_by_region.json"
+        },
+        {
+          "name": "liv3:v3_village_thematic_by_region",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_village_thematic_by_region.json"
+        },
+        {
+          "name": "liv3:v3_village_thematic_by_region_ses",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_village_thematic_by_region_ses.json"
+        },
+        {
+          "name": "liv3:v3_village_thematic_by_region_znt",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_village_thematic_by_region_znt.json"
+        },
+        {
+          "name": "liv3:v3_znt_thematic_by_city",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_znt_thematic_by_city.json"
+        },
+        {
+          "name": "liv3:v3_znt_thematic_by_district",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_znt_thematic_by_district.json"
+        },
+        {
+          "name": "liv3:v3_znt_thematic_by_provinsi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv3%3Av3_znt_thematic_by_provinsi.json"
+        },
+        {
+          "name": "liv2_2:2020_admin_desa",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_admin_desa.json"
+        },
+        {
+          "name": "liv2_2:2020_admin_desa1",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_admin_desa1.json"
+        },
+        {
+          "name": "liv2_2:2020_admin_kabkot",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_admin_kabkot.json"
+        },
+        {
+          "name": "liv2_2:2020_admin_kec",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_admin_kec.json"
+        },
+        {
+          "name": "liv2_2:2020_admin_prov",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_admin_prov.json"
+        },
+        {
+          "name": "liv2_2:2020_aset_bpr",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_aset_bpr.json"
+        },
+        {
+          "name": "liv2_2:2020_cabang_bank",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_cabang_bank.json"
+        },
+        {
+          "name": "liv2_2:2020_harga_berlaku",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_harga_berlaku.json"
+        },
+        {
+          "name": "liv2_2:2020_harga_berlaku_prov",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_harga_berlaku_prov.json"
+        },
+        {
+          "name": "liv2_2:2020_harga_konstan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_harga_konstan.json"
+        },
+        {
+          "name": "liv2_2:2020_harga_konstan_prov",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_harga_konstan_prov.json"
+        },
+        {
+          "name": "liv2_2:2020_inflasi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_inflasi.json"
+        },
+        {
+          "name": "liv2_2:2020_investasi_internasional",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_investasi_internasional.json"
+        },
+        {
+          "name": "liv2_2:2020_investasi_regional",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_investasi_regional.json"
+        },
+        {
+          "name": "liv2_2:2020_jumlah_nabung",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_jumlah_nabung.json"
+        },
+        {
+          "name": "liv2_2:2020_kredit",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_kredit.json"
+        },
+        {
+          "name": "liv2_2:2020_npl_bpr_ojk",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_npl_bpr_ojk.json"
+        },
+        {
+          "name": "liv2_2:2020_rtr",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_rtr.json"
+        },
+        {
+          "name": "liv2_2:2020_ses",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2020_ses.json"
+        },
+        {
+          "name": "liv2_2:2021_admin_desa",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_admin_desa.json"
+        },
+        {
+          "name": "liv2_2:2021_admin_kabkot",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_admin_kabkot.json"
+        },
+        {
+          "name": "liv2_2:2021_admin_kec",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_admin_kec.json"
+        },
+        {
+          "name": "liv2_2:2021_admin_prov",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_admin_prov.json"
+        },
+        {
+          "name": "liv2_2:2021_aset_bpr",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_aset_bpr.json"
+        },
+        {
+          "name": "liv2_2:2021_cabang_bank",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_cabang_bank.json"
+        },
+        {
+          "name": "liv2_2:2021_harga_berlaku",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_harga_berlaku.json"
+        },
+        {
+          "name": "liv2_2:2021_harga_berlaku_prov",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_harga_berlaku_prov.json"
+        },
+        {
+          "name": "liv2_2:2021_harga_konstan",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_harga_konstan.json"
+        },
+        {
+          "name": "liv2_2:2021_harga_konstan_prov",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_harga_konstan_prov.json"
+        },
+        {
+          "name": "liv2_2:2021_inflasi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_inflasi.json"
+        },
+        {
+          "name": "liv2_2:2021_investasi_internasional",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_investasi_internasional.json"
+        },
+        {
+          "name": "liv2_2:2021_investasi_regional",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_investasi_regional.json"
+        },
+        {
+          "name": "liv2_2:2021_jumlah_nabung",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_jumlah_nabung.json"
+        },
+        {
+          "name": "liv2_2:2021_kredit",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_kredit.json"
+        },
+        {
+          "name": "liv2_2:2021_npl_bpr_ojk",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_npl_bpr_ojk.json"
+        },
+        {
+          "name": "liv2_2:2021_rtr",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_rtr.json"
+        },
+        {
+          "name": "liv2_2:2021_ses",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_ses.json"
+        },
+        {
+          "name": "liv2_2:2021_ses_backup",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3A2021_ses_backup.json"
+        },
+        {
+          "name": "liv2_2:admin_desa",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Aadmin_desa.json"
+        },
+        {
+          "name": "liv2_2:admin_kab",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Aadmin_kab.json"
+        },
+        {
+          "name": "liv2_2:admin_kec",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Aadmin_kec.json"
+        },
+        {
+          "name": "liv2_2:aset_bpr",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Aaset_bpr.json"
+        },
+        {
+          "name": "liv2_2:cabang_bank",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Acabang_bank.json"
+        },
+        {
+          "name": "liv2_2:data_kendaraan_2018",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Adata_kendaraan_2018.json"
+        },
+        {
+          "name": "liv2_2:data_kendaraan_2020",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Adata_kendaraan_2020.json"
+        },
+        {
+          "name": "liv2_2:data_kendaraan_2021",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Adata_kendaraan_2021.json"
+        },
+        {
+          "name": "liv2_2:data_kendaraan_admin_provinsi_2018",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Adata_kendaraan_admin_provinsi_2018.json"
+        },
+        {
+          "name": "liv2_2:data_kendaraan_admin_provinsi_2020",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Adata_kendaraan_admin_provinsi_2020.json"
+        },
+        {
+          "name": "liv2_2:data_kendaraan_admin_provinsi_2021",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Adata_kendaraan_admin_provinsi_2021.json"
+        },
+        {
+          "name": "liv2_2:harga_konstan_2021",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Aharga_konstan_2021.json"
+        },
+        {
+          "name": "liv2_2:inflasi",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Ainflasi.json"
+        },
+        {
+          "name": "liv2_2:investasi_internasional",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Ainvestasi_internasional.json"
+        },
+        {
+          "name": "liv2_2:investasi_regional",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Ainvestasi_regional.json"
+        },
+        {
+          "name": "liv2_2:jumlah_nabung",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Ajumlah_nabung.json"
+        },
+        {
+          "name": "liv2_2:kredit",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Akredit.json"
+        },
+        {
+          "name": "liv2_2:list_exprerience",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Alist_exprerience.json"
+        },
+        {
+          "name": "liv2_2:npl_bpr_ojk19",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Anpl_bpr_ojk19.json"
+        },
+        {
+          "name": "liv2_2:pdrb",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Apdrb.json"
+        },
+        {
+          "name": "liv2_2:pdrb_prov",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Apdrb_prov.json"
+        },
+        {
+          "name": "liv2_2:poi_byId",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Apoi_byId.json"
+        },
+        {
+          "name": "liv2_2:poi_byKategoriKota",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Apoi_byKategoriKota.json"
+        },
+        {
+          "name": "liv2_2:poi_bySubKategoriKota",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Apoi_bySubKategoriKota.json"
+        },
+        {
+          "name": "liv2_2:poi_medical",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Apoi_medical.json"
+        },
+        {
+          "name": "liv2_2:providn",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Aprovidn.json"
+        },
+        {
+          "name": "liv2_2:rtr",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Artr.json"
+        },
+        {
+          "name": "liv2_2:rtr_2021",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Artr_2021.json"
+        },
+        {
+          "name": "liv2_2:ses",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/liv2_2%3Ases.json"
+        },
+        {
+          "name": "kebencanaan:risiko_kebakaran",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/kebencanaan%3Arisiko_kebakaran.json"
+        },
+        {
+          "name": "kebencanaan:risiko_kriminalitas",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/kebencanaan%3Arisiko_kriminalitas.json"
+        },
+        {
+          "name": "kebencanaan:risk_flood_historis_bnpb",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/kebencanaan%3Arisk_flood_historis_bnpb.json"
+        },
+        {
+          "name": "kebencanaan:risk_flood_historis_gee",
+          "href": "https://gsdev.lokasimaps.com/geoserver/rest/layers/kebencanaan%3Arisk_flood_historis_gee.json"
+        }
+      ]
+    }
+  }

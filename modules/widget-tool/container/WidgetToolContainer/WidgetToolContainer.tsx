@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ToolContainer } from "../../tool/container/ToolContainer";
 import { WidgetContainer } from "../../widget/container/WidgetContainer";
 import { useMapControl } from "@/modules/map/control/hooks/useMapControl";
+import GeonodeLoginButton from "@/components/GeonodeLoginButton";
 
 export const WidgetToolContainer = () => {
   const mapControl = useMapControl();
@@ -21,6 +22,7 @@ export const WidgetToolContainer = () => {
   return (
     <Tabs value={tabValue} onValueChange={setTabValue}>
       <div className="py-2 px-4">
+        <GeonodeLoginButton/>
         <TabsList className="grid w-fit grid-cols-2">
           <TabsTrigger value="system-dynamic">System Dynamic</TabsTrigger>
           <TabsTrigger value="widget">Widgets</TabsTrigger>

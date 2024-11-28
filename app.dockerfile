@@ -18,7 +18,7 @@ COPY . .
 # RUN npx prisma generate
 
 # Build the application
-RUN npm run build
+RUN npm run clean && npm run build
 
 # Now create a production image
 FROM node:18-alpine AS production

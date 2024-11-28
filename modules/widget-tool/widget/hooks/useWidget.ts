@@ -7,22 +7,44 @@ interface WidgetStore {
     setFilterByExtent: (value: boolean) => void;
 }
 
+export interface SelectedAttribute {
+    attr: string;
+    agg: string;
+}
+
 export const useWidget = create<WidgetStore>()(
     devtools(
         (set) => ({
             filterByExtent: false,
             setFilterByExtent: (value: boolean) =>
                 set(() => ({ filterByExtent: value }), undefined, 'setFilterByExtent'),
-        }),
+            }),
         { store: 'WIDGET', name: 'store' }
     )
 );
 
-export const dataChartPropertyValue = (layerName: string, extent: any, filterByExtent: boolean, cqlFilter: string, properties: string, enabled: boolean) => {
+export const dataChartPropertyValue = (layerName: string, extent: any, filterByExtent: boolean, cqlFilter: string, properties: SelectedAttribute[], enabled: boolean) => {
     return useQuery({
         queryKey: ["dataChartPropertyValue", layerName, filterByExtent, cqlFilter, ...(filterByExtent ? [extent] : []), properties],
         queryFn: async () => {
-            const url = `api/gn/layer/propertyValue?layer=${layerName}&property=${properties}&&cql_filter=${cqlFilter}${filterByExtent ? `&bbox=${extent.west},${extent.south},${extent.east},${extent.north}` : ''}`;
+            const url = `api/gn/layer/propertyValue?layer=${layerName}&property=${properties.map(v => v.attr).join(',')}&agg=${properties.map(v => v.agg).join(',')}&cql_filter=${cqlFilter}${filterByExtent ? `&bbox=${extent.west},${extent.south},${extent.east},${extent.north}` : ''}`;
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            const data = await response.json();
+            return data;
+        },
+        enabled,
+        staleTime: 300000,
+    });
+};
+
+export const dataChartPropertyValueMetric = (layerName: string, extent: any, filterByExtent: boolean, cqlFilter: string, properties: SelectedAttribute[], enabled: boolean) => {
+    return useQuery({
+        queryKey: ["dataChartPropertyValue", layerName, filterByExtent, cqlFilter, ...(filterByExtent ? [extent] : []), properties],
+        queryFn: async () => {
+            const url = `api/gn/layer/propertyValue?layer=${layerName}&property=${properties.map(v => v.attr).join(',')}&agg=${properties.map(v => v.agg).join(',')}&metric=true&cql_filter=${cqlFilter}${filterByExtent ? `&bbox=${extent.west},${extent.south},${extent.east},${extent.north}` : ''}`;
             const response = await fetch(url);
             if (!response.ok) {
                 throw new Error("Network response was not ok");
