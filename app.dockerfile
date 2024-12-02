@@ -12,13 +12,15 @@ RUN npm install
 
 # Copy Prisma schema and application code
 # COPY prisma ./prisma/
+
 COPY . .
+
 
 # Generate Prisma client
 # RUN npx prisma generate
 
 # Build the application
-RUN npm run clean && npm run build
+RUN npm run build
 
 # Now create a production image
 FROM node:18-alpine AS production
@@ -31,6 +33,8 @@ COPY --from=builder /app/.next /app/.next
 COPY --from=builder /app/public /app/public
 # COPY --from=builder /app/prisma /app/prisma
 COPY --from=builder /app/package*.json /app/
+# Copy SSL certificates to the production image
+COPY --from=builder /app/nginx/ssl /nginx/ssl
 
 # Expose the necessary port
 EXPOSE 3000

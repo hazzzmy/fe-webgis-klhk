@@ -39,3 +39,5 @@ next-env.d.ts
 ./app/api/gn/auth
 app.dockerfile
 docker-compose.yml
+
+/nginx

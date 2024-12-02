@@ -4,4 +4,6 @@ npm-debug.log
 .next
 .env.local
 .env.development.local
-__registry__
+__registry_
+*.log
+_
