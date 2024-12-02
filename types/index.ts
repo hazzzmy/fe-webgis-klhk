@@ -98,8 +98,10 @@ export interface ResourceParams {
     content: 'my-content' | 'featured' | 'group' | 'organization';
     category: 'all';
     type: 'all' | 'dataset' | 'map';
-    subType: 'all' | 'raster' | 'vector' | 'vector-time' | 'remote';
+    subType: string;
     search: string;
+    island: string;
+    year: string;
 }
 
 export interface SystemDynamic{

@@ -13,6 +13,9 @@ import { Input } from '@/components/ui/input'
 import { QueryObserverResult } from '@tanstack/react-query';
 import { Meta, ResourceParams } from '@/types';
 
+import { Select, SelectItem, SelectTrigger, SelectContent, SelectValue } from "@/components/ui/select";
+
+
 interface MapAddLayerProps {
     params: ResourceParams;
     dataQuery: QueryObserverResult<any>;
@@ -39,11 +42,13 @@ export const MapAddLayer: React.FC<MapAddLayerProps> = (props) => {
 
     const totalRecords = dataQuery.data?.total || meta.total; // Get the total count
     const totalPages = Math.ceil(totalRecords / meta.pageSize); // Calculate total pages
+    const years = Array.from({ length: 41 }, (_, i) => (2020 + i).toString()); // Generate years 2020 to 2060
+
 
     return (
         <div className='w-full h-full'>
             <div className='flex flex-row w-full h-full'>
-                <div className='flex flex-col gap-2 justify-start items-start w-4/12 p-4'>
+                <div className='flex flex-col gap-2 justify-start items-start w-3/12 p-4'>
                     <div className='flex flex-row gap-2 w-full items-center'>
                         <h3 className="text-gray-700 text-sm w-2/12">Type</h3>
                         <Tabs defaultValue={params.type} className='w-10/12'>
@@ -62,39 +67,65 @@ export const MapAddLayer: React.FC<MapAddLayerProps> = (props) => {
 
                     <div className='flex flex-row gap-2 w-full items-center'>
                         <h3 className="text-gray-700 text-sm w-2/12">Subtype</h3>
-                        <Tabs defaultValue={params.subType} className='w-10/12'>
-                            <TabsList>
-                                <TabsTrigger
-                                    value="all"
-                                    onClick={() => onParamsChange({ subType: 'all' })}
-                                    disabled={params.type === 'map'} // Ensure 'all' is always selected for 'map'
-                                >All</TabsTrigger>
-
-                                <TabsTrigger
-                                    value="raster"
-                                    onClick={() => onParamsChange({ subType: 'raster' })}
-                                    disabled={params.type === 'map'} // Disable these when 'map' is selected
-                                >Raster</TabsTrigger>
-
-                                <TabsTrigger
-                                    value="vector"
-                                    onClick={() => onParamsChange({ subType: 'vector' })}
-                                    disabled={params.type === 'map'}
-                                >Vector</TabsTrigger>
-
-                                <TabsTrigger
-                                    value="vector-time"
-                                    onClick={() => onParamsChange({ subType: 'vector-time' })}
-                                    disabled={params.type === 'map'}
-                                >Vector Time</TabsTrigger>
-
-                                <TabsTrigger
-                                    value="remote"
-                                    onClick={() => onParamsChange({ subType: 'remote' })}
-                                    disabled={params.type === 'map'}
-                                >Remote</TabsTrigger>
-                            </TabsList>
-                        </Tabs>
+                        <Select
+                            defaultValue={params.subType}
+                            disabled={params.type === 'map'}
+                            onValueChange={(value) => onParamsChange({ subType: value })}
+                        >
+                            <SelectTrigger className="w-10/12">
+                                <SelectValue placeholder="Select an island" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectItem value="all">All Subtype</SelectItem>
+                                <SelectItem value="vector">Vector</SelectItem>
+                                <SelectItem value="raster">Raster</SelectItem>
+                                <SelectItem value="vector-time">Vector Time</SelectItem>
+                                <SelectItem value="remote">Remote</SelectItem>
+                            </SelectContent>
+                        </Select>
+                    </div>
+                    <div className="flex flex-row gap-2 w-full items-center">
+                        <h3 className="text-gray-700 text-sm w-2/12">Island</h3>
+                        <Select
+                            defaultValue={params.island}
+                            onValueChange={(value) => onParamsChange({ island: value })}
+                        >
+                            <SelectTrigger className="w-10/12">
+                                <SelectValue placeholder="Select an island" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectItem value="all">All Islands</SelectItem>
+                                <SelectItem value="Sumatra">Sumatra</SelectItem>
+                                <SelectItem value="Jawa">Jawa</SelectItem>
+                                <SelectItem value="Balinusra">Bali & Nusa Tenggara</SelectItem>
+                                <SelectItem value="Kalimantan">Kalimantan</SelectItem>
+                                <SelectItem value="Sulawesi">Sulawesi</SelectItem>
+                                <SelectItem value="Maluku">Maluku</SelectItem>
+                                <SelectItem value="Papua">Papua</SelectItem>
+                            </SelectContent>
+                        </Select>
+                    </div>
+                    <div className="flex flex-row gap-2 w-full items-center">
+                        <h3 className="text-gray-700 text-sm w-2/12">Year</h3>
+                        <Select
+                            defaultValue={params.year}
+                            disabled={params.type === 'map'}
+                            onValueChange={(value) => onParamsChange({ year: value })}
+                        >
+                            <SelectTrigger className="w-10/12">
+                                <SelectValue placeholder="Select a year" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectItem value={'all'}>
+                                    All Years
+                                </SelectItem>
+                                {years.map((year) => (
+                                    <SelectItem key={year} value={year}>
+                                        {year}
+                                    </SelectItem>
+                                ))}
+                            </SelectContent>
+                        </Select>
                     </div>
                     <div className="flex flex-row items-center w-full gap-2">
                         <h3 className="text-gray-700 text-sm w-2/12">Search</h3>
@@ -111,11 +142,11 @@ export const MapAddLayer: React.FC<MapAddLayerProps> = (props) => {
                         />
                     </div>
                 </div>
-                <div className='flex flex-col gap-4 justify-start items-start w-8/12 p-2 h-full'>
-                    <div className='grid grid-cols-4 gap-2 w-full h-full'>
+                <div className='flex flex-col gap-4 justify-start items-start w-9/12 p-2 h-full'>
+                    <div className='grid grid-cols-5 gap-2 w-full h-full'>
                         {dataQuery.isLoading ? (
                             // Show skeleton cards while data is loading
-                            Array.from({ length: 8 }).map((_, index) => (
+                            Array.from({ length: 10 }).map((_, index) => (
                                 <SkeletonWrapper key={index} isLoading={true}>
                                     <Card className='w-full h-[30vh] shadow p-0' />
                                 </SkeletonWrapper>
@@ -179,7 +210,7 @@ export const MapAddLayer: React.FC<MapAddLayerProps> = (props) => {
                         )}
                     </div>
                     <div className='flex flex-row justify-between items-center w-full gap-2'>
-                        <div className='w-2/12'>Total: {totalRecords}</div>
+                        <div className='w-2/12'>Total: {totalRecords} Layers</div>
                         <Pagination className="w-10/12 flex justify-end items-center">
                             <PaginationContent className="flex items-end">
                                 <PaginationItem>

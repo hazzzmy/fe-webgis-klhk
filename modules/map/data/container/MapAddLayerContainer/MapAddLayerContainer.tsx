@@ -19,12 +19,17 @@ export const MapAddLayerContainer = () => {
         category: 'all',
         type: 'all',
         subType: 'all',
-        search: ''
+        search: '',
+        island: 'all',
+        year: 'all',
     })
+
+    console.log(params.island)
+
     const [debouncedSearchTerm] = useDebounce(params.search, 800);
     const [meta, setMeta] = useState<Meta>({
         page: 1,
-        pageSize: 8,
+        pageSize: 10,
         total: 0
     })
     
@@ -84,9 +89,9 @@ export const MapAddLayerContainer = () => {
     }
 
     const dataQuery = useQuery({
-        queryKey: ["gn", "resources", params.content, params.type, params.subType, debouncedSearchTerm, meta.page],
+        queryKey: ["gn", "resources", params,  debouncedSearchTerm, meta.page],
         queryFn: async () => {
-            const url = `/api/gn/resources?regions=Indonesia&page=${meta.page}&page_size=${meta.pageSize}&type=${params.type}&subtype=${params.subType}&search=${debouncedSearchTerm}`;
+            const url = `/api/gn/resources?page=${meta.page}&page_size=${meta.pageSize}&type=${params.type}&subtype=${params.subType}&search=${debouncedSearchTerm}&island=${params.island}&year=${params.year}`;
             const response = await fetch(url);
             if (!response.ok) {
                 throw new Error("Network response was not ok");

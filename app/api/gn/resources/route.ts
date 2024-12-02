@@ -7,7 +7,7 @@ export async function GET(req: NextRequest) {
 
     // Extract query parameters from the request
     const page = searchParams.get('page') || 1;
-    const page_size = searchParams.get('page_size') || 8;
+    const page_size = searchParams.get('page_size') || 10;
     const search = searchParams.get('search') || '';
     const subtype = searchParams.get('subtype') || 'all';
     const favorite = searchParams.get('favorite');
@@ -15,20 +15,31 @@ export async function GET(req: NextRequest) {
     const isPublished = searchParams.get('is_published');
     const isApproved = searchParams.get('is_approved');
     const category = searchParams.get('category');
-    const keywords = searchParams.get('keywords');
+    // const keywords = searchParams.get('keywords');
     const regions = searchParams.get('regions');
     const owner = searchParams.get('owner');
     const extent = searchParams.get('extent');
     const resource_type = searchParams.get('type') || 'all';
+    const island = searchParams.get('island');
+    const year = searchParams.get('year');
     
-    // Base URL for GeoNode API
     let url = `${process.env.NEXT_PUBLIC_GEONODE}/api/v2/resources?page=${page}&page_size=${page_size}`;
     
-    // Append search filters if provided
     if (search) {
         url += `&search=${search}&search_fields=title&search_fields=abstract`;
     }
+
+    let keywords:string[]= []
     
+    if (island != 'all'){
+        keywords.push(island as string)
+    }
+    if (year != 'all'){
+        keywords.push(year as string)
+    }
+
+    console.log(keywords)
+
     let defaultResourceTypes = ['map', 'dataset'];
     if(resource_type != 'all'){
         defaultResourceTypes = [resource_type as string];
@@ -51,18 +62,23 @@ export async function GET(req: NextRequest) {
             url += `&filter{subtype.in}=${type}`
         })
     }
-    
+
+    if (keywords.length>0){
+        keywords.forEach((keyword:string)=>{
+            url += `&filter{keywords.name.in}=${keyword}`
+        })
+    }
     
     if (favorite) url += `&favorite=${favorite}`;
     if (featured) url += `&filter{featured}=${featured}`;
     if (isPublished) url += `&filter{is_published}=${isPublished}`;
     if (isApproved) url += `&filter{is_approved}=${isApproved}`;
     if (category) url += `&filter{category.identifier}=${category}`;
-    if (keywords) url += `&filter{keywords.name}=${keywords}`;
     if (regions) url += `&filter{regions.name}=${regions}`;
     if (owner) url += `&filter{owner.username}=${owner}`;
     if (extent) url += `&extent=${extent}`;
 
+    console.log(url)
 
     try {
         // Make the Axios request to the GeoNode API

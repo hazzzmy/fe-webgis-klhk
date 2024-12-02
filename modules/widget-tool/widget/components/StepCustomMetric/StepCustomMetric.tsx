@@ -41,6 +41,7 @@ export const StepCustomMetric:React.FC<StepCustomMetricProps> = (props) => {
                                         title: x.target.value,
                                     })
                                 }}
+                                placeholder="This is Chart Title"
                             />
                         </div>
                         <div className="grid grid-cols-[1fr_4fr] gap-4 items-center">
@@ -53,6 +54,7 @@ export const StepCustomMetric:React.FC<StepCustomMetricProps> = (props) => {
                                         subTitle: x.target.value,
                                     })
                                 }}
+                                placeholder="This is Chart Sub Title"
                             />
                         </div>
                         <div className="grid grid-cols-[1fr_4fr] gap-4 items-center">
@@ -65,6 +67,7 @@ export const StepCustomMetric:React.FC<StepCustomMetricProps> = (props) => {
                                         unit: x.target.value,
                                     })
                                 }}
+                                placeholder="Unit"
                             />
                         </div>
                         <div className="grid grid-cols-[1fr_4fr] gap-4 items-center">
@@ -78,6 +81,7 @@ export const StepCustomMetric:React.FC<StepCustomMetricProps> = (props) => {
                                     })
                                 }}
                                 className="resize-none"
+                                placeholder="Input Footer Information Here"
                             />
                         </div>
                    </div>

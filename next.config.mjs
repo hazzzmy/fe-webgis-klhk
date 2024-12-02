@@ -52,6 +52,11 @@ const nextConfig = {
                 hostname: 'master.demo.geonode.org',
                 pathname: '/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'nodeserver.geoportal.co.id',
+                pathname: '/**',
+            },
         ],
     },
 };

@@ -1,5 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ChartConfig, ChartContainer, ChartLegend, ChartLegendContent } from "@/components/ui/chart";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -8,6 +8,10 @@ import { SharedDropdownSelect } from "@/shared/components/SharedDropdownSelect";
 import { LabelPosition } from "recharts/types/component/Label";
 import { CustomBarChart } from "../CustomBarChart";
 import { CategoricalChartProps } from "recharts/types/chart/generateCategoricalChart";
+import { chartColors } from "../../utils/chartConfig";
+import { CustomAreaChart } from "../CustomAreaChart";
+import { useEffect } from "react";
+
 
 type inputValue = {
     stacked: 'false' | 'true' | string;
@@ -45,6 +49,15 @@ const labelPositionOptions = (
 
 export const StepCustomBarArea:React.FC<StepCustomBarAreaProps> = (props) => {
     const { chartType, inputValue, dataChart, label, onChange } = props;
+
+    useEffect(() => {
+        if (chartType === 'Area') {
+            onChange({
+                ...inputValue,
+                stacked: 'true',
+            })
+        }
+    }, [chartType])
 
     return (
         <div className="grid grid-cols-2 gap-2 h-full">
@@ -90,6 +103,7 @@ export const StepCustomBarArea:React.FC<StepCustomBarAreaProps> = (props) => {
                                 ]}
                                 placeholder='Horizontal/vertical'
                                 className="w-full"
+                                disabled
                             />
                         </div>
                         <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
@@ -102,6 +116,7 @@ export const StepCustomBarArea:React.FC<StepCustomBarAreaProps> = (props) => {
                                         title: x.target.value,
                                     })
                                 }}
+                                placeholder="This is Chart Title"
                             />
                         </div>
                         <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
@@ -114,6 +129,7 @@ export const StepCustomBarArea:React.FC<StepCustomBarAreaProps> = (props) => {
                                         subTitle: x.target.value,
                                     })
                                 }}
+                                placeholder="This is Chart Sub Title"
                             />
                         </div>
                         <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
@@ -127,6 +143,7 @@ export const StepCustomBarArea:React.FC<StepCustomBarAreaProps> = (props) => {
                                     })
                                 }}
                                 className="resize-none"
+                                placeholder="Input Footer Information Here"
                             />
                         </div>
                         <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
@@ -143,6 +160,7 @@ export const StepCustomBarArea:React.FC<StepCustomBarAreaProps> = (props) => {
                                         xAxisTitle: x.target.value,
                                     })
                                 }}
+                                placeholder="Input X Axis Title"
                             />
                         </div>
                         <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
@@ -220,6 +238,7 @@ export const StepCustomBarArea:React.FC<StepCustomBarAreaProps> = (props) => {
                                     })
                                 }}
                                 placeholder="..."
+                                disabled
                             />
                         </div>
                         <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
@@ -258,16 +277,37 @@ export const StepCustomBarArea:React.FC<StepCustomBarAreaProps> = (props) => {
                         </div>
                         <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
                             <Label>Color Pallete</Label>
+                            <div className="flex">
+                                <div className="p-1 bg-secondary cursor-pointer rounded-sm">
+                                    <div className="grid grid-cols-2 h-8 w-8" style={{...chartColors}}>
+                                        <div className="h-4 w-4 bg-[var(--chart-1)] rounded-tl-sm" />
+                                        <div className="h-4 w-4 bg-[var(--chart-2)] rounded-tr-sm" />
+                                        <div className="h-4 w-4 bg-[var(--chart-3)] rounded-bl-sm" />
+                                        <div className="h-4 w-4 bg-[var(--chart-4)] rounded-br-sm" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </CardContent>
             </Card>
             {chartType === 'Bar' && (
-                <CustomBarChart
-                    dataChart={dataChart}
-                    label={label}
-                    inputValue={inputValue}
-                />
+                <div style={{...chartColors}}>
+                    <CustomBarChart
+                        dataChart={dataChart}
+                        label={label}
+                        inputValue={inputValue}
+                    />
+                </div>
+            )}
+            {chartType === 'Area' && (
+                <div style={{...chartColors}}>
+                    <CustomAreaChart
+                        dataChart={dataChart}
+                        label={label}
+                        inputValue={inputValue}
+                    />
+                </div>
             )}
         </div>
     )
