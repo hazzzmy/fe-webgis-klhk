@@ -82,6 +82,9 @@ type InitialParameterValueType = {
   time_to_change_laju_pertumbuhan_populasi_asumsi: ParameterType;
   laju_perubahan_lahan_terbangun_per_kapita_asumsi: ParameterType;
   time_to_change_laju_perubahan_lahan_terbangun_per_kapita: ParameterType;
+  elastisitas_lpe_thd_perubahan_teknologi_target: ParameterType;
+  time_to_change_elastisitas_lpe_thd_perubahan_teknologi: ParameterType;
+  
 };
 
 export const initialParameterValue: InitialParameterValueType = {
@@ -171,6 +174,28 @@ export const initialParameterValue: InitialParameterValueType = {
     baseline: 2055,
     value: 2055,
     description: "Waktu untuk mengubah Laju Perubahan lahan per kapita pada poin sebelumnya",
+    descriptionOpen: false
+  },
+  elastisitas_lpe_thd_perubahan_teknologi_target:{
+    name: "Elastisitas LPE thd perubahan teknologi target",
+    unit: "1/year",
+    min: 0.01,
+    max: 0.1,
+    step: 0.005,
+    baseline: 0.03,
+    value: 0.03,
+    description: "Perubahan elastisitas perubahan teknologi dari laju pertumbuhan ekonomi wilayah Akan mempengaruhi tingkat teknologi wilayah (Total Factor Productivity) yang mendorong produksi bds fungsi Cobb-Douglas",
+    descriptionOpen: false
+  },
+  time_to_change_elastisitas_lpe_thd_perubahan_teknologi: {
+    name: "time to change Elastisitas LPE thd perubahan teknologi",
+    unit: "year",
+    min: 2025,
+    max: 2055,
+    step: 1,
+    baseline: 2055,
+    value: 2055,
+    description: "Waktu untuk mengubah Laju Perubahan Perubahan laju teknologi pada perekonomian",
     descriptionOpen: false
   }
 }

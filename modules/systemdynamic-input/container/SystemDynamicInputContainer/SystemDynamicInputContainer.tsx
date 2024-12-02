@@ -70,7 +70,7 @@ export const SystemDynamicInputContainer = () => {
   const systemDynamicControl = useSystemDynamicControl()
 
   return systemDynamicControl.tools.systemDynamicInputControl.active && (
-    <div className="p-4 flex flex-col gap-4 max-h-[calc(100vh-60px)]">
+    <div className="p-4 flex flex-col gap-4 max-h-[calc(100vh-130px)]">
       <div className='flex flex-row justify-between w-full items-center'>
         <h3 className="text-primary text-xl font-bold">Input Parameter</h3>
       </div>
@@ -176,7 +176,7 @@ export const SystemDynamicInputContainer = () => {
                 </CollapsibleTrigger>  
             </div>
             <CollapsibleContent>
-              <div className="rounded-md border px-4 py-3 font-mono text-sm">
+              <div className="rounded-md border px-4 py-3 font-mono text-sm max-w-[400px]">
                 {parameter.description}
               </div>
             </CollapsibleContent>

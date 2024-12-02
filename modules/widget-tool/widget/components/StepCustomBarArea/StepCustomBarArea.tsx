@@ -103,7 +103,6 @@ export const StepCustomBarArea:React.FC<StepCustomBarAreaProps> = (props) => {
                                 ]}
                                 placeholder='Horizontal/vertical'
                                 className="w-full"
-                                disabled
                             />
                         </div>
                         <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">

@@ -761,7 +761,7 @@ export const WidgetContainer = () => {
                     {/* <div>Total: {itemsDataChart.length}</div> */}
                 </div>
                 {itemsDataChart.length > 0 ? (
-                    <div className="grid grid-cols-1 gap-2 bg-gray-200 overflow-y-auto max-h-[calc(100vh-120px)]">
+                    <div className="p-4 grid grid-cols-1 gap-2 bg-white overflow-y-auto max-h-[calc(100vh-160px)] rounded custom-scrollbar">
                         {renderListChartWidget()}
                     </div> 
                 ): <Card className="flex p-4 gap-2 justify-center items-center">

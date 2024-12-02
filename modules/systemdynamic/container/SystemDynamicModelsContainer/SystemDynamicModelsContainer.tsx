@@ -18,15 +18,15 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
-import { useSystemDynamicParameter } from "@/modules/systemdynamic-input/hooks/useSystemDynamicInputData";
+import { useSystemDynamicInputData, useSystemDynamicParameter } from "@/modules/systemdynamic-input/hooks/useSystemDynamicInputData";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 export const description = "A stacked area chart"
 
-const LoadingComponent = () => {
+const LoadingComponent = (island: {island:string}) => {
 	return (
 		<div className="flex-col flex items-center justify-center bg-black bg-opacity-60 z-50 gap-4 h-screen">
-			<p className="text-white text-wrap">Running System Dynamic Model</p>
+			<p className="text-white text-wrap">Running System Dynamic Model for {island.island}</p>
 			<Loader2 className="w-12 h-12 animate-spin text-secondary" />
 		</div>
 	)
@@ -36,25 +36,33 @@ export const SystemDynamicModelsContainer = () => {
 
   const [firstRender, setFirstRender] = useState(true);
   const [shouldFetch, setShouldFetch] = useState(false);
+  
 
   const systemDynamicData = useSystemDynamicData();
   const activeParameters = systemDynamicData.activeParameters();
   const {parameters, grid_layout, setRefetchDataFn, setIsFetching} = useSystemDynamicParameter();
+  const {island} = useSystemDynamicInputData()
   
   const dataQuery = useQuery({
-    queryKey: ["systemDynamic"],
+    queryKey: ["systemDynamic", island],
     queryFn: async () => {
-        const url = `api/py/sd?initial_time=${parameters.initial_time.value}
-        &final_time=${parameters.final_time.value}
-        &mps_assumption=${parameters.mps_assumption.value}
-        &time_to_change_mps_assumption=${parameters.time_to_change_mps_assumption.value}
-        &laju_pertumbuhan_populasi_asumsi=${parameters.laju_pertumbuhan_populasi_asumsi.value}
-        &time_to_change_laju_pertumbuhan_populasi_asumsi=${parameters.time_to_change_laju_pertumbuhan_populasi_asumsi.value}
-        &laju_perubahan_lahan_terbangun_per_kapita_asumsi=${parameters.laju_perubahan_lahan_terbangun_per_kapita_asumsi.value}
-        &time_to_change_laju_perubahan_lahan_terbangun_per_kapita=${parameters.time_to_change_laju_perubahan_lahan_terbangun_per_kapita.value}`
+        
+        const url = `api/py/sd?${new URLSearchParams({
+          initial_time: parameters.initial_time.value.toString(),
+          final_time: parameters.final_time.value.toString(),
+          mps_assumption: parameters.mps_assumption.value.toString(),
+          island: island,
+          time_to_change_mps_assumption: parameters.time_to_change_mps_assumption.value.toString(),
+          laju_pertumbuhan_populasi_asumsi: parameters.laju_pertumbuhan_populasi_asumsi.value.toString(),
+          time_to_change_laju_pertumbuhan_populasi_asumsi: parameters.time_to_change_laju_pertumbuhan_populasi_asumsi.value.toString(),
+          laju_perubahan_lahan_terbangun_per_kapita_asumsi: parameters.laju_perubahan_lahan_terbangun_per_kapita_asumsi.value.toString(),
+          time_to_change_laju_perubahan_lahan_terbangun_per_kapita: parameters.time_to_change_laju_perubahan_lahan_terbangun_per_kapita.value.toString(),
+          elastisitas_lpe_thd_perubahan_teknologi_target: parameters.elastisitas_lpe_thd_perubahan_teknologi_target.value.toString(),
+          time_to_change_elastisitas_lpe_thd_perubahan_teknologi: parameters.time_to_change_elastisitas_lpe_thd_perubahan_teknologi.value.toString(),
+        }).toString()}`;
+        
         const response = await fetch(url);
         if (!response.ok) {
-          console.log(response);
             throw new Error("Network response was not ok");
         }
         const data = await response.json();
@@ -62,7 +70,8 @@ export const SystemDynamicModelsContainer = () => {
         return data;
     },
     staleTime: 300000,
-    enabled: firstRender || shouldFetch,
+    // enabled: firstRender || shouldFetch,
+    enabled: !!island && (firstRender || shouldFetch),
   });
 
   useEffect(() => {
@@ -85,6 +94,12 @@ export const SystemDynamicModelsContainer = () => {
         setIsFetching(false);
       }
   }, [dataQuery.isFetching, setIsFetching]);
+
+  useEffect(() => {
+    if (island) {
+      setShouldFetch(true); // Trigger fetch when island changes
+    }
+  }, [island]);
   
 
   const chartConfig = {
@@ -98,8 +113,15 @@ export const SystemDynamicModelsContainer = () => {
     },
   } satisfies ChartConfig
 
+  if (!island) {
+    return <Card className="flex p-4 gap-2 justify-center items-center">
+        <InfoIcon />
+        <p>Please select an Island</p>
+    </Card>
+  }
+
   if (dataQuery.isLoading) {
-    return <LoadingComponent />
+    return <LoadingComponent island={island}/>
   }
 
   return dataQuery.data && activeParameters.length > 0 ? (
@@ -201,29 +223,3 @@ function formatYAxisTick(value: number) {
   }
   return value.toString(); // Returns the number as a string
 }
-
-// Custom tooltip formatting function
-function formatTooltipValue(value: number) {
-  if (value >= 1000000) {
-    return `${(value / 1000000).toFixed(0)} JT`;
-  }
-  return value.toFixed(0);
-}
-
-
-const CustomTooltip = ({ active, payload, label }: { active?: any, payload?: any, label?: any }) => {
-  if (active && payload && payload.length) {
-    console.log(payload, label)
-
-    return (
-      <div className="p-4 rounded bg-white shadow">
-        <p className="font-bold text-primary">Year</p>
-        <p className="text-primary">{label}</p>
-        <p className="font-bold text-primary">{payload[0].name}</p>
-        <p className="text-primary">{`${payload[0].value.toLocaleString()}`}</p>
-      </div>
-    );
-  }
-
-  return null;
-};

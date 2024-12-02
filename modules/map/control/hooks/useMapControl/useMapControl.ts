@@ -62,7 +62,7 @@ interface MapControlStore {
 export const useMapControl = create<MapControlStore>()(
     devtools(
         (set, get) => ({
-            activeBasemap:'google',
+            activeBasemap:'maptiler-satellite',
             setActiveBasemap: (payload) => set(
                 () => ({ activeBasemap: payload }),
                 undefined,

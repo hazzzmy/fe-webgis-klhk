@@ -30,6 +30,8 @@ export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
 
     const layer = searchParams.get('layer');
+    console.log("🚀 ~ GET ~ layer:", layer)
+    
     const property = searchParams.get('property');
     const bbox = searchParams.get('bbox');
     const cql_filter = searchParams.get('cql_filter');
@@ -39,12 +41,15 @@ export async function GET(req: NextRequest) {
     let url = `${process.env.NEXT_PUBLIC_GEONODE}/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typenames=${layer}&outputFormat=application/json`
 
     let urlGetAttributeList = `${process.env.NEXT_PUBLIC_GEONODE}/geoserver/ows?service=wfs&version=2.0.0&typeNames=${layer}&request=DescribeFeatureType&outputFormat=application/json`
-
+    
+    
+    
     const getAttributeList = await axios.get(urlGetAttributeList, {
         headers: {
             'Accept': 'application/json',
         },
     });
+    console.log("🚀 ~ GET ~ urlGetAttributeList:", urlGetAttributeList)
 
     const geometryTypes = [
         "Point", "LineString", "Polygon", "MultiPoint",
@@ -79,7 +84,6 @@ export async function GET(req: NextRequest) {
 
     const queryString = new URLSearchParams(params).toString();
     url = `${url}&${queryString}`;
-
 
     try {
         const response = await axios.get(url, {

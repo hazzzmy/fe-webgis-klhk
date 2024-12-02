@@ -81,8 +81,8 @@ export const MapControlLayers: React.FC<MapControlLayersProps> = (props) => {
                             <Image alt="klhk" src="/image/klhklogo.png" width={33} height={45} priority />
                             <CityPlanSVG />
                         </div>
-                        <div className="flex items-center justify-center w-full bg-secondary gap-2 rounded-br-lg rounded-bl-lg flex-col h-full">
-                            <div className="flex items-center justify-center w-full gap-2 rounded-md rounded-bl-none rounded-br-none p-3 pb-0">
+                        <div className="flex items-center justify-center w-full gap-2 rounded-br-lg rounded-bl-lg flex-col h-full">
+                            {/* <div className="flex items-center justify-center w-full gap-2 rounded-md rounded-bl-none rounded-br-none p-3 pb-0">
                                 <Select>
                                     <SelectTrigger className="w-full">
                                         <SelectValue placeholder="All Indonesia Island" />
@@ -97,15 +97,16 @@ export const MapControlLayers: React.FC<MapControlLayersProps> = (props) => {
                                         <SelectItem value="Papua">Papua</SelectItem>
                                     </SelectContent>
                                 </Select>
-                            </div>
-                            <Tabs defaultValue="layers" className="w-full" onValueChange={handleTabChange}>
+                            </div> */}
+                            {/* <Tabs defaultValue="layers" className="w-full" onValueChange={handleTabChange}>
                                 <div className="px-3 pb-1">
                                     <TabsList className="grid w-full grid-cols-2">
                                         <TabsTrigger value="layers">Layers</TabsTrigger>
                                         <TabsTrigger value="system-dynamic">System Dynamic</TabsTrigger>
                                     </TabsList>
                                 </div>
-                                <TabsContent value="layers" className="p-0 bg-white rounded-br-lg rounded-bl-lg max-h-screen">
+                                <TabsContent value="layers" className="p-0 bg-white rounded-br-lg rounded-bl-lg max-h-screen"> */}
+                                <div className="w-full bg-white rounded-br-lg rounded-bl-lg">
                                     <div className="flex flex-col">
                                         <div
                                             className={cn(
@@ -131,7 +132,7 @@ export const MapControlLayers: React.FC<MapControlLayersProps> = (props) => {
                                                 </Tooltip>
                                             </TooltipProvider>
                                         </div>
-                                        <div className="overflow-y-auto custom-scrollbar max-h-[63vh]">
+                                        <div className="overflow-y-auto custom-scrollbar max-h-[75vh]">
                                             {children}
                                         </div>
                                         <div
@@ -144,8 +145,8 @@ export const MapControlLayers: React.FC<MapControlLayersProps> = (props) => {
                                             )}
                                         </div>
                                     </div>
-                                </TabsContent>
-                                <TabsContent value="system-dynamic" className="p-0 bg-white rounded-br-lg rounded-bl-lg">
+                                </div>
+                                {/* <TabsContent value="system-dynamic" className="p-0 bg-white rounded-br-lg rounded-bl-lg">
                                     <div className="flex flex-col">
                                         <div className="overflow-y-auto custom-scrollbar">
                                             {children}
@@ -161,7 +162,7 @@ export const MapControlLayers: React.FC<MapControlLayersProps> = (props) => {
                                         </div>
                                     </div>
                                 </TabsContent>
-                            </Tabs>
+                            </Tabs> */}
                         </div>
                     </div>
                 </div>

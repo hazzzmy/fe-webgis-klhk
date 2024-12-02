@@ -18,6 +18,8 @@ interface Store {
 
 // DataStore interface with state and actions
 interface DataStore {
+  island: string;
+  setSelectedIsland: (param: string) => void;  // Action to set the selected parameter
   data: Store;                  // The actual data structure
   setData: (newData: Store) => void;  // Action to update the data state
   selectedParameter: string;    // New field for selected parameter
@@ -27,6 +29,15 @@ interface DataStore {
 export const useSystemDynamicInputData = create<DataStore>()(
   devtools(
     (set) => ({
+
+      island: "",
+      setSelectedIsland: (param) =>
+        set((state) => {
+          if (state.island !== param) {
+            return { island: param, refetch: true }; // Set refetch true if island changes
+          }
+          return {};
+        }),
       data: initialParamterData,     // Set the initial state with the provided data
       setData: (newData) => set({    // Implement setData to update the entire state
         data: newData,
@@ -62,6 +73,8 @@ type InitialParameterValueType = {
   time_to_change_laju_pertumbuhan_populasi_asumsi: ParameterType;
   laju_perubahan_lahan_terbangun_per_kapita_asumsi: ParameterType;
   time_to_change_laju_perubahan_lahan_terbangun_per_kapita: ParameterType;
+  elastisitas_lpe_thd_perubahan_teknologi_target: ParameterType;
+  time_to_change_elastisitas_lpe_thd_perubahan_teknologi: ParameterType;
 };
 // Define the store interface with state and actions
 interface ParameterStore {
@@ -82,7 +95,7 @@ export const useSystemDynamicParameter = create<ParameterStore>()(
   devtools(
     (set) => ({
       parameters: initialParameterValue,  // Set initial parameter values
-      grid_layout: 1,
+      grid_layout: 2,
       isFetching: false,
       setIsFetching: (value: boolean) => set({ isFetching: value }),
       setGridLayout: (value:number) => set({ grid_layout: value }),

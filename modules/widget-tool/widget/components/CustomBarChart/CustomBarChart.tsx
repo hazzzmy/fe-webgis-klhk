@@ -51,7 +51,7 @@ export const CustomBarChart: React.FC<CustomBarChartProps> = ({
   }, {}) satisfies ChartConfig;
 
   return (
-    <Card className="h-full rounded-md">
+    <Card className="h-full rounded-md p-2">
         {!withoutTitle && (
             <CardHeader>
                     <CardTitle className="text-primary text-xl font-normal">

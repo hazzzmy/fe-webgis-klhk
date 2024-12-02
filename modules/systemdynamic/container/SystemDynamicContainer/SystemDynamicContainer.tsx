@@ -15,11 +15,12 @@ const LoadingComponent = () => {
 
 export const SystemDynamicContainer: React.FC<React.PropsWithChildren> = ({ children }) => {
 
-	const modelsData = useModelsData()
+	// const modelsData = useModelsData()
 	
 	return (
-		<div className='relative h-[100vh] w-full'>
-			{modelsData?.data ? <>{children}</>: <LoadingComponent />}
+		<div className='relative w-full h-screen'>
+			{/* {modelsData?.data ? <>{children}</>: <LoadingComponent />} */}
+			{children}
 		</div>
 	);
 };

@@ -35,7 +35,7 @@ export const MapControlContainer = () => {
               defaultSize={42}
               minSize={20}
               maxSize={90}
-              style={{ display: mapControl.tools.attributesTable.active ? 'block' : 'none'}}
+              style={{ display: mapControl.tools.attributesTable.active ? 'block' : 'none', maxWidth: '79vw'}}
               >
               <div className='relative h-full'>
                 <AttributesTableContainer sizeWidgetTools={mapControl.tools.widgetTools.active ? 100 : 0} />
