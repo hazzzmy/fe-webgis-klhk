@@ -30,7 +30,6 @@ export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
 
     const layer = searchParams.get('layer');
-    console.log("🚀 ~ GET ~ layer:", layer)
     
     const property = searchParams.get('property');
     const bbox = searchParams.get('bbox');
@@ -49,7 +48,6 @@ export async function GET(req: NextRequest) {
             'Accept': 'application/json',
         },
     });
-    console.log("🚀 ~ GET ~ urlGetAttributeList:", urlGetAttributeList)
 
     const geometryTypes = [
         "Point", "LineString", "Polygon", "MultiPoint",
@@ -75,11 +73,11 @@ export async function GET(req: NextRequest) {
     }
 
     if (cql_filter && bbox) {
-        params.cql_filter = `${cql_filter} AND BBOX(${geometryProperty.name}, ${bbox},'EPSG:4326')`;
+        params.cql_filter = `${cql_filter} AND BBOX(${geometryProperty.name}, ${bbox},'EPSG:3857')`;
     } else if (cql_filter) {
         params.cql_filter = `${cql_filter}`;
     } else if (bbox) {
-        params.cql_filter = `BBOX(${geometryProperty.name}, ${bbox}, 'EPSG:4326')`;
+        params.cql_filter = `BBOX(${geometryProperty.name}, ${bbox}, 'EPSG:3857')`;
     }
 
     const queryString = new URLSearchParams(params).toString();

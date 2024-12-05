@@ -38,7 +38,6 @@ export async function GET(req: NextRequest) {
         keywords.push(year as string)
     }
 
-    console.log(keywords)
 
     let defaultResourceTypes = ['map', 'dataset'];
     if(resource_type != 'all'){

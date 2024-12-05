@@ -27,7 +27,7 @@ interface CustomPieChartProps {
         propertyValue: string[]
         labelPosition: LabelPosition | 'none';
         legendPosition: string;
-        colorPalete: string;
+        colorPalette: string;
     };
     withoutTitle?: boolean;
 }

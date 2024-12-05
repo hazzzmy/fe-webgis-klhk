@@ -31,7 +31,7 @@ interface CustomBarChartProps {
     yAxisTitle: string;
     labelPosition: LabelPosition | 'none';
     legendPosition: string;
-    colorPalete: string;
+    colorPalette: string;
   };
   withoutTitle?: boolean;
 }
@@ -51,7 +51,7 @@ export const CustomBarChart: React.FC<CustomBarChartProps> = ({
   }, {}) satisfies ChartConfig;
 
   return (
-    <Card className="h-full rounded-md p-2">
+    <Card className="h-full rounded-md">
         {!withoutTitle && (
             <CardHeader>
                     <CardTitle className="text-primary text-xl font-normal">
@@ -71,7 +71,7 @@ export const CustomBarChart: React.FC<CustomBarChartProps> = ({
                 <BarChart
                     accessibilityLayer
                     data={dataChart}
-                    margin={{ top: 20, bottom: 10 }}
+                    margin={{ left: 20, top: 20, bottom: 10, right: 20 }}
                 >
                     <CartesianGrid vertical={false} />
                     {inputValue.orientation === "horizontal" ? (
@@ -82,7 +82,7 @@ export const CustomBarChart: React.FC<CustomBarChartProps> = ({
                                 tickMargin={10}
                                 axisLine={false}
                                 tickFormatter={(value) => value.toString().slice(0, 5)}
-                                // angle={45}
+                                angle={(dataChart || [])?.length > 12 ? 45 : 0}
                                 label={{
                                     value: inputValue.xAxisTitle,
                                     position: "insideBottom",
@@ -93,6 +93,7 @@ export const CustomBarChart: React.FC<CustomBarChartProps> = ({
                             <YAxis
                                 type="number"
                                 hide={inputValue.yAxisLabel === "false"}
+                                label={{ value: inputValue.yAxisTitle, angle: -90, position: 'insideLeft', offset: -10 }}
                                 {
                                     ...(inputValue.yAxisLabelValue !== 'none' ? {
                                       dataKey:inputValue.yAxisLabelValue,

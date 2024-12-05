@@ -8,9 +8,10 @@ import { SharedDropdownSelect } from "@/shared/components/SharedDropdownSelect";
 import { LabelPosition } from "recharts/types/component/Label";
 import { CustomBarChart } from "../CustomBarChart";
 import { CategoricalChartProps } from "recharts/types/chart/generateCategoricalChart";
-import { chartColors } from "../../utils/chartConfig";
+import { chartColors, ChartColorsType } from "../../utils/chartConfig";
 import { CustomAreaChart } from "../CustomAreaChart";
 import { useEffect } from "react";
+import { ChartColorPreview } from "../ChartColorPreview";
 
 
 type inputValue = {
@@ -26,7 +27,7 @@ type inputValue = {
     yAxisTitle: string;
     labelPosition: LabelPosition | 'none';
     legendPosition: string;
-    colorPalete: string;
+    colorPalette: ChartColorsType;
 }
 
 interface StepCustomBarAreaProps {
@@ -103,6 +104,7 @@ export const StepCustomBarArea:React.FC<StepCustomBarAreaProps> = (props) => {
                                 ]}
                                 placeholder='Horizontal/vertical'
                                 className="w-full"
+                                disabled
                             />
                         </div>
                         <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
@@ -237,7 +239,6 @@ export const StepCustomBarArea:React.FC<StepCustomBarAreaProps> = (props) => {
                                     })
                                 }}
                                 placeholder="..."
-                                disabled
                             />
                         </div>
                         <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
@@ -276,22 +277,27 @@ export const StepCustomBarArea:React.FC<StepCustomBarAreaProps> = (props) => {
                         </div>
                         <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
                             <Label>Color Pallete</Label>
-                            <div className="flex">
-                                <div className="p-1 bg-secondary cursor-pointer rounded-sm">
-                                    <div className="grid grid-cols-2 h-8 w-8" style={{...chartColors}}>
-                                        <div className="h-4 w-4 bg-[var(--chart-1)] rounded-tl-sm" />
-                                        <div className="h-4 w-4 bg-[var(--chart-2)] rounded-tr-sm" />
-                                        <div className="h-4 w-4 bg-[var(--chart-3)] rounded-bl-sm" />
-                                        <div className="h-4 w-4 bg-[var(--chart-4)] rounded-br-sm" />
-                                    </div>
-                                </div>
+                            <div className="flex gap-1">
+                                {Object.entries(chartColors).map(([colorName, colorProperties]) => (
+                                    <ChartColorPreview
+                                        colorName={colorName as ChartColorsType}
+                                        colorProperties={colorProperties}
+                                        active={inputValue.colorPalette === colorName}
+                                        onClick={(v) => {
+                                            onChange({
+                                                ...inputValue,
+                                                colorPalette: v
+                                            })
+                                        }}
+                                    />
+                                ))}
                             </div>
                         </div>
                     </div>
                 </CardContent>
             </Card>
             {chartType === 'Bar' && (
-                <div style={{...chartColors}}>
+                <div style={{...chartColors[inputValue.colorPalette]}}>
                     <CustomBarChart
                         dataChart={dataChart}
                         label={label}
@@ -300,7 +306,7 @@ export const StepCustomBarArea:React.FC<StepCustomBarAreaProps> = (props) => {
                 </div>
             )}
             {chartType === 'Area' && (
-                <div style={{...chartColors}}>
+                <div style={{...chartColors[inputValue.colorPalette]}}>
                     <CustomAreaChart
                         dataChart={dataChart}
                         label={label}

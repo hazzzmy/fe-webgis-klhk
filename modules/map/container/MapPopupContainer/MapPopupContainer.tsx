@@ -5,12 +5,25 @@ import { useMapData } from '../../data/hooks/useMapData';
 import { toTitleCase } from '@/lib/utils';
 
 const fetchFeatureInfo = async (layer: string, point: { x: number, y: number, height:number, width:number }, bbox: string) => {
-    const url = `/api/gn/layer/featureInfo?layer=${layer}&x=${point.x}&y=${point.y}&h=${point.height}&w=${point.width}&bbox=${bbox}&srs=EPSG:4326`;
+    const url = `/api/gn/layer/featureInfo?layer=${layer}&x=${point.x}&y=${point.y}&h=${point.height}&w=${point.width}&bbox=${bbox}&srs=EPSG:3857`;
     const response = await fetch(url);
     if (!response.ok) {
         throw new Error("Network response was not ok");
     }
     return response.json();
+};
+
+const clampLatitude = (lat: number): number => {
+    return Math.max(-85.05112878, Math.min(85.05112878, lat));
+};
+
+const EARTH_RADIUS = 6378137;
+
+const latLonToWebMercator = ([lon, lat]: [number, number]): [number, number] => {
+    const clampedLat = clampLatitude(lat);
+    const x = EARTH_RADIUS * (lon * Math.PI / 180); // Convert longitude to meters
+    const y = EARTH_RADIUS * Math.log(Math.tan(Math.PI / 4 + (clampedLat * Math.PI / 360))); // Convert latitude to meters
+    return [x, y];
 };
 
 export const MapPopupContainer: React.FC = () => {
@@ -44,21 +57,34 @@ export const MapPopupContainer: React.FC = () => {
         
         const handleOnClick = async (e: maplibregl.MapMouseEvent) => {
             const filterLayer = layers.filter(v => mapLayers.includes(v.layer.id));
-            // const width = map.getMap().getCanvas().width;
-            // const height = map.getMap().getCanvas().height;
+
+
+            // Map width and height in pixels
             const width = map.getContainer().clientWidth;
             const height = map.getContainer().clientHeight;
-            const x = Math.round(e.point.x); // x coordinate (horizontal)
-            const y = Math.round(e.point.y); // y coordinate (vertical)
-        
-            // const x = Math.round((e.point.x / width) * 256);
-            // const y = Math.round((e.point.y / height) * 256);
-            const bounds = map.getBounds().toArray().flat();
-        
-            const sw = map.project([bounds[0], bounds[1]]);
-            const ne = map.project([bounds[2], bounds[3]]);
-            const bbox3857 = [sw.x, ne.y, ne.x, sw.y];
-        
+
+            // Mouse click location in pixels
+            const x = Math.round(e.point.x);
+            const y = Math.round(e.point.y);
+
+            // Get map bounds in EPSG:4326 (longitude/latitude)
+            const bounds = map.getBounds();
+            
+            const sw = bounds.getSouthWest().toArray() as [number, number];
+            
+            const ne = bounds.getNorthEast().toArray() as [number, number];
+            
+            let bbox = []
+
+            bbox = [sw[0], sw[1], ne[0], ne[1]];
+
+            if (ne[1] >= 0){
+
+                const sw3857 = latLonToWebMercator(sw);
+                const ne3857 = latLonToWebMercator(ne);
+                bbox = [sw3857[0], sw3857[1], ne3857[0], ne3857[1]];
+            }
+            
             if (filterLayer.length > 0) {
                 if (popup) {
                     popup.remove(); // Remove the previous popup
@@ -67,7 +93,7 @@ export const MapPopupContainer: React.FC = () => {
                 try {
                     // Fetch feature info for each layer
                     const featureInfoResults = await Promise.all(
-                        filterLayer.map(v => fetchFeatureInfo(v.layerName as string, { x, y, height, width }, bounds.join(',')))
+                        filterLayer.map(v => fetchFeatureInfo(v.layerName as string, { x, y, height, width }, bbox.join(',')))
                     );
         
                     // Group features by layer name

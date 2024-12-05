@@ -31,7 +31,7 @@ interface CustomAreaChartProps {
     yAxisTitle: string;
     labelPosition: LabelPosition | "none";
     legendPosition: string;
-    colorPalete: string;
+    colorPalette: string;
   };
   withoutTitle?: boolean;
 }
@@ -81,6 +81,7 @@ export const CustomAreaChart: React.FC<CustomAreaChartProps> = ({
                     tickMargin={10}
                     axisLine={false}
                     tickFormatter={(value) => value.toString().slice(0, 5)}
+                    angle={(dataChart || [])?.length > 12 ? 45 : 0}
                     label={{
                         value: inputValue.xAxisTitle,
                         position: "insideBottom",
@@ -94,6 +95,7 @@ export const CustomAreaChart: React.FC<CustomAreaChartProps> = ({
                     <YAxis
                         type="number"
                         hide={inputValue.yAxisLabel === "false"}
+                        label={{ value: inputValue.yAxisTitle, angle: -90, position: 'insideLeft', offset: -10, }}
                         {
                           ...(inputValue.yAxisLabelValue !== 'none' ? {
                             dataKey:inputValue.yAxisLabelValue,

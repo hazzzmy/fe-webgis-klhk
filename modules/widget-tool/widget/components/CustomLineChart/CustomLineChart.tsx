@@ -35,7 +35,7 @@ interface CustomLineChartProps {
     yAxisTitle: string;
     labelPosition: LabelPosition | "none";
     legendPosition: string;
-    colorPalete: string;
+    colorPalette: string;
   };
   withoutTitle?: boolean;
 }
@@ -93,6 +93,7 @@ export const CustomLineChart: React.FC<CustomLineChartProps> = ({
             <YAxis
                 type="number"
                 hide={inputValue.yAxisLabel === "false"}
+                label={{ value: inputValue.yAxisTitle, angle: -90, position: 'insideLeft', offset: -10, }}
                 {
                     ...(inputValue.yAxisLabelValue !== 'none' ? {
                       dataKey:inputValue.yAxisLabelValue,

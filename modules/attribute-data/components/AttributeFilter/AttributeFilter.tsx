@@ -113,7 +113,7 @@ export const AttributeFilter: React.FC<QueryFilterProps> = (props) => {
         { symbol: 'IN', text: "IN ('value1', 'value2')" },
         { symbol: 'NOT IN', text: "NOT IN ('value1', 'value2')" },
         { symbol: 'NOT', text: "NOT(attribute_name = 'value')" },
-        { symbol: 'BBOX', text: "BBOX(geometry,west,south,east,north,'EPSG:4326')" },
+        { symbol: 'BBOX', text: "BBOX(geometry,west,south,east,north,'EPSG:3857')" },
     ];
 
     return (

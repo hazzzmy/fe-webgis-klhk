@@ -7,10 +7,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { SharedDropdownSelect } from "@/shared/components/SharedDropdownSelect";
 import { LabelPosition } from "recharts/types/component/Label";
 import { CategoricalChartProps } from "recharts/types/chart/generateCategoricalChart";
-import { chartColors } from "../../utils/chartConfig";
+import { chartColors, ChartColorsType } from "../../utils/chartConfig";
 import { CustomPieChart } from "../CustomPieChart";
 import { CustomRadarChart } from "../CustomRadarChart";
 import { CustomRadialChart } from "../CustomRadialChart";
+import { ChartColorPreview } from "../ChartColorPreview";
 
 type inputValue = {
     title: string;
@@ -19,7 +20,7 @@ type inputValue = {
     propertyValue: string[]
     labelPosition: LabelPosition | 'none';
     legendPosition: string;
-    colorPalete: string;
+    colorPalette: ChartColorsType;
 }
 
 interface StepCustomRadarRadialPieProps {
@@ -154,21 +155,26 @@ export const StepCustomRadarRadialPie:React.FC<StepCustomRadarRadialPieProps> = 
                     </div>
                     <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
                         <Label>Color Pallete</Label>
-                        <div className="flex">
-                            <div className="p-1 bg-secondary cursor-pointer rounded-sm">
-                                <div className="grid grid-cols-2 h-8 w-8" style={{...chartColors}}>
-                                    <div className="h-4 w-4 bg-[var(--chart-1)] rounded-tl-sm" />
-                                    <div className="h-4 w-4 bg-[var(--chart-2)] rounded-tr-sm" />
-                                    <div className="h-4 w-4 bg-[var(--chart-3)] rounded-bl-sm" />
-                                    <div className="h-4 w-4 bg-[var(--chart-4)] rounded-br-sm" />
-                                </div>
+                        <div className="flex gap-1">
+                                {Object.entries(chartColors).map(([colorName, colorProperties]) => (
+                                    <ChartColorPreview
+                                        colorName={colorName as ChartColorsType}
+                                        colorProperties={colorProperties}
+                                        active={inputValue.colorPalette === colorName}
+                                        onClick={(v) => {
+                                            onChange({
+                                                ...inputValue,
+                                                colorPalette: v
+                                            })
+                                        }}
+                                    />
+                                ))}
                             </div>
-                        </div>
                     </div>
                 </CardContent>
             </Card>
             {chartType === 'Radar' && (
-                <div style={{...chartColors}}>
+                <div style={{...chartColors[inputValue.colorPalette]}}>
                     <CustomRadarChart
                         dataChart={dataChart}
                         label={label}
@@ -177,7 +183,7 @@ export const StepCustomRadarRadialPie:React.FC<StepCustomRadarRadialPieProps> = 
                 </div>
             )}
             {chartType === 'Radial' && (
-                <div style={{...chartColors}}>
+                <div style={{...chartColors[inputValue.colorPalette]}}>
                     <CustomRadialChart
                         dataChart={dataChart}
                         label={label}
@@ -186,7 +192,7 @@ export const StepCustomRadarRadialPie:React.FC<StepCustomRadarRadialPieProps> = 
                 </div>
             )}
             {chartType === 'Pie' && (
-                <div style={{...chartColors}}>
+                <div style={{...chartColors[inputValue.colorPalette]}}>
                     <CustomPieChart
                         dataChart={dataChart}
                         label={label}

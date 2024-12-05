@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Drawer, DrawerContent, DrawerDescription, DrawerTitle } from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button"
-import { InfoIcon, MinusCircle, Pencil, PlusCircle } from "lucide-react"
+import { MinusCircle, Pencil, PlusCircle } from "lucide-react"
 import { useMapData } from "@/modules/map/data/hooks/useMapData";
 import { Card } from "@/components/ui/card";
 import { InfoCircledIcon } from "@radix-ui/react-icons";
@@ -27,7 +27,7 @@ import { LabelPosition } from "recharts/types/component/Label";
 import { CategoricalChartProps } from "recharts/types/chart/generateCategoricalChart";
 import { CustomBarChart } from "../../components/CustomBarChart";
 import { CustomMetric } from "../../components/CustomMetric";
-import { chartColors } from "../../utils/chartConfig";
+import { chartColors, ChartColorsType } from "../../utils/chartConfig";
 import { CustomAreaChart } from "../../components/CustomAreaChart";
 import { StepCustomLineScatter } from "../../components/StepCustomLineScatter";
 import { StepCustomRadarRadialPie } from "../../components/StepCustomRadarRadialPie";
@@ -44,7 +44,7 @@ type inputValueChart = {
     footer: string;
     labelPosition: LabelPosition | 'none';
     legendPosition: string;
-    colorPalete: string;
+    colorPalette: ChartColorsType;
 }
 
 type inputValueLineScatter = inputValueChart & {
@@ -85,7 +85,7 @@ const defaultInputValueChart: inputValueChart = {
     footer: '',
     labelPosition: 'none',
     legendPosition: 'bottom',
-    colorPalete: 'pallete-1'
+    colorPalette: 'default'
 }
 
 const defaultInputValueLineScatter: inputValueLineScatter = {
@@ -126,13 +126,14 @@ interface WrapperChartItemProps {
     children: React.ReactNode;
     onEdit: () => void;
     onRemove: () => void;
+    palette?: ChartColorsType;
 }
 
 const WrapperChartItem: React.FC<WrapperChartItemProps> = (props) => {
-    const { children, onEdit, onRemove } = props;
+    const { children, palette, onEdit, onRemove } = props;
 
     return (
-        <div className="relative" style={{...chartColors}}>
+        <div className="relative" style={{...chartColors[palette as ChartColorsType]}}>
             <div className="absolute top-3 right-6">
                 <div className="flex items-center gap-2">
                     <Pencil
@@ -565,6 +566,7 @@ export const WidgetContainer = () => {
                         setSelectedAttr(v.data.attrAgg as SelectedAttribute[])
                     }}
                     onRemove={handleRemoveItem}
+                    palette={(v.data.input as inputValueBarArea).colorPalette}
                 >
                     <CustomBarChart
                         dataChart={v.data.chart}
@@ -589,6 +591,7 @@ export const WidgetContainer = () => {
                         setSelectedAttr(v.data.attrAgg as SelectedAttribute[])
                     }}
                     onRemove={handleRemoveItem}
+                    palette={(v.data.input as inputValueBarArea).colorPalette}
                 >
                     <CustomAreaChart
                         dataChart={v.data.chart}
@@ -613,6 +616,7 @@ export const WidgetContainer = () => {
                         setSelectedAttr(v.data.attrAgg as SelectedAttribute[])
                     }}
                     onRemove={handleRemoveItem}
+                    palette={(v.data.input as inputValueLineScatter).colorPalette}
                 >
                     <CustomLineChart
                         dataChart={v.data.chart}
@@ -637,6 +641,7 @@ export const WidgetContainer = () => {
                         setSelectedAttr(v.data.attrAgg as SelectedAttribute[])
                     }}
                     onRemove={handleRemoveItem}
+                    palette={(v.data.input as inputValueLineScatter).colorPalette}
                 >
                     <CustomScatterChart
                         dataChart={v.data.chart}
@@ -661,6 +666,7 @@ export const WidgetContainer = () => {
                         setSelectedAttr(v.data.attrAgg as SelectedAttribute[])
                     }}
                     onRemove={handleRemoveItem}
+                    palette={(v.data.input as inputValueRadarRadialPie).colorPalette}
                 >
                     <CustomRadarChart
                         dataChart={v.data.chart}
@@ -685,6 +691,7 @@ export const WidgetContainer = () => {
                         setSelectedAttr(v.data.attrAgg as SelectedAttribute[])
                     }}
                     onRemove={handleRemoveItem}
+                    palette={(v.data.input as inputValueRadarRadialPie).colorPalette}
                 >
                     <CustomRadialChart
                         dataChart={v.data.chart}
@@ -709,6 +716,7 @@ export const WidgetContainer = () => {
                         setSelectedAttr(v.data.attrAgg as SelectedAttribute[])
                     }}
                     onRemove={handleRemoveItem}
+                    palette={(v.data.input as inputValueRadarRadialPie).colorPalette}
                 >
                     <CustomPieChart
                         dataChart={v.data.chart}
@@ -746,29 +754,27 @@ export const WidgetContainer = () => {
 
     return (
         <React.Fragment>
-            <div className="bg-gray-100 h-screen p-4 gap-4 flex flex-col">
-                <div className="flex items-center justify-between text-sm flex-wrap gap-2">
-                    <h3 className="text-primary text-xl font-bold">Chart Information</h3>
+            <div>
+                <div className="px-4 flex items-center justify-between text-sm flex-wrap gap-2">
                     <Button
                         variant={'outline'}
-                        className="text-primary bg-secondary rounded hover:bg-primary hover:text-white flex items-center gap-2"
+                        className="px-4 py-2 text-primary bg-secondary rounded hover:bg-primary hover:text-white flex items-center gap-2"
                         size='sm'
                         onClick={handleOnCreate}
                     >
                         Create
                         <PlusCircle size={20} />
                     </Button>
-                    {/* <div>Total: {itemsDataChart.length}</div> */}
+                    <div>Total: {itemsDataChart.length}</div>
                 </div>
-                {itemsDataChart.length > 0 ? (
-                    <div className="p-4 grid grid-cols-1 gap-2 bg-white overflow-y-auto max-h-[calc(100vh-160px)] rounded custom-scrollbar">
-                        {renderListChartWidget()}
-                    </div> 
-                ): <Card className="flex p-4 gap-2 justify-center items-center">
-                <InfoIcon />
-                <p>Please build some chart first</p>
-                </Card>}
+                <div className="p-4">
+                    {itemsDataChart.length > 0 && (
+                        <div className="p-2 grid grid-cols-1 gap-2 bg-gray-200 overflow-y-auto max-h-[calc(100vh-120px)]">
+                            {renderListChartWidget()}
+                        </div>
+                    )}
                 </div>
+            </div>
             <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
                 <DrawerContent className="flex px-6 pb-6 gap-4 min-h-[90vh]">
                     <DrawerTitle>Chart Editor</DrawerTitle>
