@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Drawer, DrawerContent, DrawerDescription, DrawerTitle } from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button"
-import { MinusCircle, Pencil, PlusCircle } from "lucide-react"
+import { InfoIcon, MinusCircle, Pencil, PlusCircle } from "lucide-react"
 import { useMapData } from "@/modules/map/data/hooks/useMapData";
 import { Card } from "@/components/ui/card";
 import { InfoCircledIcon } from "@radix-ui/react-icons";
@@ -754,27 +754,29 @@ export const WidgetContainer = () => {
 
     return (
         <React.Fragment>
-            <div>
-                <div className="px-4 flex items-center justify-between text-sm flex-wrap gap-2">
+            <div className="bg-gray-100 h-screen p-4 gap-4 flex flex-col">
+                <div className="flex items-center justify-between text-sm flex-wrap gap-2">
+                    <h3 className="text-primary text-xl font-bold">Chart Information</h3>
                     <Button
                         variant={'outline'}
-                        className="px-4 py-2 text-primary bg-secondary rounded hover:bg-primary hover:text-white flex items-center gap-2"
+                        className="text-primary bg-secondary rounded hover:bg-primary hover:text-white flex items-center gap-2"
                         size='sm'
                         onClick={handleOnCreate}
                     >
                         Create
                         <PlusCircle size={20} />
                     </Button>
-                    <div>Total: {itemsDataChart.length}</div>
+                    {/* <div>Total: {itemsDataChart.length}</div> */}
                 </div>
-                <div className="p-4">
-                    {itemsDataChart.length > 0 && (
-                        <div className="p-2 grid grid-cols-1 gap-2 bg-gray-200 overflow-y-auto max-h-[calc(100vh-120px)]">
-                            {renderListChartWidget()}
-                        </div>
-                    )}
+                {itemsDataChart.length > 0 ? (
+                    <div className="p-4 grid grid-cols-1 gap-2 bg-white overflow-y-auto max-h-[calc(100vh-160px)] rounded custom-scrollbar">
+                        {renderListChartWidget()}
+                    </div> 
+                ): <Card className="flex p-4 gap-2 justify-center items-center">
+                <InfoIcon />
+                <p>Please build some chart first</p>
+                </Card>}
                 </div>
-            </div>
             <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
                 <DrawerContent className="flex px-6 pb-6 gap-4 min-h-[90vh]">
                     <DrawerTitle>Chart Editor</DrawerTitle>
