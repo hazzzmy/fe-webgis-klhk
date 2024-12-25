@@ -41,8 +41,6 @@ export async function GET(req: NextRequest) {
 
     let urlGetAttributeList = `${process.env.NEXT_PUBLIC_GEONODE}/geoserver/ows?service=wfs&version=2.0.0&typeNames=${layer}&request=DescribeFeatureType&outputFormat=application/json`
     
-    
-    
     const getAttributeList = await axios.get(urlGetAttributeList, {
         headers: {
             'Accept': 'application/json',
@@ -79,6 +77,8 @@ export async function GET(req: NextRequest) {
     } else if (bbox) {
         params.cql_filter = `BBOX(${geometryProperty.name}, ${bbox}, 'EPSG:3857')`;
     }
+
+    console.log(url)
 
     const queryString = new URLSearchParams(params).toString();
     url = `${url}&${queryString}`;

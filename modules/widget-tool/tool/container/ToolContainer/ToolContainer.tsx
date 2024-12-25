@@ -28,12 +28,12 @@ export const ToolContainer = () => {
             <SelectValue placeholder="Select an Island" />
           </SelectTrigger>
           <SelectContent>
-            {/* <SelectItem value="sumatera">Sumatera</SelectItem> */}
-            {/* <SelectItem value="jawa">Jawa</SelectItem> */}
+            <SelectItem value="sumatera">Sumatera</SelectItem>
+            <SelectItem value="jawa">Jawa</SelectItem>
             <SelectItem value="balinusra">Bali & Nusa Tenggara</SelectItem>
-            {/* <SelectItem value="kalimantan">Kalimantan</SelectItem> */}
-            {/* <SelectItem value="sulawesi">Sulawesi</SelectItem> */}
-            {/* <SelectItem value="maluku">Maluku</SelectItem> */}
+            <SelectItem value="kalimantan">Kalimantan</SelectItem>
+            <SelectItem value="sulawesi">Sulawesi</SelectItem>
+            <SelectItem value="maluku">Maluku</SelectItem>
             <SelectItem value="papua">Papua</SelectItem>
           </SelectContent>
         </Select>
