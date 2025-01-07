@@ -79,11 +79,14 @@ export async function GET(req: NextRequest) {
 
     console.log(url)
 
+    const accessToken = process.env.NEXT_PUBLIC_GEONODE_ACCESS_TOKEN
+
     try {
         // Make the Axios request to the GeoNode API
         const response = await axios.get(url, {
             headers: {
                 'Accept': 'application/json',
+                'Authorization': `Bearer ${accessToken}`,
             },
         });
 
