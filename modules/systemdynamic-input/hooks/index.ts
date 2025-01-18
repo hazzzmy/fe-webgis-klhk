@@ -1,1 +1,1 @@
-export { useSystemDynamicInputData } from './useSystemDynamicInputData'
+export { useSystemDynamicParameter } from './useSystemDynamicParameter'

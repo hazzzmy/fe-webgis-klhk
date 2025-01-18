@@ -9,10 +9,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useSystemDynamicInputData } from "@/modules/systemdynamic-input/hooks";
+import { useSystemDynamicParameter } from "@/modules/systemdynamic-input/hooks/useSystemDynamicParameter";
 
 export const ToolContainer = () => {
-  const setSelectedIsland = useSystemDynamicInputData(
+  const setSelectedIsland = useSystemDynamicParameter(
     (state) => state.setSelectedIsland
   );
 

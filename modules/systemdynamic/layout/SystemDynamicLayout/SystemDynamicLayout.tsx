@@ -1,20 +1,14 @@
-import { MapControlLayersContainer } from "@/modules/map/control/container/MapControlLayersContainer"
 import { SystemDynamicContainer } from "../../container/SystemDynamicContainer"
-import { SystemDynamicControlContainer } from "../../control/container/SystemDynamicControlContainer"
 import { SystemDynamicModelsContainer } from "../../container/SystemDynamicModelsContainer"
-import { SystemDynamicPanelControl } from "../../container/SystemDynamicPanelControl"
 import { Button } from "@/components/ui/button"
 import { PanelRight, PanelRightInactiveIcon } from "lucide-react"
 import { useSystemDynamicControl } from "../../control/hooks"
-import { ButtonToggleSidebar } from "@/modules/map/control/components/ButtonToggleSidebar"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { useSystemDynamicInputData } from "@/modules/systemdynamic-input/hooks"
-
-
-// stara <MapLayout>
+import { useSystemDynamicParameter } from "@/modules/systemdynamic-input/hooks"
 
 export const SystemDynamicLayout:React.FC<{ children?: React.ReactNode }> = (props) => {
     const systemDynamicControl = useSystemDynamicControl()
+    const { island } = useSystemDynamicParameter();
+    
     return (
         <SystemDynamicContainer>
             {props.children}
@@ -29,7 +23,7 @@ export const SystemDynamicLayout:React.FC<{ children?: React.ReactNode }> = (pro
                                 }}
                                 disabled={systemDynamicControl.tools.systemDynamicInputControl.disabled}
                                 >
-                                {systemDynamicControl.tools.systemDynamicInputControl.active ? <PanelRightInactiveIcon/> : <PanelRight/>}
+                                {systemDynamicControl.tools.systemDynamicInputControl.active && island? <PanelRightInactiveIcon/> : <PanelRight/>}
                             </Button>
                         )}
                 </div>

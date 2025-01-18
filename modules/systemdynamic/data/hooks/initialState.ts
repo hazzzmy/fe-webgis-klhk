@@ -58,25 +58,11 @@ export const initialSystemDynamicList:SystemDynamic[] = [
         parameter:["Indeks D3T Lahan"],
         active:true,
     },
-    // {
-    //     uuid:"fed3e965-3f02-46b6-9f33-10f0f5dbed03",
-    //     type:"multiple",
-    //     name:"Ambang Batas Populasi Air dan Ambang Batas Populasi dari Lahan",
-    //     parameter:["Ambang Batas populasi Air", "Ambang Batas populasi dari Lahan"],
-    //     active:true,
-    // }
     {
         uuid:"fed3e965-3f02-46b6-9f33-10f0f5dbed03",
-        type:"single",
-        name:"Ambang Batas Populasi Air",
-        parameter:["Ambang Batas populasi Air"],
-        active:true,
-    },
-    {
-        uuid:"674ccde7-a4c5-48dd-b8cd-3de8d2bb7a8d",
-        type:"single",
-        name:"Ambang Batas Populasi dari Lahan",
-        parameter:["Ambang Batas populasi dari Lahan"],
+        type:"multiple",
+        name:"Ambang Batas Populasi Air dan Ambang Batas Populasi dari Lahan",
+        parameter:["Ambang Batas populasi Air", "Ambang Batas populasi dari Lahan","Populasi Pulau"],
         active:true,
     }
 ]
