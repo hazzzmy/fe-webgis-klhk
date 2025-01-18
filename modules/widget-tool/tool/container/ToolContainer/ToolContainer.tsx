@@ -16,7 +16,7 @@ export const ToolContainer = () => {
     (state) => state.setSelectedIsland
   );
 
-  const handleIslandChange = (value: string) => {
+  const handleIslandChange = (value: any) => {
     setSelectedIsland(value); // Update the island in the Zustand store
   };
 
