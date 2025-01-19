@@ -37,6 +37,8 @@ export async function GET(req: NextRequest) {
     const agg = searchParams.get('agg');
     const metric = searchParams.get('metric');
 
+    console.log(bbox)
+
     let url = `${process.env.NEXT_PUBLIC_GEONODE}/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typenames=${layer}&outputFormat=application/json`
 
     let urlGetAttributeList = `${process.env.NEXT_PUBLIC_GEONODE}/geoserver/ows?service=wfs&version=2.0.0&typeNames=${layer}&request=DescribeFeatureType&outputFormat=application/json`
@@ -71,11 +73,11 @@ export async function GET(req: NextRequest) {
     }
 
     if (cql_filter && bbox) {
-        params.cql_filter = `${cql_filter} AND BBOX(${geometryProperty.name}, ${bbox},'EPSG:3857')`;
+        params.cql_filter = `${cql_filter} AND BBOX(${geometryProperty.name}, ${bbox},'EPSG:4326')`;
     } else if (cql_filter) {
         params.cql_filter = `${cql_filter}`;
     } else if (bbox) {
-        params.cql_filter = `BBOX(${geometryProperty.name}, ${bbox}, 'EPSG:3857')`;
+        params.cql_filter = `BBOX(${geometryProperty.name}, ${bbox}, 'EPSG:4326')`;
     }
 
     console.log(url)

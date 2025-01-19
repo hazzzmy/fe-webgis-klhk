@@ -88,7 +88,7 @@ export const StepCustomBarArea:React.FC<StepCustomBarAreaProps> = (props) => {
                                 className="w-full"
                             />
                         </div>
-                        <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
+                        {/* <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
                             <Label>Orientation</Label>
                             <SharedDropdownSelect
                                 value={inputValue.orientation}
@@ -104,8 +104,9 @@ export const StepCustomBarArea:React.FC<StepCustomBarAreaProps> = (props) => {
                                 ]}
                                 placeholder='Horizontal/vertical'
                                 className="w-full"
+                                disabled
                             />
-                        </div>
+                        </div> */}
                         <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
                             <Label>Title</Label>
                             <Input
@@ -279,7 +280,6 @@ export const StepCustomBarArea:React.FC<StepCustomBarAreaProps> = (props) => {
                             <div className="flex gap-1">
                                 {Object.entries(chartColors).map(([colorName, colorProperties]) => (
                                     <ChartColorPreview
-                                        key={colorName}
                                         colorName={colorName as ChartColorsType}
                                         colorProperties={colorProperties}
                                         active={inputValue.colorPalette === colorName}

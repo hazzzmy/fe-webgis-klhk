@@ -136,7 +136,7 @@ export const CustomPieChart: React.FC<CustomPieChartProps> = ({
                                 {
                                 dataChart?.map((entry, index) => (
                                     <li key={`item-${index}`} className="flex items-center gap-1">
-                                        <div className={`h-3 w-3 bg-[${chartConfig[entry[label]].color}]`} />
+                                        <div className={`h-3 w-3 bg-[${chartConfig[entry[label]]?.color}]`} />
                                         {entry[label]}
                                     </li>
                                 ))

@@ -1,5 +1,5 @@
 export {
     useWidget,
-    dataChartPropertyValue,
-    dataChartPropertyValueMetric
+    useChartPropertyValue,
+    useChartPropertyValueMetric
 } from './useWidget'

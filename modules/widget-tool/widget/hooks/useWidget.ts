@@ -23,9 +23,9 @@ export const useWidget = create<WidgetStore>()(
     )
 );
 
-export const dataChartPropertyValue = (layerName: string, extent: any, filterByExtent: boolean, cqlFilter: string, properties: SelectedAttribute[], enabled: boolean) => {
+export const useChartPropertyValue = (layerName: string, extent: any, filterByExtent: boolean, cqlFilter: string, properties: SelectedAttribute[], enabled: boolean) => {
     return useQuery({
-        queryKey: ["dataChartPropertyValue", layerName, filterByExtent, cqlFilter, ...(filterByExtent ? [extent] : []), properties],
+        queryKey: ["useChartPropertyValue", layerName, filterByExtent, cqlFilter, ...(filterByExtent ? [extent] : []), properties],
         queryFn: async () => {
             const url = `api/gn/layer/propertyValue?layer=${layerName}&property=${properties.map(v => v.attr).join(',')}&agg=${properties.map(v => v.agg).join(',')}&cql_filter=${cqlFilter}${filterByExtent ? `&bbox=${extent.west},${extent.south},${extent.east},${extent.north}` : ''}`;
             const response = await fetch(url);
@@ -40,9 +40,9 @@ export const dataChartPropertyValue = (layerName: string, extent: any, filterByE
     });
 };
 
-export const dataChartPropertyValueMetric = (layerName: string, extent: any, filterByExtent: boolean, cqlFilter: string, properties: SelectedAttribute[], enabled: boolean) => {
+export const useChartPropertyValueMetric = (layerName: string, extent: any, filterByExtent: boolean, cqlFilter: string, properties: SelectedAttribute[], enabled: boolean) => {
     return useQuery({
-        queryKey: ["dataChartPropertyValue", layerName, filterByExtent, cqlFilter, ...(filterByExtent ? [extent] : []), properties],
+        queryKey: ["useChartPropertyValue", layerName, filterByExtent, cqlFilter, ...(filterByExtent ? [extent] : []), properties],
         queryFn: async () => {
             const url = `api/gn/layer/propertyValue?layer=${layerName}&property=${properties.map(v => v.attr).join(',')}&agg=${properties.map(v => v.agg).join(',')}&metric=true&cql_filter=${cqlFilter}${filterByExtent ? `&bbox=${extent.west},${extent.south},${extent.east},${extent.north}` : ''}`;
             const response = await fetch(url);

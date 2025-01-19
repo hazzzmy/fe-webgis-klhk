@@ -1,76 +1,28 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react"
-import { Drawer, DrawerContent, DrawerDescription, DrawerTitle } from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button"
-import { InfoIcon, MinusCircle, Pencil, PlusCircle } from "lucide-react"
+import { InfoIcon, Loader2, PlusCircle } from "lucide-react"
 import { useMapData } from "@/modules/map/data/hooks/useMapData";
-import { Card } from "@/components/ui/card";
-import { InfoCircledIcon } from "@radix-ui/react-icons";
 import { LayerListItem } from "@/types";
-import SkeletonWrapper from "@/components/SkeletonWrapper";
 import { dataQueryProperty, useAttributeData } from "@/modules/attribute-data/hooks/useAttributeData";
-import { dataChartPropertyValue, useWidget } from "../../hooks";
+import { useChartPropertyValue, useWidget } from "../../hooks";
 import { useMapControl } from "@/modules/map/control/hooks/useMapControl";
-import { LayerSelector } from "../../components/LayerSelector";
-import { ListAttributes } from "../../components/ListAttributes";
-import { SelectedAttributes } from "../../components/SelectedAttributes";
-import { LabelSelect } from "../../components/LabelSelector";
-import { EmptyState } from "../../components/EmptyState";
-import { DataPreview } from "../../components/DataPreview";
-import { dataChartPropertyValueMetric, SelectedAttribute } from "../../hooks/useWidget";
-import { AggSelector } from "../../components/AggSelector";
-import { Stepper } from "../../components/Stepper";
-import { StepChartType } from "../../components/StepChartType";
+import { useChartPropertyValueMetric, SelectedAttribute } from "../../hooks/useWidget";
 import { ChartType } from "../../components/StepChartType/StepChartType";
-import { StepCustomMetric } from "../../components/StepCustomMetric";
-import { StepCustomBarArea } from "../../components/StepCustomBarArea";
-import { LabelPosition } from "recharts/types/component/Label";
-import { CategoricalChartProps } from "recharts/types/chart/generateCategoricalChart";
-import { CustomBarChart } from "../../components/CustomBarChart";
-import { CustomMetric } from "../../components/CustomMetric";
-import { chartColors, ChartColorsType } from "../../utils/chartConfig";
-import { CustomAreaChart } from "../../components/CustomAreaChart";
-import { StepCustomLineScatter } from "../../components/StepCustomLineScatter";
-import { StepCustomRadarRadialPie } from "../../components/StepCustomRadarRadialPie";
-import { CustomLineChart } from "../../components/CustomLineChart";
-import { CustomScatterChart } from "../../components/CustomScatterChart";
-import { CustomRadarChart } from "../../components/CustomRadarChart";
-import { CustomRadialChart } from "../../components/CustomRadialChart";
-import { CustomPieChart } from "../../components/CustomPieChart";
-
-type inputValueChart = {
-    id?: string;
-    title: string;
-    subTitle: string;
-    footer: string;
-    labelPosition: LabelPosition | 'none';
-    legendPosition: string;
-    colorPalette: ChartColorsType;
-}
-
-type inputValueLineScatter = inputValueChart & {
-    xAxisTitle: string;
-    yAxisValue: string[],
-    yAxisLabel: string,
-    yAxisLabelValue: string;
-    yAxisTitle: string;
-}
-
-type inputValueBarArea = inputValueLineScatter & {
-    stacked: 'false' | 'true' | string;
-    orientation: string;
-}
-
-type inputValueRadarRadialPie = inputValueChart & {
-    propertyValue: string[];
-}
-
-type inputValueMetric = {
-    id?: string;
-    title: string;
-    subTitle: string;
-    unit: string;
-    footer: string;
-}
+import { StepDataSelection } from "../../components/StepDataSelection";
+import { StepMetricSelection } from "../../components/StepMetricSelection";
+import { StepCustomization } from "../../components/StepCustomization";
+import { 
+    InputValueChart,
+    InputValueLineScatter,
+    InputValueBarArea,
+    InputValueRadarRadialPie,
+    InputValueMetric, 
+    ItemDataChart
+} from "../../types";
+import { ChartList } from "../../components/ChartList";
+import { ChartDrawer } from "../../components/ChartDrawer";
+import { Card } from "@/components/ui/card";
 
 const defaultInputValueMetrtic = {
     title: '',
@@ -79,7 +31,7 @@ const defaultInputValueMetrtic = {
     unit: '',
 }
 
-const defaultInputValueChart: inputValueChart = {
+const defaultInputValueChart: InputValueChart = {
     title: '',
     subTitle: '',
     footer: '',
@@ -88,7 +40,7 @@ const defaultInputValueChart: inputValueChart = {
     colorPalette: 'default'
 }
 
-const defaultInputValueLineScatter: inputValueLineScatter = {
+const defaultInputValueLineScatter: InputValueLineScatter = {
     ...defaultInputValueChart,
     xAxisTitle: '',
     yAxisValue: [],
@@ -97,77 +49,42 @@ const defaultInputValueLineScatter: inputValueLineScatter = {
     yAxisTitle: '',
 }
 
-const defaultInputValueBarArea: inputValueBarArea = {
+const defaultInputValueBarArea: InputValueBarArea = {
     ...defaultInputValueLineScatter,
     stacked: 'false',
     orientation: 'horizontal',
 }
 
-const defaultInputValueRadarRadialPie: inputValueRadarRadialPie = {
+const defaultInputValueRadarRadialPie: InputValueRadarRadialPie = {
     ...defaultInputValueChart,
     propertyValue: []
 }
 
-interface ItemDataChart {
-    id: string;
-    data: {
-        type: ChartType;
-        input: inputValueBarArea | inputValueMetric | inputValueLineScatter | inputValueRadarRadialPie;
-        label: string;
-        value?: number;
-        chart?: CategoricalChartProps["data"];
-        layer?: LayerListItem;
-        attrAgg?: SelectedAttribute[];
-        aggMetric?: string;
-    }
-}
-
-interface WrapperChartItemProps {
-    children: React.ReactNode;
-    onEdit: () => void;
-    onRemove: () => void;
-    palette?: ChartColorsType;
-}
-
-const WrapperChartItem: React.FC<WrapperChartItemProps> = (props) => {
-    const { children, palette, onEdit, onRemove } = props;
-
-    return (
-        <div className="relative" style={{...chartColors[palette as ChartColorsType]}}>
-            <div className="absolute top-3 right-6">
-                <div className="flex items-center gap-2">
-                    <Pencil
-                        size={20}
-                        className="hover:text-primary cursor-pointer"
-                        onClick={onEdit}
-                    />
-                    <MinusCircle
-                        size={20}
-                        className="hover:text-primary cursor-pointer"
-                        onClick={onRemove}
-                    />
-                </div>
-            </div>
-            {children}
-        </div>
-    )
+const LoadingComponent = () => {
+	return (
+		<div className="absolute flex-col inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50 gap-4">
+			<p className="text-white text-wrap">Updating Chart Data</p>
+			<Loader2 className="w-12 h-12 animate-spin text-secondary" />
+		</div>
+	)
 }
 
 export const WidgetContainer = () => {
     const {layers} = useMapData();
     const {extent} = useMapControl();
     const {cqlFilter: cql} = useAttributeData();
-    const {filterByExtent} = useWidget();
+    const {filterByExtent, setFilterByExtent} = useWidget();
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [selectedLayer, setSelectedLayer] = useState<LayerListItem|undefined>();
     const [selectedAttr, setSelectedAttr] = useState<SelectedAttribute[]>([]);
     const [itemsDataChart, setItemsDataChart] = useState<ItemDataChart[]>([]);
     const [selectedLabel, setSelectedLabel] = useState('');
     const [aggMetric, setAggMetric] = useState('')
-    const [inputValueMetric, setInputValueMetric] = useState<inputValueMetric>(defaultInputValueMetrtic)
-    const [inputValueBarArea, setInputValueBarArea] = useState<inputValueBarArea>(defaultInputValueBarArea)
-    const [inputValueLineScatter, setInputValueLineScatter] = useState<inputValueLineScatter>(defaultInputValueLineScatter)
-    const [inputValueRadarRadialPie, setInputValueRadarRadialPie] = useState<inputValueRadarRadialPie>(defaultInputValueRadarRadialPie)
+    const [inputValueMetric, setInputValueMetric] = useState<InputValueMetric>(defaultInputValueMetrtic)
+    const [inputValueBarArea, setInputValueBarArea] = useState<InputValueBarArea>(defaultInputValueBarArea)
+    const [inputValueLineScatter, setInputValueLineScatter] = useState<InputValueLineScatter>(defaultInputValueLineScatter)
+    const [inputValueRadarRadialPie, setInputValueRadarRadialPie] = useState<InputValueRadarRadialPie>(defaultInputValueRadarRadialPie)
+    const [isUpdatingChartData, setIsUpdatingChartData] = useState(false);
 
     const [activeStep, setActiveStep] = useState(0);
     const steps = ['Chart Type', 'Chart Data', 'Customize'];
@@ -179,7 +96,7 @@ export const WidgetContainer = () => {
     const dataAttr = dataQueryProperty(layerName);
     const hasLayerData = !!selectedLayer && !!dataAttr.data;
     const listAttr = dataAttr?.data?.featureTypes || [];
-    const dataChart = dataChartPropertyValue(
+    const dataChart = useChartPropertyValue(
         layerName,
         extent,
         filterByExtent,
@@ -190,7 +107,7 @@ export const WidgetContainer = () => {
         ],
         selectedAttr.length > 0 && !!selectedLayer && !!selectedLabel
     );
-    const dataChartMetric = dataChartPropertyValueMetric(
+    const dataChartMetric = useChartPropertyValueMetric(
         layerName,
         extent,
         filterByExtent,
@@ -229,175 +146,68 @@ export const WidgetContainer = () => {
         }
     }, [isDrawerOpen])
 
+    useEffect(() => {
+        if (selectedChartType) {
+            const currentId = inputValueMetric.id || 
+                inputValueBarArea.id ||
+                inputValueLineScatter.id ||
+                inputValueRadarRadialPie.id;
+
+            setInputValueMetric({ ...defaultInputValueMetrtic, id: currentId });
+            setInputValueBarArea({ ...defaultInputValueBarArea, id: currentId });
+            setInputValueLineScatter({ ...defaultInputValueLineScatter, id: currentId });
+            setInputValueRadarRadialPie({ ...defaultInputValueRadarRadialPie, id: currentId });
+        }
+    }, [selectedChartType]);
+
     const renderStep2 = () => (
-        <div>
-            <div className="grid grid-cols-4 gap-4 mb-2">
-                <div>
-                    {/* Select Layer */}
-                    <LayerSelector layers={layers} selectedLayer={selectedLayer} handleLayerSelect={handleLayerSelect} />
-
-                    {/* Selected Label */}
-                    {hasLayerData && (
-                        <LabelSelect
-                            listAttr={listAttr} 
-                            selectedLabel={selectedLabel} 
-                            handleSelectLabel={handleSelectLabel}
-                            placeholder="Select Label"
-                            filter={['int', 'string']}
-                        />
-                    )}
-                </div>
-                {hasLayerData && (
-                    <>
-                        {/* Select Attributes */}
-                        <ListAttributes
-                            listAttr={listAttr.filter((attr: any) => ['int', 'number'].includes(attr.localType))}
-                            selectedLabel={selectedLabel}
-                            selectedAttr={selectedAttr}
-                            setSelectedAttr={setSelectedAttr}
-                        />
-                    
-                        {/* Selected Attribute */}
-                        <SelectedAttributes selectedAttr={selectedAttr} setSelectedAttr={setSelectedAttr} />
-
-                        {/* Data Preview */}
-                        <DataPreview data={dataChart?.data} isLoading={dataChart.isLoading} gap={8} />
-                    </>
-                )}
-            </div>
-
-            {/* Skeleton Loader */}
-            {!dataAttr.data && !!selectedLayer && (
-                <div className="grid grid-cols-4 gap-4">
-                    <SkeletonWrapper isLoading={dataAttr.isLoading}>
-                        <Card className="w-[25vw] h-[60vh]" />
-                    </SkeletonWrapper>
-                    <SkeletonWrapper isLoading={dataAttr.isLoading}>
-                        <Card className="w-[25vw] h-[60vh]" />
-                    </SkeletonWrapper>
-                    <SkeletonWrapper isLoading={dataAttr.isLoading}>
-                        <Card className="w-full h-[60vh]" />
-                    </SkeletonWrapper>
-                    <SkeletonWrapper isLoading={dataAttr.isLoading}>
-                        <Card className="w-full h-[60vh]" />
-                    </SkeletonWrapper>
-                </div>
-            )}
-            {(layers.length === 0 || (layers.length > 0 && !selectedLayer)) && (
-                <EmptyState
-                    message={layers.length === 0 ? "Please Add Layer First" : "Please Select Layer First"}
-                    icon={<InfoCircledIcon />}
-                />
-            )}
-
-        </div>
-    )
+        <StepDataSelection
+            layers={layers}
+            selectedLayer={selectedLayer}
+            selectedLabel={selectedLabel}
+            selectedAttr={selectedAttr}
+            hasLayerData={hasLayerData}
+            listAttr={listAttr}
+            dataChart={dataChart}
+            dataAttr={dataAttr}
+            handleLayerSelect={handleLayerSelect}
+            handleSelectLabel={handleSelectLabel}
+            setSelectedAttr={setSelectedAttr}
+        />
+    );
 
     const renderStep2ForMetric = () => (
-        <div>
-            <div className="grid grid-cols-[1fr_2fr] gap-4 mb-2">
-                <div>
-                    {/* Select Layer */}
-                    <LayerSelector layers={layers} selectedLayer={selectedLayer} handleLayerSelect={handleLayerSelect} />
-                    {hasLayerData && (
-                        <>
-                            <div className="mb-4">
-                                <div className="flex flex-col min-w-44 mb-2">
-                                    <p className="">Operation</p>
-                                </div>
-                                <AggSelector
-                                    value={aggMetric}
-                                    onValueChange={(value) => setAggMetric(value)}
-                                    placeholder="Select Operation"
-                                />
-                            </div>
-                        
-                            <LabelSelect
-                                listAttr={listAttr}
-                                selectedLabel={selectedLabel} 
-                                handleSelectLabel={handleSelectLabel}
-                                placeholder="Select Attribute"
-                                filter={['int', 'number']}
-                            />
-                        </>
-                    )}
-                </div>
+        <StepMetricSelection
+            layers={layers}
+            selectedLayer={selectedLayer}
+            selectedLabel={selectedLabel}
+            hasLayerData={hasLayerData}
+            listAttr={listAttr}
+            dataChartMetric={dataChartMetric}
+            dataAttr={dataAttr}
+            aggMetric={aggMetric}
+            handleLayerSelect={handleLayerSelect}
+            handleSelectLabel={handleSelectLabel}
+            setAggMetric={setAggMetric}
+        />
+    );
 
-                {/* Data Preview */}
-                {hasLayerData && (
-                    <>
-                        <DataPreview
-                            data={dataChartMetric?.data}
-                            isLoading={dataChartMetric.isLoading}
-                            gap={2}
-                        />
-                    </>
-                )}
-            </div>
-
-            {/* Skeleton Loader */}
-            {!dataAttr.data && !!selectedLayer && (
-                <div className="grid grid-cols-[1fr_2fr] gap-4">
-                    <SkeletonWrapper isLoading={dataAttr.isLoading}>
-                        <Card className="w-[25vw] h-[60vh]" />
-                    </SkeletonWrapper>
-                    <SkeletonWrapper isLoading={dataAttr.isLoading}>
-                        <Card className="w-[25vw] h-[60vh]" />
-                    </SkeletonWrapper>
-                </div>
-            )}
-            {(layers.length === 0 || (layers.length > 0 && !selectedLayer)) && (
-                <EmptyState
-                    message={layers.length === 0 ? "Please Add Layer First" : "Please Select Layer First"}
-                    icon={<InfoCircledIcon />}
-                />
-            )}
-
-        </div>
-    )
-
-    const renderStep3 = () => {
-        if (selectedChartType === 'Metric') {
-            return (
-                <StepCustomMetric
-                    chartType={selectedChartType}
-                    value={dataChartMetric?.data?.value || 0}
-                    inputValue={inputValueMetric}
-                    onChange={(x) => setInputValueMetric(x)}
-                />
-            )
-        } else if (selectedChartType === 'Bar' || selectedChartType === 'Area') {
-            return (
-                <StepCustomBarArea
-                    chartType={selectedChartType}
-                    dataChart={dataChart?.data}
-                    inputValue={inputValueBarArea}
-                    onChange={(x) => setInputValueBarArea(x)}
-                    label={selectedLabel}
-                />
-            )
-        } else if (selectedChartType === 'Line' || selectedChartType === 'Scatter') {
-            return (
-                <StepCustomLineScatter
-                    chartType={selectedChartType}
-                    dataChart={dataChart?.data}
-                    inputValue={inputValueLineScatter}
-                    onChange={(x) => setInputValueLineScatter(x)}
-                    label={selectedLabel}
-                />
-            )
-        } else if (selectedChartType === 'Radar' || selectedChartType === 'Radial' || selectedChartType === 'Pie') {
-            return (
-                <StepCustomRadarRadialPie
-                    chartType={selectedChartType}
-                    dataChart={dataChart?.data}
-                    inputValue={inputValueRadarRadialPie}
-                    onChange={(x) => setInputValueRadarRadialPie(x)}
-                    label={selectedLabel}
-                />
-            )
-        }
-    }
+    const renderStep3 = () => (
+        <StepCustomization
+            selectedChartType={selectedChartType}
+            dataChart={dataChart}
+            dataChartMetric={dataChartMetric}
+            selectedLabel={selectedLabel}
+            inputValueMetric={inputValueMetric}
+            inputValueBarArea={inputValueBarArea}
+            inputValueLineScatter={inputValueLineScatter}
+            inputValueRadarRadialPie={inputValueRadarRadialPie}
+            setInputValueMetric={setInputValueMetric}
+            setInputValueBarArea={setInputValueBarArea}
+            setInputValueLineScatter={setInputValueLineScatter}
+            setInputValueRadarRadialPie={setInputValueRadarRadialPie}
+        />
+    );
 
     const isDisabledNext = () => {
         switch (activeStep) {
@@ -419,423 +229,255 @@ export const WidgetContainer = () => {
 
     const handleCreateChart = () => {
         const id = itemsDataChart.length === 0 ? 'widget-chart-1' : 'widget-chart-' + (itemsDataChart.length + 1);
-        if (selectedChartType === 'Bar' || selectedChartType === 'Area') {
-            if (!!inputValueBarArea.id) {
-                const updatedIndex = itemsDataChart.findIndex(v => v.id === inputValueBarArea.id);
+
+        const createOrUpdateChart = (inputValue: any) => {
+            const baseChartData = {
+                type: selectedChartType,
+                label: selectedLabel,
+                chart: dataChart?.data,
+                input: {...inputValue, id: inputValue.id || id},
+                attrAgg: selectedAttr,
+                layer: selectedLayer,
+            };
+
+            if (inputValue.id) {
+                const updatedIndex = itemsDataChart.findIndex(v => v.id === inputValue.id);
                 const updatedData = itemsDataChart.map((v, idx) => idx === updatedIndex ? {
-                    id: inputValueBarArea.id,
-                    data: {
-                        type: selectedChartType,
-                        label: selectedLabel,
-                        chart: dataChart?.data,
-                        input: {...inputValueBarArea, id: inputValueBarArea.id},
-                        attrAgg: selectedAttr,
-                        layer: selectedLayer,
-                    }
-                } as ItemDataChart : v)
+                    id: inputValue.id,
+                    data: baseChartData
+                } as ItemDataChart : v);
                 setItemsDataChart(updatedData);
             } else {
-                setItemsDataChart((prev) => ([
+                setItemsDataChart(prev => ([
                     ...prev,
                     {
                         id,
-                        data: {
-                            type: selectedChartType,
-                            label: selectedLabel,
-                            chart: dataChart?.data,
-                            input: {...inputValueBarArea, id},
-                            attrAgg: selectedAttr,
-                            layer: selectedLayer,
-                        }
+                        data: baseChartData
                     }
-                ]))
+                ]));
             }
-        } else if (selectedChartType === 'Line' || selectedChartType === 'Scatter') {
-            if (!!inputValueLineScatter.id) {
-                const updatedIndex = itemsDataChart.findIndex(v => v.id === inputValueLineScatter.id);
-                const updatedData = itemsDataChart.map((v, idx) => idx === updatedIndex ? {
-                    id: inputValueLineScatter.id,
-                    data: {
-                        type: selectedChartType,
-                        label: selectedLabel,
-                        chart: dataChart?.data,
-                        input: {...inputValueLineScatter, id: inputValueLineScatter.id},
-                        attrAgg: selectedAttr,
-                        layer: selectedLayer,
-                    }
-                } as ItemDataChart : v)
-                setItemsDataChart(updatedData);
-            } else {
-                setItemsDataChart((prev) => ([
-                    ...prev,
-                    {
-                        id,
-                        data: {
-                            type: selectedChartType,
-                            label: selectedLabel,
-                            chart: dataChart?.data,
-                            input: {...inputValueLineScatter, id},
-                            attrAgg: selectedAttr,
-                            layer: selectedLayer,
-                        }
-                    }
-                ]))
-            }
-        } else if (selectedChartType === 'Radar' || selectedChartType === 'Radial' || selectedChartType === 'Pie') {
-            if (!!inputValueRadarRadialPie.id) {
-                const updatedIndex = itemsDataChart.findIndex(v => v.id === inputValueRadarRadialPie.id);
-                const updatedData = itemsDataChart.map((v, idx) => idx === updatedIndex ? {
-                    id: inputValueRadarRadialPie.id,
-                    data: {
-                        type: selectedChartType,
-                        label: selectedLabel,
-                        chart: dataChart?.data,
-                        input: {...inputValueRadarRadialPie, id: inputValueRadarRadialPie.id},
-                        attrAgg: selectedAttr,
-                        layer: selectedLayer,
-                    }
-                } as ItemDataChart : v)
-                setItemsDataChart(updatedData);
-            } else {
-                setItemsDataChart((prev) => ([
-                    ...prev,
-                    {
-                        id,
-                        data: {
-                            type: selectedChartType,
-                            label: selectedLabel,
-                            chart: dataChart?.data,
-                            input: {...inputValueRadarRadialPie, id},
-                            attrAgg: selectedAttr,
-                            layer: selectedLayer,
-                        }
-                    }
-                ]))
-            }
-        } else if (selectedChartType === 'Metric') {
-            if (!!inputValueMetric.id) {
+        };
+
+        const createOrUpdateMetric = () => {
+            const baseMetricData = {
+                type: 'Metric',
+                label: selectedLabel,
+                value: dataChartMetric?.data?.value,
+                input: {...inputValueMetric, id: inputValueMetric.id || id},
+                layer: selectedLayer,
+                aggMetric: aggMetric,
+            };
+
+            if (inputValueMetric.id) {
                 const updatedIndex = itemsDataChart.findIndex(v => v.id === inputValueMetric.id);
                 const updatedData = itemsDataChart.map((v, idx) => idx === updatedIndex ? {
                     id: inputValueMetric.id,
-                    data: {
-                        type: 'Metric',
-                        label: selectedLabel,
-                        value: dataChartMetric?.data?.value,
-                        input: {...inputValueMetric, id: inputValueMetric.id},
-                        layer: selectedLayer,
-                        aggMetric: aggMetric,
-                    }
-                } as ItemDataChart : v)
+                    data: baseMetricData
+                } as ItemDataChart : v);
                 setItemsDataChart(updatedData);
             } else {
-                setItemsDataChart((prev) => ([
+                setItemsDataChart(prev => ([
                     ...prev,
                     {
                         id,
                         data: {
-                            type: 'Metric',
-                            label: selectedLabel,
-                            value: dataChartMetric?.data?.value,
-                            input: {...inputValueMetric, id},
-                            layer: selectedLayer,
-                            aggMetric: aggMetric,
+                            ...baseMetricData,
+                            type: 'Metric' as ChartType
                         }
                     }
-                ]))
+                ]));
             }
+        };
+
+        switch (selectedChartType) {
+            case 'Bar':
+            case 'Area':
+                createOrUpdateChart(inputValueBarArea);
+                break;
+            case 'Line':
+            case 'Scatter':
+                createOrUpdateChart(inputValueLineScatter);
+                break;
+            case 'Radar':
+            case 'Radial':
+            case 'Pie':
+                createOrUpdateChart(inputValueRadarRadialPie);
+                break;
+            case 'Metric':
+                createOrUpdateMetric();
+                break;
         }
+
         setIsDrawerOpen(false);
     }
 
-    const renderListChartWidget = () => itemsDataChart.map(v => {
-        const handleRemoveItem = () => {
-            setItemsDataChart((prev) => prev.filter(prevData => prevData.id !== v.id))
+    const handleChartEdit = (
+        layer: LayerListItem | undefined,
+        chartType: ChartType,
+        label: string,
+        input: any,
+        attrAgg?: SelectedAttribute[],
+        aggMetric?: string
+    ) => {
+        setSelectedLayer(layer);
+        setSelectedChartType(chartType);
+        setSelectedLabel(label);
+        setIsDrawerOpen(true);
+        setActiveStep(1);
+
+        switch (chartType) {
+            case 'Bar':
+            case 'Area':
+                setInputValueBarArea(input as InputValueBarArea);
+                setSelectedAttr(attrAgg as SelectedAttribute[]);
+                break;
+            case 'Line':
+            case 'Scatter':
+                setInputValueLineScatter(input as InputValueLineScatter);
+                setSelectedAttr(attrAgg as SelectedAttribute[]);
+                break;
+            case 'Radar':
+            case 'Radial':
+            case 'Pie':
+                setInputValueRadarRadialPie(input as InputValueRadarRadialPie);
+                setSelectedAttr(attrAgg as SelectedAttribute[]);
+                break;
+            case 'Metric':
+                setInputValueMetric(input as InputValueMetric);
+                setAggMetric(aggMetric ?? '');
+                break;
         }
-        if (v.data.type === 'Bar') {
-            return (
-                <WrapperChartItem
-                    key={v.id}
-                    onEdit={() => {
-                        setSelectedLayer(v.data.layer)
-                        setSelectedChartType(v.data.type)
-                        setSelectedLabel(v.data.label)
-                        setIsDrawerOpen(true)
-                        setActiveStep(1)
+    };
 
-                        setInputValueBarArea(v.data.input as inputValueBarArea)
-                        setSelectedAttr(v.data.attrAgg as SelectedAttribute[])
-                    }}
-                    onRemove={handleRemoveItem}
-                    palette={(v.data.input as inputValueBarArea).colorPalette}
-                >
-                    <CustomBarChart
-                        dataChart={v.data.chart}
-                        label={v.data.label}
-                        inputValue={v.data.input as inputValueBarArea}
-                        withoutTitle
-                    />
-                </WrapperChartItem>
-            )
-        } else if (v.data.type === 'Area') {
-            return (
-                <WrapperChartItem
-                    key={v.id}
-                    onEdit={() => {
-                        setSelectedLayer(v.data.layer)
-                        setSelectedChartType(v.data.type)
-                        setSelectedLabel(v.data.label)
-                        setIsDrawerOpen(true)
-                        setActiveStep(1)
+    const handleChartRemove = (id: string) => {
+        setItemsDataChart(prev => prev.filter(item => item.id !== id));
+    };
 
-                        setInputValueBarArea(v.data.input as inputValueBarArea)
-                        setSelectedAttr(v.data.attrAgg as SelectedAttribute[])
-                    }}
-                    onRemove={handleRemoveItem}
-                    palette={(v.data.input as inputValueBarArea).colorPalette}
-                >
-                    <CustomAreaChart
-                        dataChart={v.data.chart}
-                        label={v.data.label}
-                        inputValue={v.data.input as inputValueBarArea}
-                        withoutTitle
-                    />
-                </WrapperChartItem>
-            )
-        } else if (v.data.type === 'Line') {
-            return (
-                <WrapperChartItem
-                    key={v.id}
-                    onEdit={() => {
-                        setSelectedLayer(v.data.layer)
-                        setSelectedChartType(v.data.type)
-                        setSelectedLabel(v.data.label)
-                        setIsDrawerOpen(true)
-                        setActiveStep(1)
-
-                        setInputValueLineScatter(v.data.input as inputValueLineScatter)
-                        setSelectedAttr(v.data.attrAgg as SelectedAttribute[])
-                    }}
-                    onRemove={handleRemoveItem}
-                    palette={(v.data.input as inputValueLineScatter).colorPalette}
-                >
-                    <CustomLineChart
-                        dataChart={v.data.chart}
-                        label={v.data.label}
-                        inputValue={v.data.input as inputValueLineScatter}
-                        withoutTitle
-                    />
-                </WrapperChartItem>
-            )
-        } else if (v.data.type === 'Scatter') {
-            return (
-                <WrapperChartItem
-                    key={v.id}
-                    onEdit={() => {
-                        setSelectedLayer(v.data.layer)
-                        setSelectedChartType(v.data.type)
-                        setSelectedLabel(v.data.label)
-                        setIsDrawerOpen(true)
-                        setActiveStep(1)
-
-                        setInputValueLineScatter(v.data.input as inputValueLineScatter)
-                        setSelectedAttr(v.data.attrAgg as SelectedAttribute[])
-                    }}
-                    onRemove={handleRemoveItem}
-                    palette={(v.data.input as inputValueLineScatter).colorPalette}
-                >
-                    <CustomScatterChart
-                        dataChart={v.data.chart}
-                        label={v.data.label}
-                        inputValue={v.data.input as inputValueLineScatter}
-                        withoutTitle
-                    />
-                </WrapperChartItem>
-            )
-        } else if (v.data.type === 'Radar') {
-            return (
-                <WrapperChartItem
-                    key={v.id}
-                    onEdit={() => {
-                        setSelectedLayer(v.data.layer)
-                        setSelectedChartType(v.data.type)
-                        setSelectedLabel(v.data.label)
-                        setIsDrawerOpen(true)
-                        setActiveStep(1)
-
-                        setInputValueRadarRadialPie(v.data.input as inputValueRadarRadialPie)
-                        setSelectedAttr(v.data.attrAgg as SelectedAttribute[])
-                    }}
-                    onRemove={handleRemoveItem}
-                    palette={(v.data.input as inputValueRadarRadialPie).colorPalette}
-                >
-                    <CustomRadarChart
-                        dataChart={v.data.chart}
-                        label={v.data.label}
-                        inputValue={v.data.input as inputValueRadarRadialPie}
-                        withoutTitle
-                    />
-                </WrapperChartItem>
-            )
-        } else if (v.data.type === 'Radial') {
-            return (
-                <WrapperChartItem
-                    key={v.id}
-                    onEdit={() => {
-                        setSelectedLayer(v.data.layer)
-                        setSelectedChartType(v.data.type)
-                        setSelectedLabel(v.data.label)
-                        setIsDrawerOpen(true)
-                        setActiveStep(1)
-
-                        setInputValueRadarRadialPie(v.data.input as inputValueRadarRadialPie)
-                        setSelectedAttr(v.data.attrAgg as SelectedAttribute[])
-                    }}
-                    onRemove={handleRemoveItem}
-                    palette={(v.data.input as inputValueRadarRadialPie).colorPalette}
-                >
-                    <CustomRadialChart
-                        dataChart={v.data.chart}
-                        label={v.data.label}
-                        inputValue={v.data.input as inputValueRadarRadialPie}
-                        withoutTitle
-                    />
-                </WrapperChartItem>
-            )
-        } else if (v.data.type === 'Pie') {
-            return (
-                <WrapperChartItem
-                    key={v.id}
-                    onEdit={() => {
-                        setSelectedLayer(v.data.layer)
-                        setSelectedChartType(v.data.type)
-                        setSelectedLabel(v.data.label)
-                        setIsDrawerOpen(true)
-                        setActiveStep(1)
-
-                        setInputValueRadarRadialPie(v.data.input as inputValueRadarRadialPie)
-                        setSelectedAttr(v.data.attrAgg as SelectedAttribute[])
-                    }}
-                    onRemove={handleRemoveItem}
-                    palette={(v.data.input as inputValueRadarRadialPie).colorPalette}
-                >
-                    <CustomPieChart
-                        dataChart={v.data.chart}
-                        label={v.data.label}
-                        inputValue={v.data.input as inputValueRadarRadialPie}
-                        withoutTitle
-                    />
-                </WrapperChartItem>
-            )
-        } else if (v.data.type === 'Metric') {
-            return (
-                <WrapperChartItem
-                    key={v.id}
-                    onEdit={() => {
-                        setSelectedLayer(v.data.layer)
-                        setSelectedChartType(v.data.type)
-                        setSelectedLabel(v.data.label)
-                        setIsDrawerOpen(true)
-                        setActiveStep(1)
-
-                        setInputValueMetric(v.data.input as inputValueMetric)
-                        setAggMetric(v.data.aggMetric as string);
-                    }}
-                    onRemove={handleRemoveItem}
-                >
-                    <CustomMetric
-                        value={v.data.value}
-                        withoutTitle
-                        inputValue={v.data.input as inputValueMetric}
-                    />
-                </WrapperChartItem>
-            )
+    const fetchDataChartPropertyValue = async (
+        layerName: string,
+        extent: any,
+        filterByExtent: boolean,
+        cqlFilter: string,
+        properties: SelectedAttribute[],
+        isMetric: boolean
+    ): Promise<any> => {
+        const url = `api/gn/layer/propertyValue?layer=${layerName}&property=${properties.map(v => v.attr).join(',')}&agg=${properties.map(v => v.agg).join(',')}${isMetric ? '&metric=true' : ''}&cql_filter=${cqlFilter}${
+            filterByExtent ? `&bbox=${extent.west},${extent.south},${extent.east},${extent.north}` : ''
+        }`;
+    
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
         }
-    })
+        return await response.json();
+    };
+
+    const fetchDataForCharts = async () => {
+        setIsUpdatingChartData(true);
+        const updatedCharts = await Promise.all(
+            itemsDataChart.map(async (item) => {
+                const isMetric = item.data.type === 'Metric';
+                const newChartData = await fetchDataChartPropertyValue(
+                    item?.data?.layer?.layerName as string,
+                    extent,
+                    filterByExtent,
+                    cqlFilter,
+                    [
+                        { agg: isMetric ? item?.data?.aggMetric as string : "count", attr: item?.data?.label },
+                        ...(item?.data?.attrAgg || []),
+                    ],
+                    isMetric
+                );
+
+                return {
+                    ...item,
+                    data: {
+                        ...item.data,
+                        chart: !isMetric ? newChartData : undefined,
+                        value: isMetric ? newChartData?.value : undefined,
+                    },
+                };
+            })
+        );
+
+        setItemsDataChart(updatedCharts as ItemDataChart[]);
+        setIsUpdatingChartData(false)
+    };
+
+    useEffect(() => {
+        fetchDataForCharts()
+    }, [...(filterByExtent ? [extent] : []), filterByExtent])
 
     return (
         <React.Fragment>
-            <div className="bg-gray-100 h-screen p-4 gap-4 flex flex-col">
-                <div className="flex items-center justify-between text-sm flex-wrap gap-2">
-                    <h3 className="text-primary text-xl font-bold">Chart Information</h3>
-                    <Button
-                        variant={'outline'}
-                        className="text-primary bg-secondary rounded hover:bg-primary hover:text-white flex items-center gap-2"
-                        size='sm'
-                        onClick={handleOnCreate}
-                    >
-                        Create
-                        <PlusCircle size={20} />
-                    </Button>
-                    {/* <div>Total: {itemsDataChart.length}</div> */}
-                </div>
-                {itemsDataChart.length > 0 ? (
-                    <div className="p-4 grid grid-cols-1 gap-2 bg-white overflow-y-auto max-h-[calc(100vh-160px)] rounded custom-scrollbar">
-                        {renderListChartWidget()}
-                    </div> 
-                ): <Card className="flex p-4 gap-2 justify-center items-center">
-                <InfoIcon />
-                <p>Please build some chart first</p>
-                </Card>}
-                </div>
-            <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
-                <DrawerContent className="flex px-6 pb-6 gap-4 min-h-[90vh]">
-                    <DrawerTitle>Chart Editor</DrawerTitle>
-                    <DrawerDescription />
-                    <div className="w-full flex justify-between items-center mb-4">
-                        <Stepper steps={steps} activeStep={activeStep} />
-                        <div className="flex items-center gap-2">
-                            {activeStep > 0 && (
-                                <Button
-                                    variant={'outline'}
-                                    className="min-w-20 px-4 py-2 text-primary bg-secondary rounded hover:bg-primary hover:text-white"
-                                    onClick={() => {
-                                        setActiveStep(activeStep -1)
-                                        if (activeStep === 1) {
-                                            setAggMetric('')
-                                            setSelectedLabel('')
-                                            setSelectedAttr([])
-                                        } else if (activeStep === 2 && selectedChartType === 'Metric') {
-                                            setInputValueMetric(defaultInputValueMetrtic)
-                                        } else if (activeStep === 2 && selectedChartType === 'Bar' || selectedChartType === 'Area') {
-                                            setInputValueBarArea(defaultInputValueBarArea);
-                                        } else if (activeStep === 2 && selectedChartType === 'Line' || selectedChartType === 'Scatter') {
-                                            setInputValueLineScatter(defaultInputValueLineScatter);
-                                        } else if (activeStep === 2 && selectedChartType === 'Radar' || selectedChartType === 'Radial' || selectedChartType === 'Pie') {
-                                            setInputValueRadarRadialPie(defaultInputValueRadarRadialPie);
-                                        }
-                                    }}
-                                >
-                                    Back
-                                </Button>
-                            )}
+            <div>
+                <div className="bg-gray-100 h-screen p-4 gap-4 flex flex-col">
+                    <div className="flex items-center justify-between text-sm flex-wrap gap-2">
+                        <h3 className="text-primary text-xl font-bold">Chart Information</h3>
+                        <div className="flex gap-2 items-center text-primary">
                             <Button
-                                disabled={isDisabledNext()}
-                                variant={'outline'}
-                                className="min-w-20 px-4 py-2 text-primary bg-secondary rounded hover:bg-primary hover:text-white"
-                                onClick={() => {
-                                    if (activeStep < steps.length - 1) {
-                                        setActiveStep(activeStep + 1)
-                                    } else {
-                                        handleCreateChart()
-                                    }
-                                }}
+                                variant="outline"
+                                onClick={() => setFilterByExtent(!filterByExtent)}
+                                className={filterByExtent ? 'hover:bg-secondary hover:text-white bg-primary text-white' : ''}
+                                size='sm'
                             >
-                                {activeStep < steps.length - 1 ? 'Next' : 'Create'}
+                                <h3>Filter By Extent</h3>
                             </Button>
+                            <Button
+                                variant={'outline'}
+                                className="text-primary bg-secondary rounded hover:bg-primary hover:text-white flex items-center gap-2"
+                                size='sm'
+                                onClick={handleOnCreate}
+                            >
+                                Create
+                                <PlusCircle size={20} />
+                            </Button>
+                            {/* <div>Total: {itemsDataChart.length}</div> */}
                         </div>
                     </div>
-                    {activeStep === 0 && (
-                        <StepChartType
-                            listChart={listChart}
-                            selectedChartType={selectedChartType}
-                            setSelectedChartType={setSelectedChartType}
-                        />
-                    )}
-                    {activeStep === 1 && selectedChartType !== 'Metric' && renderStep2()}
-                    {activeStep === 1 && selectedChartType === 'Metric' && renderStep2ForMetric()}
-                    {activeStep === 2 && renderStep3()}
-                </DrawerContent>
-            </Drawer>
+                    <div className="relative">
+                    {isUpdatingChartData && <LoadingComponent />}
+                        {itemsDataChart.length > 0 ? (
+                            <ChartList
+                                items={itemsDataChart}
+                                onEdit={handleChartEdit}
+                                onRemove={handleChartRemove}
+                            />
+                        ) : <Card className="flex p-4 gap-2 justify-center items-center">
+                        <InfoIcon />
+                        <p>Please build some chart first</p>
+                    </Card>}
+                    </div>
+                </div>
+            </div>
+            <ChartDrawer
+                isOpen={isDrawerOpen}
+                onOpenChange={setIsDrawerOpen}
+                activeStep={activeStep}
+                steps={steps}
+                listChart={listChart}
+                selectedChartType={selectedChartType}
+                setSelectedChartType={setSelectedChartType}
+                setActiveStep={setActiveStep}
+                isDisabledNext={isDisabledNext}
+                handleCreateChart={handleCreateChart}
+                renderStep2={renderStep2}
+                renderStep2ForMetric={renderStep2ForMetric}
+                renderStep3={renderStep3}
+                setAggMetric={setAggMetric}
+                setSelectedLabel={setSelectedLabel}
+                setSelectedAttr={setSelectedAttr}
+                setInputValueMetric={setInputValueMetric}
+                setInputValueBarArea={setInputValueBarArea}
+                setInputValueLineScatter={setInputValueLineScatter}
+                setInputValueRadarRadialPie={setInputValueRadarRadialPie}
+                defaultValues={{
+                    inputValueMetric: defaultInputValueMetrtic,
+                    inputValueBarArea: defaultInputValueBarArea,
+                    inputValueLineScatter: defaultInputValueLineScatter,
+                    inputValueRadarRadialPie: defaultInputValueRadarRadialPie
+                }}
+            />
         </React.Fragment>
     )
 }
