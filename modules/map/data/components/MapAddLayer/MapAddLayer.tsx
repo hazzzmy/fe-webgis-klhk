@@ -95,13 +95,13 @@ export const MapAddLayer: React.FC<MapAddLayerProps> = (props) => {
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectItem value="all">All Islands</SelectItem>
-                                <SelectItem value="Sumatra">Sumatra</SelectItem>
-                                <SelectItem value="Jawa">Jawa</SelectItem>
-                                <SelectItem value="Balinusra">Bali & Nusa Tenggara</SelectItem>
-                                <SelectItem value="Kalimantan">Kalimantan</SelectItem>
-                                <SelectItem value="Sulawesi">Sulawesi</SelectItem>
-                                <SelectItem value="Maluku">Maluku</SelectItem>
-                                <SelectItem value="Papua">Papua</SelectItem>
+                                <SelectItem value="sumatera">Sumatera</SelectItem>
+                                <SelectItem value="jawa">Jawa</SelectItem>
+                                <SelectItem value="balinusra">Bali & Nusa Tenggara</SelectItem>
+                                <SelectItem value="kalimantan">Kalimantan</SelectItem>
+                                <SelectItem value="sulawesi">Sulawesi</SelectItem>
+                                <SelectItem value="maluku">Maluku</SelectItem>
+                                <SelectItem value="papua">Papua</SelectItem>
                             </SelectContent>
                         </Select>
                     </div>
