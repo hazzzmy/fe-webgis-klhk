@@ -7,6 +7,7 @@ import { useMapData } from "../../hooks/useMapData"
 import { useDebounce } from "use-debounce"
 import { useQuery } from "@tanstack/react-query"
 import { LngLatBoundsLike, useMap } from "react-map-gl"
+import { X } from "lucide-react"
 
 
 export const MapAddLayerContainer = () => {
@@ -109,8 +110,11 @@ export const MapAddLayerContainer = () => {
 
     return (
         <Drawer open={mapControl.isOpenAddLayer} onOpenChange={(value) => mapControl.setIsOpenAddLayer(value)}>
-            <DrawerContent className="flex px-6 pb-6 gap-4 min-h-[90vh]">
-                <DrawerTitle>Explore Layers</DrawerTitle>
+            <DrawerContent className="flex px-6 pb-6 gap-4 min-h-[90vh] w-full">
+                <div className="w-full flex flex-row justify-between items-center">
+                    <DrawerTitle>Explore Layers</DrawerTitle>
+                    <X className="cursor-pointer" onClick={() => mapControl.setIsOpenAddLayer(false)} />
+                </div>
                 <DrawerDescription />
                 <MapAddLayer
                     meta={meta}

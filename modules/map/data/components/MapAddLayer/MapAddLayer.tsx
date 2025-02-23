@@ -7,13 +7,14 @@ import Image from 'next/image';
 import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination"
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { formatExecTime, substringText } from '@/lib/utils';
+import { formatExecTime, substringText, toTitleCase } from '@/lib/utils';
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from '@/components/ui/input'
 import { QueryObserverResult } from '@tanstack/react-query';
 import { Meta, ResourceParams } from '@/types';
 
 import { Select, SelectItem, SelectTrigger, SelectContent, SelectValue } from "@/components/ui/select";
+import { Layers } from 'lucide-react';
 
 
 interface MapAddLayerProps {
@@ -154,58 +155,98 @@ export const MapAddLayer: React.FC<MapAddLayerProps> = (props) => {
                         ) : (dataQuery.data.resources.length > 0 ?
                             dataQuery.data.resources.map((item: any) => (
                                 <SkeletonWrapper key={item.pk} isLoading={false}>
-                                    <Card className='w-full h-[30vh] shadow p-0'>
-                                        <div className='w-full h-3/6'>
-                                            {item.thumbnail_url ? (
-                                                <Image
-                                                    src={item.thumbnail_url}
-                                                    alt={item.title}
-                                                    width="0"
-                                                    height="0"
-                                                    sizes="100vw"
-                                                    className="w-full h-full"
-                                                    onError={(e) => {
-                                                        e.currentTarget.src = "/image/placeholder.jpg";
-                                                    }}
-                                                    onAbort={(e) => {
-                                                        e.currentTarget.src = "/image/placeholder.jpg";
-                                                    }}
-                                                />
-                                            ) : (
-                                                <Image
-                                                    src={"/image/placeholder.jpg"}
-                                                    alt={item.title}
-                                                    width="0"
-                                                    height="0"
-                                                    sizes="100vw"
-                                                    className="w-full h-full"
-                                                />
-                                            )}
-                                        </div>
-                                        <CardContent className='h-3/6 p-2 flex flex-col justify-between items-start w-full'>
-                                            <CardTitle className='text-md'>{substringText(item.title.split("_").join(" "), 20)}</CardTitle>
-                                            <div className='flex flex-row justify-between items-end w-full'>
-                                                <div className='flex flex-col justify-between items-start gap-1'>
-                                                    <div className='flex flex-row gap-1 items-center'>
-                                                        {item.owner.avatar && (
-                                                            <Image
-                                                                src={item.owner.avatar}
-                                                                alt="avatar"
-                                                                width={15}
-                                                                height={15}
-                                                                className='rounded-lg'
-                                                            />
-                                                        )}
-                                                        <Badge variant="outline">{item.resource_type}</Badge>
-                                                        {item.resource_type !== "map" && <Badge variant="outline">{item.subtype}</Badge>}
-                                                    </div>
-                                                    <p className='text-xs'>{formatExecTime(item.created)}</p>
+                                    <div className="relative group w-full h-[30vh] transition-transform transform hover:scale-105 duration-300 ease-in-out">
+                                        <Card className="w-full h-full shadow p-0 rounded">
+                                            {/* Image Section */}
+                                            <div className="w-full h-3/6 relative rounded">
+                                                {item.thumbnail_url ? (
+                                                    <Image
+                                                        src={item.thumbnail_url}
+                                                        alt={item.title}
+                                                        width="0"
+                                                        height="0"
+                                                        sizes="100vw"
+                                                        className="w-full h-full"
+                                                        placeholder='blur'
+                                                        blurDataURL='/image/placeholder.jpg'
+                                                        onError={(e) => {
+                                                            e.currentTarget.src = "/image/placeholder.jpg";
+                                                        }}
+                                                        onAbort={(e) => {
+                                                            e.currentTarget.src = "/image/placeholder.jpg";
+                                                        }}
+                                                        onLoad={(e) => {
+                                                            e.currentTarget.src = "/image/placeholder.jpg";
+                                                        }}
+                                                    />
+                                                ) : (
+                                                    <Image
+                                                        src={"/image/placeholder.jpg"}
+                                                        alt={item.title}
+                                                        width="0"
+                                                        height="0"
+                                                        sizes="100vw"
+                                                        className="w-full h-full"
+                                                    />
+                                                )}
+                                                <div className="h-full absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded rounded-bl-none rounded-br-none">
+                                                    <Button
+                                                        variant="outline"
+                                                        className="bg-white shadow-lg"
+                                                        onClick={() => onAddLayer(item)}
+                                                    >
+                                                        <Layers /> +Add
+                                                    </Button>
                                                 </div>
-                                                <Button variant="outline" onClick={() => onAddLayer(item)}>Add</Button>
                                             </div>
-                                        </CardContent>
-                                    </Card>
+
+
+                                            {/* Card Content */}
+                                            <CardContent className="h-3/6 p-2 flex flex-col justify-between items-start w-full overflow-hidden">
+                                                {/* Title Section */}
+                                                <CardTitle className="text-md w-full">
+                                                    <p className="flex text-wrap w-full overflow-hidden text-ellipsis whitespace-nowrap text-sm">
+                                                        {toTitleCase(item.title)}
+                                                    </p>
+                                                </CardTitle>
+
+                                                {/* Content Section */}
+                                                <div className="flex flex-row justify-between items-end w-full gap-2">
+                                                    <div className="flex flex-col justify-between items-start gap-1 min-w-0 flex-1">
+                                                        <div className="flex flex-row gap-1 items-center min-w-0 flex-wrap">
+                                                            {/* Avatar */}
+                                                            {item.owner.avatar && (
+                                                                <Image
+                                                                    src={item.owner.avatar}
+                                                                    alt="avatar"
+                                                                    width={15}
+                                                                    height={15}
+                                                                    className="rounded-lg shrink-0"
+                                                                />
+                                                            )}
+
+                                                            {/* Badges - Ensuring they wrap and don't overflow */}
+                                                            <Badge variant="outline" className="truncate max-w-[40%]">
+                                                                {item.resource_type}
+                                                            </Badge>
+
+                                                            {item.resource_type !== "map" && (
+                                                                <Badge variant="outline" className="truncate max-w-[40%]">
+                                                                    {item.subtype}
+                                                                </Badge>
+                                                            )}
+                                                        </div>
+
+                                                        {/* Execution Time */}
+                                                        <p className="text-xs truncate w-full">{formatExecTime(item.created)}</p>
+                                                    </div>
+                                                </div>
+                                            </CardContent>
+
+                                        </Card>
+                                    </div>
                                 </SkeletonWrapper>
+
                             )) : <Card className='w-full shadow p-2'>No Data Available</Card>
                         )}
                     </div>
