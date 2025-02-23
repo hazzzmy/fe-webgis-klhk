@@ -5,12 +5,13 @@ import { Stepper } from "../Stepper";
 import { StepChartType } from "../StepChartType";
 import { ChartType } from "../StepChartType/StepChartType";
 import { SelectedAttribute } from "../../hooks/useWidget";
-import { 
+import {
     InputValueMetric,
     InputValueBarArea,
     InputValueLineScatter,
-    InputValueRadarRadialPie 
+    InputValueRadarRadialPie
 } from "../../types";
+import { X } from 'lucide-react';
 
 interface ChartDrawerProps {
     isOpen: boolean;
@@ -93,8 +94,12 @@ export const ChartDrawer: React.FC<ChartDrawerProps> = ({
 
     return (
         <Drawer open={isOpen} onOpenChange={onOpenChange}>
-            <DrawerContent className="flex px-6 pb-6 gap-4 min-h-[90vh]">
-                <DrawerTitle>Chart Editor</DrawerTitle>
+            <DrawerContent className="flex px-6 pb-6 gap-4 min-h-[90vh] w-full">
+                <div className='w-full flex justify-between items-center'>
+                    <DrawerTitle>Chart Editor</DrawerTitle>
+                    <X className='cursor-pointer' onClick={() => onOpenChange(false)} />
+                </div>
+
                 <DrawerDescription />
                 <div className="w-full flex justify-between items-center mb-4">
                     <Stepper steps={steps} activeStep={activeStep} />

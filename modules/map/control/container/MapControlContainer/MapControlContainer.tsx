@@ -119,7 +119,7 @@ export const MapControlContainer = () => {
                 mapControl.toolConfig({ key: 'measure', config: { active: !mapControl.tools.measure.active } })
               }}
               disabled={mapControl.tools.measure.disabled}
-              setDistance={mapControl.setDistanceInfo}
+              setMeasurement={mapControl.setDistanceInfo}
             />
           )}
           {mapControl.tools.basemap.show && (
