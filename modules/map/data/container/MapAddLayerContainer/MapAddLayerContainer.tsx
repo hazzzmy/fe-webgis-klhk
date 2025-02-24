@@ -25,8 +25,6 @@ export const MapAddLayerContainer = () => {
         year: 'all',
     })
 
-    console.log(params.island)
-
     const [debouncedSearchTerm] = useDebounce(params.search, 800);
     const [meta, setMeta] = useState<Meta>({
         page: 1,
@@ -98,7 +96,6 @@ export const MapAddLayerContainer = () => {
                 throw new Error("Network response was not ok");
             }
             const data = await response.json();
-            console.log(data);
             
             setMeta((prev) => ({ ...prev, total: data.total }))
 

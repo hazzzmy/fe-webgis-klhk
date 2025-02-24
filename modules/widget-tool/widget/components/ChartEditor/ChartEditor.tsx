@@ -44,8 +44,6 @@ export function ChartEditor(props: ChartEditorProps) {
       const newChartOptions = newChartWrapper.getOptions();
       const newChartType = newChartWrapper.getChartType();
 
-      console.log("Chart type changed to ", newChartType);
-      console.log("Chart options changed to ", newChartOptions);
     });
   };
 

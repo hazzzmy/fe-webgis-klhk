@@ -174,7 +174,6 @@ export const SortableCardLayer:React.FC<SortableCardLayerProps> = (props) => {
     width: '100%',
   };
 
-  console.log(layer.name,'layername')
 
     return (
         <div ref={setNodeRef} style={styles}>

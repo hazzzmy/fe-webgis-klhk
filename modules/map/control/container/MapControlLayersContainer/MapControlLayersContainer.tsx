@@ -100,7 +100,6 @@ export const MapControlLayersContainer = () => {
     }
 
     const handleZoomToLayer = (layer: LayerListItem) => {
-        console.log(layer.bbox?.coords)
         const bbox = layer.bbox?.coords as LngLatBoundsLike;
         
         map.current?.fitBounds(bbox)

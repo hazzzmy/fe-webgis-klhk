@@ -13,15 +13,18 @@ export async function GET(req: Request, res:NextResponse) {
     const time_to_change_laju_perubahan_lahan_terbangun_per_kapita = searchParams.get('time_to_change_laju_perubahan_lahan_terbangun_per_kapita');   
     const elastisitas_lpe_thd_perubahan_teknologi_target = searchParams.get('elastisitas_lpe_thd_perubahan_teknologi_target');
     const time_to_change_elastisitas_lpe_thd_perubahan_teknologi = searchParams.get('time_to_change_elastisitas_lpe_thd_perubahan_teknologi');
+    const std_kebutuhan_air_per_kapita_sk_146_2023_target = searchParams.get('std_kebutuhan_air_per_kapita_sk_146_2023_target');
+    const waktu_pengubahan_standar_kebutuhan_air_per_kapita = searchParams.get('waktu_pengubahan_standar_kebutuhan_air_per_kapita');
+    const debit_per_detik_pertanian_dasar_sk_146_2023_skenario = searchParams.get('debit_per_detik_pertanian_dasar_sk_146_2023_skenario');
+    const waktu_perubahan_std_debit_per_detik_pertanian = searchParams.get('waktu_perubahan_std_debit_per_detik_pertanian');
+    const lahan_pangan_per_kapita_skenario = searchParams.get('lahan_pangan_per_kapita_skenario');
+    const waktu_perubahan_lahan_pangan_per_kapita = searchParams.get('waktu_perubahan_lahan_pangan_per_kapita');
+    const lahan_built_up_per_kapita_skenario = searchParams.get('lahan_built_up_per_kapita_skenario');
+    const waktu_perubahan_lahan_built_up_per_kapita = searchParams.get('waktu_perubahan_lahan_built_up_per_kapita');
 
     const params = {
         island:island,
         simulation: "simulation",
-        parameter: [
-            "PDRB Pulau", "LPE Pulau", "Populasi Pulau", "Tenaga Kerja", "Pengangguran",
-            "Tk Pengangguran", "Rasio kecukupan air SK 146","Indeks D3T Air", "Indeks D3T Lahan",
-            "Ambang Batas populasi Air", "Ambang Batas populasi dari Lahan"
-        ],
         initial_time: initial_time || 2016,
         final_time: final_time || 2055,
         mps_assumption: mps_assumption || 0.36,
@@ -31,8 +34,18 @@ export async function GET(req: Request, res:NextResponse) {
         laju_perubahan_lahan_terbangun_per_kapita_asumsi:laju_perubahan_lahan_terbangun_per_kapita_asumsi || 0.03,
         time_to_change_laju_perubahan_lahan_terbangun_per_kapita:time_to_change_laju_perubahan_lahan_terbangun_per_kapita || 2055,
         elastisitas_lpe_thd_perubahan_teknologi_target: elastisitas_lpe_thd_perubahan_teknologi_target || 0.35,
-        time_to_change_elastisitas_lpe_thd_perubahan_teknologi: time_to_change_elastisitas_lpe_thd_perubahan_teknologi || 3000
+        time_to_change_elastisitas_lpe_thd_perubahan_teknologi: time_to_change_elastisitas_lpe_thd_perubahan_teknologi || 3000,
+        std_kebutuhan_air_per_kapita_sk_146_2023_target: std_kebutuhan_air_per_kapita_sk_146_2023_target || 42.3,
+        waktu_pengubahan_standar_kebutuhan_air_per_kapita: waktu_pengubahan_standar_kebutuhan_air_per_kapita || 3000,
+        debit_per_detik_pertanian_dasar_sk_146_2023_skenario: debit_per_detik_pertanian_dasar_sk_146_2023_skenario || 1,
+        waktu_perubahan_std_debit_per_detik_pertanian: waktu_perubahan_std_debit_per_detik_pertanian || 3000,
+        lahan_pangan_per_kapita_skenario: lahan_pangan_per_kapita_skenario || 740,
+        waktu_perubahan_lahan_pangan_per_kapita: waktu_perubahan_lahan_pangan_per_kapita || 3000,
+        lahan_built_up_per_kapita_skenario: lahan_built_up_per_kapita_skenario || 20,
+        waktu_perubahan_lahan_built_up_per_kapita: waktu_perubahan_lahan_built_up_per_kapita || 3000
     }
+
+    console.log(params)
 
     try {
         const response = await fetch(`${process.env.NEXT_PUBLIC_BE_URL}/postSystemDynamic`, {

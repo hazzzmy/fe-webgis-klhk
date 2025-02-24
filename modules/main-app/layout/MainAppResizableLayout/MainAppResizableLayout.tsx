@@ -43,8 +43,8 @@ export const MainAppResizableLayout: React.FC<{ children: React.ReactNode, pathn
         </ResizablePanel> */}
         <ResizableHandle withHandle={mapControl.tools.widgetTools.active} />
         <ResizablePanel
-          defaultSize={30}
-          minSize={20}
+          defaultSize={40}
+          minSize={40}
           maxSize={75}
           style={{ display: mapControl.tools.widgetTools.active ? 'block' : 'none' }}
           onResize={(size) => {
@@ -74,9 +74,9 @@ export const MainAppResizableLayout: React.FC<{ children: React.ReactNode, pathn
         </ResizablePanel>
         <ResizableHandle withHandle={systemDynamicControl.tools.systemDynamicInputControl.active} />
         <ResizablePanel
-          defaultSize={20}
-          minSize={20}
-          maxSize={60}
+          defaultSize={40}
+          minSize={40}
+          maxSize={75}
           style={{ display: systemDynamicControl.tools.systemDynamicInputControl.active ? 'block' : 'none' }}
           onResize={(size) => {
             const sizeInPX = (size / 100) * ((window.innerWidth || 0) - (!systemDynamicControl.tools.systemDynamicInputControl.active ? 60 : 370))

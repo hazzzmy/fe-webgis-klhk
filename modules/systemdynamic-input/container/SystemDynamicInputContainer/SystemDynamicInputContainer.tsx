@@ -78,7 +78,7 @@ export const SystemDynamicInputContainer = () => {
         <h3 className="text-primary text-xl font-bold">Input Parameter</h3>
       </div>
       <div className='overflow-y overflow-x-hidden flex flex-col h-[85vh] gap-2 p-4 bg-white rounded custom-scrollbar'>
-        <Card className="flex flex-col items-center justify-center p-4 rounded gap-4 shadow">
+        {/* <Card className="flex flex-col items-center justify-center p-4 rounded gap-4 shadow">
           <div className="text text-primary flex justify-center items-center text-start w-full font-bold">
             <p>Grid Layout</p>
           </div>
@@ -138,7 +138,7 @@ export const SystemDynamicInputContainer = () => {
             />
             <Button variant={'outline'} onClick={() => handleIncrement('final_time', parameters[`${island}`].final_time.value, parameters[`${island}`].final_time.step)}>+</Button>
           </div>
-        </Card>
+        </Card> */}
 
         {Object.entries(parameters[`${island}`]).slice(2).map(([key, parameter]) => (
 

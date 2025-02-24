@@ -44,7 +44,6 @@ interface AttributesTableProps {
 
 export const AttributeTable: React.FC<AttributesTableProps> = ({ layer, sizeWidgetTools, extent, filterByExtent, cqlFilter }) => {
 
-  console.log(sizeWidgetTools);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 

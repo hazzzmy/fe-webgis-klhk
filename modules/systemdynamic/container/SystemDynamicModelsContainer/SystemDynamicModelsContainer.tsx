@@ -43,6 +43,14 @@ export const SystemDynamicModelsContainer = () => {
           time_to_change_laju_perubahan_lahan_terbangun_per_kapita: island && parameters[`${island}`].time_to_change_laju_perubahan_lahan_terbangun_per_kapita.value.toString(),
           elastisitas_lpe_thd_perubahan_teknologi_target: island && parameters[`${island}`].elastisitas_lpe_thd_perubahan_teknologi_target.value.toString(),
           time_to_change_elastisitas_lpe_thd_perubahan_teknologi: island && parameters[`${island}`].time_to_change_elastisitas_lpe_thd_perubahan_teknologi.value.toString(),
+          std_kebutuhan_air_per_kapita_sk_146_2023_target: island && parameters[`${island}`].std_kebutuhan_air_per_kapita_sk_146_2023_target.value.toString(),
+          waktu_pengubahan_standar_kebutuhan_air_per_kapita: island && parameters[`${island}`].waktu_pengubahan_standar_kebutuhan_air_per_kapita.value.toString(),
+          debit_per_detik_pertanian_dasar_sk_146_2023_skenario: island && parameters[`${island}`].debit_per_detik_pertanian_dasar_sk_146_2023_skenario.value.toString(),
+          waktu_perubahan_std_debit_per_detik_pertanian: island && parameters[`${island}`].waktu_perubahan_std_debit_per_detik_pertanian.value.toString(),
+          lahan_pangan_per_kapita_skenario: island && parameters[`${island}`].lahan_pangan_per_kapita_skenario.value.toString(),
+          waktu_perubahan_lahan_pangan_per_kapita: island && parameters[`${island}`].waktu_perubahan_lahan_pangan_per_kapita.value.toString(),
+          lahan_built_up_per_kapita_skenario: island && parameters[`${island}`].lahan_built_up_per_kapita_skenario.value.toString(),
+          waktu_perubahan_lahan_built_up_per_kapita: island && parameters[`${island}`].waktu_perubahan_lahan_built_up_per_kapita.value.toString()
         }).toString()}`;
         
         const response = await fetch(url);

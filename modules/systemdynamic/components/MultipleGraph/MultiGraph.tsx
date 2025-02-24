@@ -26,7 +26,7 @@ interface MultiGraphProps {
 }
 
 // Color palette for dynamically assigned lines
-const COLORS = ["#8B0000", "#FF6666", "#FF8C00", "#FFD580", "#006400", "#90EE90"];
+const COLORS = ["#007BFF", "#000066", "#00FF00", "#004400"]
 
 export const MultiGraph: React.FC<MultiGraphProps> = ({ param, data }) => {
     const [isFullscreen, setIsFullscreen] = useState(false);

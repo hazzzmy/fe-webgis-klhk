@@ -126,8 +126,6 @@ export const WidgetContainer = () => {
     };
 
     const handleSelectLabel = (v: string) => {
-        console.log(v);
-        
         setSelectedLabel(v);
     }
 

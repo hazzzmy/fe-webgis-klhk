@@ -25,6 +25,14 @@ type InitialParameterValueType = {
   time_to_change_laju_perubahan_lahan_terbangun_per_kapita: ParameterType;
   elastisitas_lpe_thd_perubahan_teknologi_target: ParameterType;
   time_to_change_elastisitas_lpe_thd_perubahan_teknologi: ParameterType;
+  std_kebutuhan_air_per_kapita_sk_146_2023_target: ParameterType,
+  waktu_pengubahan_standar_kebutuhan_air_per_kapita: ParameterType,
+  debit_per_detik_pertanian_dasar_sk_146_2023_skenario: ParameterType,
+  waktu_perubahan_std_debit_per_detik_pertanian: ParameterType,
+  lahan_pangan_per_kapita_skenario: ParameterType,
+  waktu_perubahan_lahan_pangan_per_kapita: ParameterType,
+  lahan_built_up_per_kapita_skenario: ParameterType,
+  waktu_perubahan_lahan_built_up_per_kapita: ParameterType
 };
 
 type ParameterPulau = {

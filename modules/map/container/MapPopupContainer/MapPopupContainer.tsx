@@ -165,22 +165,6 @@ export const MapPopupContainer: React.FC = () => {
         
 
         map?.on('click', handleOnClick);
-        // map.on('click', (e) => {
-        //     // Get the map's container width and height
-        //     const width = map.getContainer().clientWidth;
-        //     const height = map.getContainer().clientHeight;
-          
-        //     // Get the pixel coordinates of the click
-        //     const x = e.point.x; // x coordinate (horizontal)
-        //     const y = e.point.y; // y coordinate (vertical)
-          
-        //     // Get the coordinates of the click in geographical coordinates (lat/lng)
-        //     const coordinates = e.lngLat;
-          
-        //     console.log(`Width: ${width}, Height: ${height}`);
-        //     console.log(`Clicked at pixel (x: ${x}, y: ${y})`);
-        //     console.log(`Clicked at geographical coordinates (lng: ${coordinates.lng}, lat: ${coordinates.lat})`);
-        // });
 
         return () => {
             map?.off('click', handleOnClick);
