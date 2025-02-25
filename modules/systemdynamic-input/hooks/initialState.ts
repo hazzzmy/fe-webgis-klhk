@@ -129,7 +129,7 @@ export const initialParameterValue: ParameterPulau = {
       name: "Laju Perubahan Lahan Terbangun Per Kapita",
       unit: "%/Tahun",
       min: 1.0,
-      max: 20.0,
+      max: 10.0,
       step: 0.5,
       baseline: 1.0,
       value: 1.0,
@@ -144,7 +144,7 @@ export const initialParameterValue: ParameterPulau = {
   <li>2. Peningkatan kesejahteraan (Pendapatan per kapita) juga mendorong individu membutuhkan variasi lahan terbangun yang lebih besar.</li>
 </ul>
 <br>
-<p><strong>Angka 1%/tahun pada skenario merupakan asumsi.</strong></p>
+<p><strong>Angka 1%-5% didekati dari perubahan lahan historis.</strong></p>
 `,
       descriptionOpen: false
     },
@@ -392,7 +392,7 @@ export const initialParameterValue: ParameterPulau = {
       name: "Laju Perubahan Lahan Terbangun Per Kapita",
       unit: "%/Tahun",
       min: 1.0,
-      max: 20.0,
+      max: 10.0,
       step: 0.5,
       baseline: 1.0,
       value: 1.0,
@@ -408,7 +408,7 @@ export const initialParameterValue: ParameterPulau = {
 </ul>
 <br>
 
-<p><strong>Angka 1%/tahun pada skenario merupakan asumsi.</strong></p>
+<p><strong>Angka 1%-5% didekati dari perubahan lahan historis.</strong></p>
 `,
       descriptionOpen: false
     },
@@ -657,7 +657,7 @@ export const initialParameterValue: ParameterPulau = {
       name: "Laju Perubahan Lahan Terbangun Per Kapita",
       unit: "%/Tahun",
       min: 1.0,
-      max: 20.0,
+      max: 10.0,
       step: 0.5,
       baseline: 1.0,
       value: 1.0,
@@ -673,7 +673,7 @@ export const initialParameterValue: ParameterPulau = {
 </ul>
 <br>
 
-<p><strong>Angka 1%/tahun pada skenario merupakan asumsi.</strong></p>
+<p><strong>Angka 1%-5% didekati dari perubahan lahan historis.</strong></p>
 `,
       descriptionOpen: false
     },
@@ -922,7 +922,7 @@ export const initialParameterValue: ParameterPulau = {
       name: "Laju Perubahan Lahan Terbangun Per Kapita",
       unit: "%/Tahun",
       min: 1.0,
-      max: 20.0,
+      max: 10.0,
       step: 0.5,
       baseline: 3.0,
       value: 3.0,
@@ -938,7 +938,7 @@ export const initialParameterValue: ParameterPulau = {
 </ul>
 <br>
 
-<p><strong>Angka 1%/tahun pada skenario merupakan asumsi.</strong></p>
+<p><strong>Angka 1%-5% didekati dari perubahan lahan historis.</strong></p>
 `,
       descriptionOpen: false
     },
@@ -1187,7 +1187,7 @@ export const initialParameterValue: ParameterPulau = {
       name: "Laju Perubahan Lahan Terbangun Per Kapita",
       unit: "%/Tahun",
       min: 1.0,
-      max: 20.0,
+      max: 10.0,
       step: 0.5,
       baseline: 3.0,
       value: 3.0,
@@ -1202,7 +1202,7 @@ export const initialParameterValue: ParameterPulau = {
   <li>2. Peningkatan kesejahteraan (Pendapatan per kapita) juga mendorong individu membutuhkan variasi lahan terbangun yang lebih besar.</li>
 </ul>
 <br>
-<p><strong>Angka 1%/tahun pada skenario merupakan asumsi.</strong></p>
+<p><strong>Angka 1%-5% didekati dari perubahan lahan historis.</strong></p>
 `,
       descriptionOpen: false
     },
@@ -1450,7 +1450,7 @@ export const initialParameterValue: ParameterPulau = {
       name: "Laju Perubahan Lahan Terbangun Per Kapita",
       unit: "%/Tahun",
       min: 1.0,
-      max: 20.0,
+      max: 10.0,
       step: 0.5,
       baseline: 1.0,
       value: 1.0,
@@ -1702,7 +1702,7 @@ export const initialParameterValue: ParameterPulau = {
       name: "Laju Perubahan Lahan Terbangun Per Kapita",
       unit: "%/Tahun",
       min: 1.0,
-      max: 20.0,
+      max: 10.0,
       step: 0.5,
       baseline: 5.0,
       value: 5.0,
@@ -1718,7 +1718,7 @@ export const initialParameterValue: ParameterPulau = {
 </ul>
 <br>
 
-<p><strong>Angka 1%/tahun pada skenario merupakan asumsi.</strong></p>
+<p><strong>Angka 1%-5% didekati dari perubahan lahan historis.</strong></p>
 `,
       descriptionOpen: false
     },
