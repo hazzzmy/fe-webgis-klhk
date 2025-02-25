@@ -6,7 +6,7 @@ export const initialSystemDynamicList:SystemDynamic[] = [
         uuid:"fed3e965-3f02-46b6-9f33-10f0f5dbed03",
         type:"multiple",
         name:"Ambang Batas Populasi Air dan Lahan [jiwa]",
-        parameter:["Ambang Batas Populasi Air", "Ambang Batas populasi dari Lahan"],
+        parameter:["Ambang Batas Populasi Air", "Ambang Batas populasi dari Lahan","Populasi Pulau"],
         active:true,
     },
     {

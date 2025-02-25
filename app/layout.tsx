@@ -43,6 +43,7 @@ export default function RootLayout({
         }}
       >
         <head>
+          <link rel="icon" href="/favicon.ico" />
           <title>{title}</title>
         </head>
         <body className={inter.className}>

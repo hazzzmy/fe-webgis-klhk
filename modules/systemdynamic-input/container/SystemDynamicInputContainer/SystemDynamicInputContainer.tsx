@@ -12,6 +12,7 @@ import { ChevronsUpDown, InfoIcon } from 'lucide-react';
 import Spinner from '@/components/ui/spinner';
 import { useSystemDynamicControl } from '@/modules/systemdynamic/control/hooks';
 import { CustomSlider } from '@/components/ui/customSlider';
+import parse from 'html-react-parser';
 
 export const SystemDynamicInputContainer = () => {
   const { island, parameters, grid_layout, updateParameterValue, resetParameters, setGridLayout, refetchData, toggleDescriptionOpen, isFetching } = useSystemDynamicParameter();
@@ -144,7 +145,7 @@ export const SystemDynamicInputContainer = () => {
 
           <Card key={key} className="flex flex-col items-center justify-center p-4 rounded gap-4 shadow">
             <div className="text text-primary flex justify-center items-center text-start w-full font-bold">
-              <p>{toTitleCase(key)} ({parameter.unit})</p>
+              <p>{toTitleCase(parameter.name)} {parameter.unit && `[${parameter.unit}]`}</p>
             </div>
             <div className="flex flex-row items-center w-full gap-4">
               <CustomSlider
@@ -180,8 +181,8 @@ export const SystemDynamicInputContainer = () => {
                 </CollapsibleTrigger>
               </div>
               <CollapsibleContent>
-                <div className="rounded-md border px-4 py-3 font-mono text-sm max-w-[400px]">
-                  {parameter.description}
+                <div className="rounded-md border px-4 py-3 text-sm max-w-[400px] text-between">
+                  {parse(parameter.description)}
                 </div>
               </CollapsibleContent>
             </Collapsible>
@@ -191,7 +192,7 @@ export const SystemDynamicInputContainer = () => {
       </div>
       <div className='flex flex-row justify-between w-full items-center gap-2'>
         <Button className='w-full bg-secondary text-primary hover:bg-primary hover:text-white' variant={'outline'} onClick={handleRun}>{isFetching ? <Spinner width={5} height={5} /> : 'Run'}</Button>
-        <Button className='w-full' variant={'outline'} onClick={handleResetAndFetch}>Reset</Button>
+        {/* <Button className='w-full' variant={'outline'} onClick={handleResetAndFetch}>Reset</Button> */}
       </div>
     </div>
   )
