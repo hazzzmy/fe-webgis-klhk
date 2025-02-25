@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@radix-ui/react-collapsible';
-import { ChevronsUpDown, InfoIcon } from 'lucide-react';
+import { ChevronsUpDown, InfoIcon, Loader } from 'lucide-react';
 import Spinner from '@/components/ui/spinner';
 import { useSystemDynamicControl } from '@/modules/systemdynamic/control/hooks';
 import { CustomSlider } from '@/components/ui/customSlider';
@@ -56,10 +56,11 @@ export const SystemDynamicInputContainer = () => {
 
   const handleResetAndFetch = () => {
     resetParameters();
-    if (refetchData) {
-      refetchData();
-    }
+    setTimeout(() => {
+      handleRun(); // Ensure handleRun is called after reset
+    }, 0);
   };
+  
 
   const handleChangeGrid = (value: any) => {
     setGridLayout(value)
@@ -73,79 +74,23 @@ export const SystemDynamicInputContainer = () => {
 
   const systemDynamicControl = useSystemDynamicControl()
 
-  return systemDynamicControl.tools.systemDynamicInputControl.active && island && (
+  if (!parameters) {
+    return <div>Loading parameters...</div>;
+  }
+  
+
+  return parameters && systemDynamicControl.tools.systemDynamicInputControl.active && island && (
     <div className="p-4 flex flex-col gap-4 max-h-[calc(100vh-130px)]">
       <div className='flex flex-row justify-between w-full items-center'>
         <h3 className="text-primary text-xl font-bold">Input Parameter</h3>
       </div>
       <div className='overflow-y overflow-x-hidden flex flex-col h-[85vh] gap-2 p-4 bg-white rounded custom-scrollbar'>
-        {/* <Card className="flex flex-col items-center justify-center p-4 rounded gap-4 shadow">
-          <div className="text text-primary flex justify-center items-center text-start w-full font-bold">
-            <p>Grid Layout</p>
-          </div>
-          <div className="flex flex-row items-center w-full gap-4">
-            <Slider
-              min={1}
-              max={3}
-              step={1}
-              value={[grid_layout]}
-              onValueChange={(value) => handleChangeGrid(value)}
-            />
-          </div>
-          <div className="flex justify-between w-full items-center gap-2">
-            <div className='flex flex-row gap-2 w-full'>
-              <Button variant={'outline'} onClick={() => setGridLayout(grid_layout - 1)}>-</Button>
-              <Input
-                type="number"
-                value={grid_layout}
-                onChange={(e) => setGridLayout(e.target.value as unknown as number)}
-                className="w-full text-center"
-              />
-              <Button variant={'outline'} onClick={() => setGridLayout(grid_layout + 1)}>+</Button>
-            </div>
-          </div>
-        </Card>
-        <Card className="flex flex-col items-center justify-center p-4 rounded gap-4 shadow">
-          <div className="text text-primary flex justify-center items-center text-start w-full font-bold">
-            <p>Time Range ({parameters[`${island}`].initial_time.unit})</p>
-          </div>
-          <div className="flex flex-row items-center w-full gap-4">
-            <p>{parameters[`${island}`].initial_time.min}</p>
-            <RangeSlider
-              min={parameters[`${island}`].initial_time.min}
-              max={parameters[`${island}`].final_time.max}
-              value={[parameters[`${island}`].initial_time.value, parameters[`${island}`].final_time.value]}
-              step={parameters[`${island}`].initial_time.step}
-              onChange={handleRangeChange}
-            />
-            <p>{parameters[`${island}`].initial_time.max}</p>
-          </div>
-          <div className="flex justify-between w-full items-center gap-2">
-            <Button variant={'outline'} onClick={() => handleDecrement('initial_time', parameters[`${island}`].initial_time.value, parameters[`${island}`].initial_time.step)}>-</Button>
-            <Input
-              type="number"
-              value={parameters[`${island}`].initial_time.value}
-              onChange={(e) => handleInputChange('initial_time', e.target.value)}
-              className="w-full text-center"
-            />
-            <Button variant={'outline'} onClick={() => handleIncrement('initial_time', parameters[`${island}`].initial_time.value, parameters[`${island}`].final_time.step)}>+</Button>
-            <Separator orientation='vertical' />
-            <Button variant={'outline'} onClick={() => handleDecrement('final_time', parameters[`${island}`].final_time.value, parameters[`${island}`].initial_time.step)}>-</Button>
-            <Input
-              type="number"
-              value={parameters[`${island}`].final_time.value}
-              onChange={(e) => handleInputChange('final_time', e.target.value)}
-              className="w-full text-center"
-            />
-            <Button variant={'outline'} onClick={() => handleIncrement('final_time', parameters[`${island}`].final_time.value, parameters[`${island}`].final_time.step)}>+</Button>
-          </div>
-        </Card> */}
 
         {Object.entries(parameters[`${island}`]).slice(2).map(([key, parameter]) => (
 
           <Card key={key} className="flex flex-col items-center justify-center p-4 rounded gap-4 shadow">
             <div className="text text-primary flex justify-center items-center text-start w-full font-bold">
-              <p>{toTitleCase(parameter.name)} {parameter.unit && `[${parameter.unit}]`}</p>
+              <p>{parameter.name && toTitleCase(parameter.name)} {parameter.unit && `[${parameter.unit}]`}</p>
             </div>
             <div className="flex flex-row items-center w-full gap-4">
               <CustomSlider
@@ -182,7 +127,7 @@ export const SystemDynamicInputContainer = () => {
               </div>
               <CollapsibleContent>
                 <div className="rounded-md border px-4 py-3 text-sm max-w-[400px] text-between">
-                  {parse(parameter.description)}
+                  {parameter.description && parse(parameter.description)}
                 </div>
               </CollapsibleContent>
             </Collapsible>
@@ -192,7 +137,7 @@ export const SystemDynamicInputContainer = () => {
       </div>
       <div className='flex flex-row justify-between w-full items-center gap-2'>
         <Button className='w-full bg-secondary text-primary hover:bg-primary hover:text-white' variant={'outline'} onClick={handleRun}>{isFetching ? <Spinner width={5} height={5} /> : 'Run'}</Button>
-        {/* <Button className='w-full' variant={'outline'} onClick={handleResetAndFetch}>Reset</Button> */}
+        <Button className='w-full' variant={'outline'} onClick={handleResetAndFetch}>Reset</Button>
       </div>
     </div>
   )

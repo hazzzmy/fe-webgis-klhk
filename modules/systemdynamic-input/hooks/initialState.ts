@@ -139,10 +139,10 @@ export const initialParameterValue: ParameterPulau = {
 <br>
 <p>Kebutuhan lahan per kapita bisa berubah dikarenakan:</p>
 <br>
-<ol>
-  <li>Adanya kebijakan pengembangan lahan-lahan terbangun untuk sosial dan ekonomi serta urbanisasi.</li>
-  <li>Peningkatan kesejahteraan (Pendapatan per kapita) juga mendorong individu membutuhkan variasi lahan terbangun yang lebih besar.</li>
-</ol>
+<ul>
+  <li>1. Adanya kebijakan pengembangan lahan-lahan terbangun untuk sosial dan ekonomi serta urbanisasi.</li>
+  <li>2. Peningkatan kesejahteraan (Pendapatan per kapita) juga mendorong individu membutuhkan variasi lahan terbangun yang lebih besar.</li>
+</ul>
 <br>
 <p><strong>Angka 1%/tahun pada skenario merupakan asumsi.</strong></p>
 `,
@@ -402,10 +402,10 @@ export const initialParameterValue: ParameterPulau = {
 <br>
 <p>Kebutuhan lahan per kapita bisa berubah dikarenakan:</p>
 <br>
-<ol>
-  <li>Adanya kebijakan pengembangan lahan-lahan terbangun untuk sosial dan ekonomi serta urbanisasi.</li>
-  <li>Peningkatan kesejahteraan (Pendapatan per kapita) juga mendorong individu membutuhkan variasi lahan terbangun yang lebih besar.</li>
-</ol>
+<ul>
+  <li>1. Adanya kebijakan pengembangan lahan-lahan terbangun untuk sosial dan ekonomi serta urbanisasi.</li>
+  <li>2. Peningkatan kesejahteraan (Pendapatan per kapita) juga mendorong individu membutuhkan variasi lahan terbangun yang lebih besar.</li>
+</ul>
 <br>
 
 <p><strong>Angka 1%/tahun pada skenario merupakan asumsi.</strong></p>
@@ -667,10 +667,10 @@ export const initialParameterValue: ParameterPulau = {
 <br>
 <p>Kebutuhan lahan per kapita bisa berubah dikarenakan:</p>
 <br>
-<ol>
-  <li>Adanya kebijakan pengembangan lahan-lahan terbangun untuk sosial dan ekonomi serta urbanisasi.</li>
-  <li>Peningkatan kesejahteraan (Pendapatan per kapita) juga mendorong individu membutuhkan variasi lahan terbangun yang lebih besar.</li>
-</ol>
+<ul>
+  <li>1. Adanya kebijakan pengembangan lahan-lahan terbangun untuk sosial dan ekonomi serta urbanisasi.</li>
+  <li>2. Peningkatan kesejahteraan (Pendapatan per kapita) juga mendorong individu membutuhkan variasi lahan terbangun yang lebih besar.</li>
+</ul>
 <br>
 
 <p><strong>Angka 1%/tahun pada skenario merupakan asumsi.</strong></p>
@@ -932,10 +932,10 @@ export const initialParameterValue: ParameterPulau = {
 <br>
 <p>Kebutuhan lahan per kapita bisa berubah dikarenakan:</p>
 <br>
-<ol>
-  <li>Adanya kebijakan pengembangan lahan-lahan terbangun untuk sosial dan ekonomi serta urbanisasi.</li>
-  <li>Peningkatan kesejahteraan (Pendapatan per kapita) juga mendorong individu membutuhkan variasi lahan terbangun yang lebih besar.</li>
-</ol>
+<ul>
+  <li>1. Adanya kebijakan pengembangan lahan-lahan terbangun untuk sosial dan ekonomi serta urbanisasi.</li>
+  <li>2. Peningkatan kesejahteraan (Pendapatan per kapita) juga mendorong individu membutuhkan variasi lahan terbangun yang lebih besar.</li>
+</ul>
 <br>
 
 <p><strong>Angka 1%/tahun pada skenario merupakan asumsi.</strong></p>
@@ -1197,10 +1197,10 @@ export const initialParameterValue: ParameterPulau = {
 <br>
 <p>Kebutuhan lahan per kapita bisa berubah dikarenakan:</p>
 <br>
-<ol>
-  <li>Adanya kebijakan pengembangan lahan-lahan terbangun untuk sosial dan ekonomi serta urbanisasi.</li>
-  <li>Peningkatan kesejahteraan (Pendapatan per kapita) juga mendorong individu membutuhkan variasi lahan terbangun yang lebih besar.</li>
-</ol>
+<ul>
+  <li>1. Adanya kebijakan pengembangan lahan-lahan terbangun untuk sosial dan ekonomi serta urbanisasi.</li>
+  <li>2. Peningkatan kesejahteraan (Pendapatan per kapita) juga mendorong individu membutuhkan variasi lahan terbangun yang lebih besar.</li>
+</ul>
 <br>
 <p><strong>Angka 1%/tahun pada skenario merupakan asumsi.</strong></p>
 `,
@@ -1712,10 +1712,10 @@ export const initialParameterValue: ParameterPulau = {
 <br>
 <p>Kebutuhan lahan per kapita bisa berubah dikarenakan:</p>
 <br>
-<ol>
-  <li>Adanya kebijakan pengembangan lahan-lahan terbangun untuk sosial dan ekonomi serta urbanisasi.</li>
-  <li>Peningkatan kesejahteraan (Pendapatan per kapita) juga mendorong individu membutuhkan variasi lahan terbangun yang lebih besar.</li>
-</ol>
+<ul>
+  <li>1. Adanya kebijakan pengembangan lahan-lahan terbangun untuk sosial dan ekonomi serta urbanisasi.</li>
+  <li>2. Peningkatan kesejahteraan (Pendapatan per kapita) juga mendorong individu membutuhkan variasi lahan terbangun yang lebih besar.</li>
+</ul>
 <br>
 
 <p><strong>Angka 1%/tahun pada skenario merupakan asumsi.</strong></p>

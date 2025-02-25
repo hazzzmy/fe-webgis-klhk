@@ -92,22 +92,26 @@ export const useSystemDynamicParameter = create<ParameterStore>()(
           }
           return {};
         }),
-  
-
-      resetParameters: () => set((state) => {
-        const resetState = {
-          parameters: {
-            ...state.parameters,
-            [state.island]: initialParameterValue, // Reset only the selected island
-          },
-        };
-        state.refetchData?.();
-        return { ...resetState };
-      }),
 
       refetchData: () => {},
       setRefetchDataFn: (fn) => set({ refetchData: fn }),
 
+      resetParameters: () => set((state) => {
+        if (state.island === "") return {}; // Prevent resetting if no island is selected
+      
+        const resetState = {
+          parameters: {
+            ...state.parameters,
+            [state.island]: initialParameterValue[state.island], // Reset only the selected island
+          },
+        };
+      
+        setTimeout(() => {
+          state.refetchData?.(); // Ensure data is refetched after resetting
+        }, 0); // Delay to ensure state updates first
+      
+        return { ...resetState };
+      }),
     
       // Updates a specific parameter value for the selected island
       updateParameterValue: (key, newValue) => set((state) => {
