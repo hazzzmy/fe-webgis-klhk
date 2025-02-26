@@ -46,7 +46,7 @@ export const initialParameterValue: ParameterPulau = {
   sumatera: {
     initial_time: {
       name: "initial time",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2016,
       max: 2055,
       step: 1,
@@ -57,7 +57,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     final_time: {
       name: "final time",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2016,
       max: 2055,
       step: 1,
@@ -87,7 +87,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_mps_assumption: {
       name: "Waktu perubahan Rerata Proposi Tabungan",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -97,7 +97,7 @@ export const initialParameterValue: ParameterPulau = {
       descriptionOpen: false
     },
     laju_pertumbuhan_populasi_asumsi: {
-      name: "Laju Pertumbuhan Popupasi",
+      name: "Laju Pertumbuhan Populasi",
       unit: "%/tahun",
       min: 0.5,
       max: 3.0,
@@ -115,8 +115,8 @@ export const initialParameterValue: ParameterPulau = {
       descriptionOpen: false
     },
     time_to_change_laju_pertumbuhan_populasi_asumsi: {
-      name: "Laju Perubahan Lahan Terbangun Per Kapita",
-      unit: "Tahun",
+      name: "Waktu pengubahan Laju Pertumbuhan Penduduk",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -150,7 +150,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_laju_perubahan_lahan_terbangun_per_kapita: {
       name: "Waktu pengubahan Laju Perubahan Lahan Terbangun Per Kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -174,7 +174,7 @@ export const initialParameterValue: ParameterPulau = {
     <br>
 
     <p>
-        <strong>Y = A ⋅ K<sup>α</sup> ⋅ L<sup>β</sup></strong> (alpha dan beta nya ganti pangkat ya), di mana:
+        <strong>Y = A ⋅ K<sup>α</sup> ⋅ L<sup>β</sup></strong> , di mana:
     </p>
     <br>
 
@@ -208,7 +208,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_elastisitas_lpe_thd_perubahan_teknologi: {
       name: "Waktu pengubahan Elastisitas LPE terhadap pertumbuhan teknologi",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -230,7 +230,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_pengubahan_standar_kebutuhan_air_per_kapita: {
       name: "Waktu pengubahan standard air per kapita per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -252,7 +252,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_perubahan_std_debit_per_detik_pertanian: {
       name: "Waktu pengubahan standard debit air per detik pertanian",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -264,8 +264,8 @@ export const initialParameterValue: ParameterPulau = {
     lahan_pangan_per_kapita_skenario: {
       name: "Lahan Pangan Per Kapita Skenario",
       unit: "m2/jiwa",
-      min: 0,
-      max: 10000,
+      min: 150,
+      max: 5000,
       step: 1,
       baseline: 880,
       value: 880,
@@ -274,7 +274,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_perubahan_lahan_pangan_per_kapita: {
       name: "Waktu perubahan lahan pangan per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -287,7 +287,7 @@ export const initialParameterValue: ParameterPulau = {
       name: "Lahan terbangun Per Kapita Skenario",
       unit: "m2/jiwa",
       min: 10,
-      max: 100,
+      max: 200,
       step: 5,
       baseline: 20,
       value: 20,
@@ -296,7 +296,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_perubahan_lahan_built_up_per_kapita: {
       name: "Waktu perubahan lahan terbangun per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -309,7 +309,7 @@ export const initialParameterValue: ParameterPulau = {
   jawa: {
     initial_time: {
       name: "initial time",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2016,
       max: 2055,
       step: 1,
@@ -320,7 +320,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     final_time: {
       name: "final time",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2016,
       max: 2055,
       step: 1,
@@ -350,7 +350,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_mps_assumption: {
       name: "Waktu perubahan Rerata Proposi Tabungan",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -360,8 +360,8 @@ export const initialParameterValue: ParameterPulau = {
       descriptionOpen: false
     },
     laju_pertumbuhan_populasi_asumsi: {
-      name: "Laju Pertumbuhan Popupasi",
-      unit: "1/tahun",
+      name: "Laju Pertumbuhan Populasi",
+      unit: "%/Tahun",
       min: 0.5,
       max: 3.0,
       step: 0.01,
@@ -379,7 +379,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_laju_pertumbuhan_populasi_asumsi: {
       name: "Waktu pengubahan Laju Pertumbuhan Penduduk",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -413,8 +413,8 @@ export const initialParameterValue: ParameterPulau = {
       descriptionOpen: false
     },
     time_to_change_laju_perubahan_lahan_terbangun_per_kapita: {
-      name: "Waktu pengubahan Laju Pertumbuhan Penduduk",
-      unit: "Tahun",
+      name: "Waktu pengubahan Laju Perubahan Lahan Terbangun Per Kapita",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -438,7 +438,7 @@ export const initialParameterValue: ParameterPulau = {
     <br>
 
     <p>
-        <strong>Y = A ⋅ K<sup>α</sup> ⋅ L<sup>β</sup></strong> (alpha dan beta nya ganti pangkat ya), di mana:
+        <strong>Y = A ⋅ K<sup>α</sup> ⋅ L<sup>β</sup></strong> , di mana:
     </p>
     <br>
 
@@ -473,7 +473,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_elastisitas_lpe_thd_perubahan_teknologi: {
       name: "Waktu pengubahan Elastisitas LPE terhadap pertumbuhan teknologi",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -495,7 +495,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_pengubahan_standar_kebutuhan_air_per_kapita: {
       name: "Waktu pengubahan standard air per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -517,7 +517,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_perubahan_std_debit_per_detik_pertanian: {
       name: "Waktu pengubahan standard debit air per detik pertanian",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -529,17 +529,17 @@ export const initialParameterValue: ParameterPulau = {
     lahan_pangan_per_kapita_skenario: {
       name: "Lahan Pangan Per Kapita Skenario",
       unit: "m2/jiwa",
-      min: 0,
-      max: 10000,
+      min: 150,
+      max: 5000,
       step: 1,
       baseline: 1070,
       value: 1070,
-      description: "Lahan Pangan Per Kapita Pulau yang diturunkan dari data produktvitas, produksi, lahan, dan jumlah penduduk pada perhitungan indeks kemampuan pemanfaatan Lahan, dengan angka 880 m2/jiwa",
+      description: "Lahan Pangan Per Kapita Pulau yang diturunkan dari data produktvitas, produksi, lahan, dan jumlah penduduk pada perhitungan indeks kemampuan pemanfaatan Lahan, dengan angka 1070 m2/jiwa",
       descriptionOpen: false
     },
     waktu_perubahan_lahan_pangan_per_kapita: {
       name: "Waktu perubahan lahan pangan per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -561,7 +561,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_perubahan_lahan_built_up_per_kapita: {
       name: "Waktu perubahan lahan terbangun per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -574,7 +574,7 @@ export const initialParameterValue: ParameterPulau = {
   kalimantan: {
     initial_time: {
       name: "initial time",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2016,
       max: 2055,
       step: 1,
@@ -585,7 +585,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     final_time: {
       name: "final time",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2016,
       max: 2055,
       step: 1,
@@ -615,7 +615,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_mps_assumption: {
       name: "Waktu perubahan Rerata Proposi Tabungan",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -625,8 +625,8 @@ export const initialParameterValue: ParameterPulau = {
       descriptionOpen: false
     },
     laju_pertumbuhan_populasi_asumsi: {
-      name: "Laju Pertumbuhan Popupasi",
-      unit: "1/tahun",
+      name: "Laju Pertumbuhan Populasi",
+      unit: "%/Tahun",
       min: 0.5,
       max: 3.0,
       step: 0.01,
@@ -644,7 +644,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_laju_pertumbuhan_populasi_asumsi: {
       name: "Waktu pengubahan Laju Pertumbuhan Penduduk",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -678,8 +678,8 @@ export const initialParameterValue: ParameterPulau = {
       descriptionOpen: false
     },
     time_to_change_laju_perubahan_lahan_terbangun_per_kapita: {
-      name: "Waktu pengubahan Laju Pertumbuhan Penduduk",
-      unit: "Tahun",
+      name: "Waktu pengubahan Laju Perubahan Lahan Terbangun Per Kapita",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -703,7 +703,7 @@ export const initialParameterValue: ParameterPulau = {
     <br>
 
     <p>
-        <strong>Y = A ⋅ K<sup>α</sup> ⋅ L<sup>β</sup></strong> (alpha dan beta nya ganti pangkat ya), di mana:
+        <strong>Y = A ⋅ K<sup>α</sup> ⋅ L<sup>β</sup></strong>, di mana:
     </p>
     <br>
 
@@ -738,7 +738,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_elastisitas_lpe_thd_perubahan_teknologi: {
       name: "Waktu pengubahan Elastisitas LPE terhadap pertumbuhan teknologi",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -760,7 +760,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_pengubahan_standar_kebutuhan_air_per_kapita: {
       name: "Waktu pengubahan standard air per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -782,7 +782,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_perubahan_std_debit_per_detik_pertanian: {
       name: "Waktu pengubahan standard debit air per detik pertanian",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -794,17 +794,17 @@ export const initialParameterValue: ParameterPulau = {
     lahan_pangan_per_kapita_skenario: {
       name: "Lahan Pangan Per Kapita Skenario",
       unit: "m2/jiwa",
-      min: 0,
-      max: 10000,
+      min: 150,
+      max: 5000,
       step: 1,
       baseline: 2120,
       value: 2120,
-      description: "Lahan Pangan Per Kapita Pulau yang diturunkan dari data produktvitas, produksi, lahan, dan jumlah penduduk pada perhitungan indeks kemampuan pemanfaatan Lahan, dengan angka 880 m2/jiwa",
+      description: "Lahan Pangan Per Kapita Pulau yang diturunkan dari data produktvitas, produksi, lahan, dan jumlah penduduk pada perhitungan indeks kemampuan pemanfaatan Lahan, dengan angka 2120 m2/jiwa",
       descriptionOpen: false
     },
     waktu_perubahan_lahan_pangan_per_kapita: {
       name: "Waktu perubahan lahan pangan per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -826,7 +826,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_perubahan_lahan_built_up_per_kapita: {
       name: "Waktu perubahan lahan terbangun per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -839,7 +839,7 @@ export const initialParameterValue: ParameterPulau = {
   sulawesi: {
     initial_time: {
       name: "initial time",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2016,
       max: 2055,
       step: 1,
@@ -850,7 +850,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     final_time: {
       name: "final time",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2016,
       max: 2055,
       step: 1,
@@ -880,7 +880,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_mps_assumption: {
       name: "Waktu perubahan Rerata Proposi Tabungan",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -890,8 +890,8 @@ export const initialParameterValue: ParameterPulau = {
       descriptionOpen: false
     },
     laju_pertumbuhan_populasi_asumsi: {
-      name: "Laju Pertumbuhan Popupasi",
-      unit: "1/tahun",
+      name: "Laju Pertumbuhan Populasi",
+      unit: "%/Tahun",
       min: 0.5,
       max: 3.0,
       step: 0.01,
@@ -909,7 +909,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_laju_pertumbuhan_populasi_asumsi: {
       name: "Waktu pengubahan Laju Pertumbuhan Penduduk",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -943,8 +943,8 @@ export const initialParameterValue: ParameterPulau = {
       descriptionOpen: false
     },
     time_to_change_laju_perubahan_lahan_terbangun_per_kapita: {
-      name: "Waktu pengubahan Laju Pertumbuhan Penduduk",
-      unit: "Tahun",
+      name: "Waktu pengubahan Laju Perubahan Lahan Terbangun Per Kapita",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -968,7 +968,7 @@ export const initialParameterValue: ParameterPulau = {
     <br>
 
     <p>
-        <strong>Y = A ⋅ K<sup>α</sup> ⋅ L<sup>β</sup></strong> (alpha dan beta nya ganti pangkat ya), di mana:
+        <strong>Y = A ⋅ K<sup>α</sup> ⋅ L<sup>β</sup></strong> , di mana:
     </p>
     <br>
 
@@ -1003,7 +1003,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_elastisitas_lpe_thd_perubahan_teknologi: {
       name: "Waktu pengubahan Elastisitas LPE terhadap pertumbuhan teknologi",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1025,7 +1025,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_pengubahan_standar_kebutuhan_air_per_kapita: {
       name: "Waktu pengubahan standard air per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1047,7 +1047,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_perubahan_std_debit_per_detik_pertanian: {
       name: "Waktu pengubahan standard debit air per detik pertanian",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1059,17 +1059,17 @@ export const initialParameterValue: ParameterPulau = {
     lahan_pangan_per_kapita_skenario: {
       name: "Lahan Pangan Per Kapita Skenario",
       unit: "m2/jiwa",
-      min: 0,
-      max: 10000,
+      min: 150,
+      max: 5000,
       step: 1,
       baseline: 830,
       value: 830,
-      description: "Lahan Pangan Per Kapita Pulau yang diturunkan dari data produktvitas, produksi, lahan, dan jumlah penduduk pada perhitungan indeks kemampuan pemanfaatan Lahan, dengan angka 880 m2/jiwa",
+      description: "Lahan Pangan Per Kapita Pulau yang diturunkan dari data produktvitas, produksi, lahan, dan jumlah penduduk pada perhitungan indeks kemampuan pemanfaatan Lahan, dengan angka 830 m2/jiwa",
       descriptionOpen: false
     },
     waktu_perubahan_lahan_pangan_per_kapita: {
       name: "Waktu perubahan lahan pangan per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1086,12 +1086,12 @@ export const initialParameterValue: ParameterPulau = {
       step: 5,
       baseline: 25,
       value: 25,
-      description: "Lahan Terbangun Per Kapita Pulau yang diturunkan dari data lahan terbangun (permukiman, komersial, infrastruktur, dll) dan jumlah penduduk, dengan angka 20 m2/jiwa",
+      description: "Lahan Terbangun Per Kapita Pulau yang diturunkan dari data lahan terbangun (permukiman, komersial, infrastruktur, dll) dan jumlah penduduk, dengan angka 25 m2/jiwa",
       descriptionOpen: false
     },
     waktu_perubahan_lahan_built_up_per_kapita: {
       name: "Waktu perubahan lahan terbangun per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1104,7 +1104,7 @@ export const initialParameterValue: ParameterPulau = {
   balinusra: {
     initial_time: {
       name: "initial time",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2016,
       max: 2055,
       step: 1,
@@ -1115,7 +1115,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     final_time: {
       name: "final time",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2016,
       max: 2055,
       step: 1,
@@ -1145,7 +1145,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_mps_assumption: {
       name: "Waktu perubahan Rerata Proposi Tabungan",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1155,8 +1155,8 @@ export const initialParameterValue: ParameterPulau = {
       descriptionOpen: false
     },
     laju_pertumbuhan_populasi_asumsi: {
-      name: "Laju Pertumbuhan Popupasi",
-      unit: "1/tahun",
+      name: "Laju Pertumbuhan Populasi",
+      unit: "%/Tahun",
       min: 0.5,
       max: 3.0,
       step: 0.01,
@@ -1174,7 +1174,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_laju_pertumbuhan_populasi_asumsi: {
       name: "Waktu pengubahan Laju Pertumbuhan Penduduk",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1207,8 +1207,8 @@ export const initialParameterValue: ParameterPulau = {
       descriptionOpen: false
     },
     time_to_change_laju_perubahan_lahan_terbangun_per_kapita: {
-      name: "Waktu pengubahan Laju Pertumbuhan Penduduk",
-      unit: "Tahun",
+      name: "Waktu pengubahan Laju Perubahan Lahan Terbangun Per Kapita",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1232,7 +1232,7 @@ export const initialParameterValue: ParameterPulau = {
     <br>
 
     <p>
-        <strong>Y = A ⋅ K<sup>α</sup> ⋅ L<sup>β</sup></strong> (alpha dan beta nya ganti pangkat ya), di mana:
+        <strong>Y = A ⋅ K<sup>α</sup> ⋅ L<sup>β</sup></strong> , di mana:
     </p>
     <br>
 
@@ -1266,7 +1266,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_elastisitas_lpe_thd_perubahan_teknologi: {
       name: "Waktu pengubahan Elastisitas LPE terhadap pertumbuhan teknologi",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1288,7 +1288,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_pengubahan_standar_kebutuhan_air_per_kapita: {
       name: "Waktu pengubahan standard air per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1310,7 +1310,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_perubahan_std_debit_per_detik_pertanian: {
       name: "Waktu pengubahan standard debit air per detik pertanian",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1322,17 +1322,17 @@ export const initialParameterValue: ParameterPulau = {
     lahan_pangan_per_kapita_skenario: {
       name: "Lahan Pangan Per Kapita Skenario",
       unit: "m2/jiwa",
-      min: 0,
-      max: 10000,
+      min: 150,
+      max: 5000,
       step: 1,
       baseline: 740,
       value: 740,
-      description: "Lahan Pangan Per Kapita Pulau yang diturunkan dari data produktvitas, produksi, lahan, dan jumlah penduduk pada perhitungan indeks kemampuan pemanfaatan Lahan, dengan angka 880 m2/jiwa",
+      description: "Lahan Pangan Per Kapita Pulau yang diturunkan dari data produktvitas, produksi, lahan, dan jumlah penduduk pada perhitungan indeks kemampuan pemanfaatan Lahan, dengan angka 740 m2/jiwa",
       descriptionOpen: false
     },
     waktu_perubahan_lahan_pangan_per_kapita: {
       name: "Waktu perubahan lahan pangan per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1354,7 +1354,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_perubahan_lahan_built_up_per_kapita: {
       name: "Waktu perubahan lahan terbangun per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1367,7 +1367,7 @@ export const initialParameterValue: ParameterPulau = {
   maluku: {
     initial_time: {
       name: "initial time",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2016,
       max: 2055,
       step: 1,
@@ -1378,7 +1378,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     final_time: {
       name: "final time",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2016,
       max: 2055,
       step: 1,
@@ -1408,7 +1408,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_mps_assumption: {
       name: "Waktu perubahan Rerata Proposi Tabungan",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1418,8 +1418,8 @@ export const initialParameterValue: ParameterPulau = {
       descriptionOpen: false
     },
     laju_pertumbuhan_populasi_asumsi: {
-      name: "Laju Pertumbuhan Popupasi",
-      unit: "1/tahun",
+      name: "Laju Pertumbuhan Populasi",
+      unit: "%/Tahun",
       min: 0.5,
       max: 3.0,
       step: 0.01,
@@ -1437,7 +1437,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_laju_pertumbuhan_populasi_asumsi: {
       name: "Waktu pengubahan Laju Pertumbuhan Penduduk",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1454,12 +1454,24 @@ export const initialParameterValue: ParameterPulau = {
       step: 0.5,
       baseline: 1.0,
       value: 1.0,
-      description: "",
+      description: `<p>Menggambarkan laju perubahan lahan terbangun per kapita (ha/kapita), misalkan tahun 2022 kebutuhan lahan per kapita adalah <strong>100 m²/kapita</strong>, maka kenaikan <strong>1%</strong> akan meningkatkan kebutuhan lahan per kapita menjadi <strong>101 m²/kapita</strong>. Makin tinggi lajunya, makin makin tinggi unit kebutuhan lahan terbangun.</p>
+<br>
+<p>Dikaitkan dengan <strong>goal 11.3.1 SDGs</strong> tentang <em>Ratio of land consumption rate to population growth rate</em>, dan beberapa studi oleh <strong>Angel, S., Parent, J., & Civco, D. L. (2011)</strong>. <em>The dimensions of global urban expansion: Estimates and projections for all countries, 2000–2050</em> dan <strong>Liu, Y., Wang, X., Li, Y., & Peng, J. (2020)</strong>. <em>Measuring urban land use efficiency in China: A multi-scalar analysis.</em> <strong>Sustainable Cities and Society</strong></p>
+<br>
+<p>Kebutuhan lahan per kapita bisa berubah dikarenakan:</p>
+<br>
+<ul>
+  <li>1. Adanya kebijakan pengembangan lahan-lahan terbangun untuk sosial dan ekonomi serta urbanisasi.</li>
+  <li>2. Peningkatan kesejahteraan (Pendapatan per kapita) juga mendorong individu membutuhkan variasi lahan terbangun yang lebih besar.</li>
+</ul>
+<br>
+<p><strong>Angka 1%-5% didekati dari perubahan lahan historis.</strong></p>
+`,
       descriptionOpen: false
     },
     time_to_change_laju_perubahan_lahan_terbangun_per_kapita: {
-      name: "Waktu pengubahan Laju Pertumbuhan Penduduk",
-      unit: "Tahun",
+      name: "Waktu pengubahan Laju Perubahan Lahan Terbangun Per Kapita",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1483,7 +1495,7 @@ export const initialParameterValue: ParameterPulau = {
     <br>
 
     <p>
-        <strong>Y = A ⋅ K<sup>α</sup> ⋅ L<sup>β</sup></strong> (alpha dan beta nya ganti pangkat ya), di mana:
+        <strong>Y = A ⋅ K<sup>α</sup> ⋅ L<sup>β</sup></strong> , di mana:
     </p>
     <br>
 
@@ -1518,7 +1530,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_elastisitas_lpe_thd_perubahan_teknologi: {
       name: "Waktu pengubahan Elastisitas LPE terhadap pertumbuhan teknologi",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1540,7 +1552,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_pengubahan_standar_kebutuhan_air_per_kapita: {
       name: "Waktu pengubahan standard air per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1562,7 +1574,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_perubahan_std_debit_per_detik_pertanian: {
       name: "Waktu pengubahan standard debit air per detik pertanian",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1574,17 +1586,17 @@ export const initialParameterValue: ParameterPulau = {
     lahan_pangan_per_kapita_skenario: {
       name: "Lahan Pangan Per Kapita Skenario",
       unit: "m2/jiwa",
-      min: 0,
-      max: 10000,
+      min: 150,
+      max: 5000,
       step: 1,
       baseline: 810,
       value: 810,
-      description: "Lahan Pangan Per Kapita Pulau yang diturunkan dari data produktvitas, produksi, lahan, dan jumlah penduduk pada perhitungan indeks kemampuan pemanfaatan Lahan, dengan angka 880 m2/jiwa",
+      description: "Lahan Pangan Per Kapita Pulau yang diturunkan dari data produktvitas, produksi, lahan, dan jumlah penduduk pada perhitungan indeks kemampuan pemanfaatan Lahan, dengan angka 810 m2/jiwa",
       descriptionOpen: false
     },
     waktu_perubahan_lahan_pangan_per_kapita: {
       name: "Waktu perubahan lahan pangan per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1601,12 +1613,12 @@ export const initialParameterValue: ParameterPulau = {
       step: 5,
       baseline: 25,
       value: 25,
-      description: "Lahan Terbangun Per Kapita Pulau yang diturunkan dari data lahan terbangun (permukiman, komersial, infrastruktur, dll) dan jumlah penduduk, dengan angka 20 m2/jiwa",
+      description: "Lahan Terbangun Per Kapita Pulau yang diturunkan dari data lahan terbangun (permukiman, komersial, infrastruktur, dll) dan jumlah penduduk, dengan angka 25 m2/jiwa",
       descriptionOpen: false
     },
     waktu_perubahan_lahan_built_up_per_kapita: {
       name: "Waktu perubahan lahan terbangun per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1619,7 +1631,7 @@ export const initialParameterValue: ParameterPulau = {
   papua: {
     initial_time: {
       name: "initial time",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2016,
       max: 2055,
       step: 1,
@@ -1630,7 +1642,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     final_time: {
       name: "final time",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2016,
       max: 2055,
       step: 1,
@@ -1660,7 +1672,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_mps_assumption: {
       name: "Waktu perubahan Rerata Proposi Tabungan",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1670,8 +1682,8 @@ export const initialParameterValue: ParameterPulau = {
       descriptionOpen: false
     },
     laju_pertumbuhan_populasi_asumsi: {
-      name: "Laju Pertumbuhan Popupasi",
-      unit: "1/tahun",
+      name: "Laju Pertumbuhan Populasi",
+      unit: "%/Tahun",
       min: 0.5,
       max: 3.0,
       step: 0.01,
@@ -1689,7 +1701,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_laju_pertumbuhan_populasi_asumsi: {
       name: "Waktu pengubahan Laju Pertumbuhan Penduduk",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1723,8 +1735,8 @@ export const initialParameterValue: ParameterPulau = {
       descriptionOpen: false
     },
     time_to_change_laju_perubahan_lahan_terbangun_per_kapita: {
-      name: "Waktu pengubahan Laju Pertumbuhan Penduduk",
-      unit: "Tahun",
+      name: "Waktu pengubahan Laju Perubahan Lahan Terbangun Per Kapita",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1748,7 +1760,7 @@ export const initialParameterValue: ParameterPulau = {
     <br>
 
     <p>
-        <strong>Y = A ⋅ K<sup>α</sup> ⋅ L<sup>β</sup></strong> (alpha dan beta nya ganti pangkat ya), di mana:
+        <strong>Y = A ⋅ K<sup>α</sup> ⋅ L<sup>β</sup></strong> , di mana:
     </p>
     <br>
 
@@ -1783,7 +1795,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     time_to_change_elastisitas_lpe_thd_perubahan_teknologi: {
       name: "Waktu pengubahan Elastisitas LPE terhadap pertumbuhan teknologi",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1805,7 +1817,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_pengubahan_standar_kebutuhan_air_per_kapita: {
       name: "Waktu pengubahan standard air per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1827,7 +1839,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_perubahan_std_debit_per_detik_pertanian: {
       name: "Waktu pengubahan standard debit air per detik pertanian",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1839,17 +1851,17 @@ export const initialParameterValue: ParameterPulau = {
     lahan_pangan_per_kapita_skenario: {
       name: "Lahan Pangan Per Kapita Skenario",
       unit: "m2/jiwa",
-      min: 0,
-      max: 10000,
+      min: 150,
+      max: 5000,
       step: 1,
       baseline: 1320,
       value: 1320,
-      description: "Lahan Pangan Per Kapita Pulau yang diturunkan dari data produktvitas, produksi, lahan, dan jumlah penduduk pada perhitungan indeks kemampuan pemanfaatan Lahan, dengan angka 880 m2/jiwa",
+      description: "Lahan Pangan Per Kapita Pulau yang diturunkan dari data produktvitas, produksi, lahan, dan jumlah penduduk pada perhitungan indeks kemampuan pemanfaatan Lahan, dengan angka 1320 m2/jiwa",
       descriptionOpen: false
     },
     waktu_perubahan_lahan_pangan_per_kapita: {
       name: "Waktu perubahan lahan pangan per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
@@ -1871,7 +1883,7 @@ export const initialParameterValue: ParameterPulau = {
     },
     waktu_perubahan_lahan_built_up_per_kapita: {
       name: "Waktu perubahan lahan terbangun per kapita",
-      unit: "Tahun",
+      unit: "Pada tahun",
       min: 2025,
       max: 2055,
       step: 1,
